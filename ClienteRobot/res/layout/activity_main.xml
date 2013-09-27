@@ -6,33 +6,27 @@
     android:keepScreenOn="true"
     >
     <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TextView android:text="X" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
-        <TextView android:text="@string/hello_world" android:id="@+id/tvAceleracionX" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>    
+        <TextView android:text="@string/X" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
+        <TextView android:text="@string/hello_world" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/tvAceleracionX" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>    
     </TableRow>
     <TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TextView android:text="Y" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
-        <TextView android:text="@string/hello_world" android:id="@+id/tvAceleracionY" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>    
+        <TextView android:text="@string/Y" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
+        <TextView 
+            android:text="@string/hello_world" 
+            android:id="@+id/tvAceleracionY" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+        	android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:layout_weight="1">
+        </TextView>    
     </TableRow>
     <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TextView android:text="Z" android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
-        <TextView android:text="@string/hello_world" android:id="@+id/tvAceleracionZ" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>    
+        <TextView android:text="@string/Z" android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
+        <TextView android:text="@string/hello_world" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/tvAceleracionZ" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>    
     </TableRow>
-    <TableRow android:id="@+id/tableRow4" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TextView android:id="@+id/posicion"  android:text="@string/hello_world" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
-        <TextView android:id="@+id/velocidad" android:text="@string/hello_world"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>    
+    <TableRow android:id="@+id/tableRow4" android:layout_width="wrap_content" android:layout_height="wrap_content">    
     </TableRow>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </TableLayout>
