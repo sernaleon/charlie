@@ -15,6 +15,7 @@ class GoShield
         void setForwardSpeedLeft(int speed);
         void setMotors(int left, int right);
         void Move(int speed, int balance);
+        void Stop();
     public:
         GoShield();
         void loop();

@@ -1,32 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"    
+    android:layout_height="fill_parent"
     android:keepScreenOn="true"
-    >
-    <TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TextView android:text="@string/X" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
-        <TextView android:text="@string/hello_world" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/tvAceleracionX" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>    
-    </TableRow>
-    <TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TextView android:text="@string/Y" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
-        <TextView 
-            android:text="@string/hello_world" 
-            android:id="@+id/tvAceleracionY" 
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content" 
-        	android:textAppearance="?android:attr/textAppearanceLarge" 
-            android:layout_weight="1">
-        </TextView>    
-    </TableRow>
-    <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <TextView android:text="@string/Z" android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>
-        <TextView android:text="@string/hello_world" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/tvAceleracionZ" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"></TextView>    
-    </TableRow>
-    <TableRow android:id="@+id/tableRow4" android:layout_width="wrap_content" android:layout_height="wrap_content">    
+    android:orientation="horizontal" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/X" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvAceleracionX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hello_world"
+            android:textAppearance="?android:attr/textAppearanceLarge" >
+        </TextView>
     </TableRow>
 
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Y" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvAceleracionY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hello_world"
+            android:textAppearance="?android:attr/textAppearanceLarge" >
+        </TextView>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Z" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvAceleracionZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hello_world"
+            android:textAppearance="?android:attr/textAppearanceLarge" >
+        </TextView>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </TableRow>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.53"
+        android:text="@string/start" />
 
 </TableLayout>

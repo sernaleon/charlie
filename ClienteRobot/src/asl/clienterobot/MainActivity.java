@@ -6,12 +6,18 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity implements SensorEventListener 
 {
+	boolean activeSocket;
 	SocketRobot socketR;
-    
+	
+	SensorManager manager;
+	Sensor acelerometro;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
@@ -19,15 +25,48 @@ public class MainActivity extends Activity implements SensorEventListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        //Sets button
+        Button button = (Button)findViewById(R.id.button1);
+        button.setOnClickListener(myhandler1);
+        
         //Sets accelerometer
-        SensorManager manager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        Sensor acelerometro = manager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
-        manager.registerListener(this, acelerometro, SensorManager.SENSOR_DELAY_GAME);
+        manager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        acelerometro = manager.getDefaultSensor(Sensor.TYPE_ORIENTATION);        
         
 		//Creates UDP socket to the Raspberry
 		socketR = new SocketRobot();
+        activeSocket = false;
     }
     
+    private void activateSensors()
+    {
+        manager.registerListener(this, acelerometro, SensorManager.SENSOR_DELAY_GAME);
+		activeSocket = true;
+    }
+    
+    private void desactivateSensors()
+    {
+		manager.unregisterListener(this);
+		activeSocket = false;
+    }
+    
+    
+    View.OnClickListener myhandler1 = new View.OnClickListener() 
+    {
+    	public void onClick(View v) 
+    	{
+    		if (activeSocket)
+    		{
+    			socketR.stop();
+    			desactivateSensors();
+    		}
+    		else
+    		{
+    			activateSensors();
+    		}
+    	}
+    };
+
 	@Override
 	public void onSensorChanged(SensorEvent event) 
 	{
