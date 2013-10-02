@@ -7,14 +7,15 @@
 class GoShield
 {
     private:
-        byte leds[12];
-        byte middleSensor[9];
-        byte frontSensor[12];
+        byte leds[NUMLEDS];
+        byte blueLeds[NUMBLUELEDS];
+        byte middleSensor[NUMMIDS];
+        byte frontSensor[NUMFRONTS];
 
         void setForwardSpeedRight(int speed);
         void setForwardSpeedLeft(int speed);
         void setMotors(int left, int right);
-        void Move(int speed, int balance);
+        void Move(byte speed, byte balance);
         void Stop();
     public:
         GoShield();

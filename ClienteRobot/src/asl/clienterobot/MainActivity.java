@@ -50,7 +50,6 @@ public class MainActivity extends Activity implements SensorEventListener
 		activeSocket = false;
     }
     
-    
     View.OnClickListener myhandler1 = new View.OnClickListener() 
     {
     	public void onClick(View v) 

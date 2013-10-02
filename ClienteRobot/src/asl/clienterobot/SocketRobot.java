@@ -11,6 +11,11 @@ public class SocketRobot
 {
 	private byte[] msg;
 	
+	public SocketRobot()
+	{
+		msg = new byte[3];
+	}
+	
 	public void sendCoordinates(float acceleration, float rotation)
 	{	
 			setDatagram(
@@ -37,7 +42,6 @@ public class SocketRobot
 	
 	private void setDatagram(byte cmd, byte p1, byte p2)
 	{
-		msg = new byte[3];
 		msg[0]= cmd;
 		msg[1]= p1;
 		msg[2]= p2;

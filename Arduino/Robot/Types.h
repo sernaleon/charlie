@@ -1,18 +1,16 @@
 #ifndef _GR_TYPES
 #define _GR_TYPES
 
-
 /**********************************************/
 //
-//            CONSTANTES DEL SISTEMA
+//            SYSTEM CONSTANTS
 //
 /**********************************************/
 
-#define KSERIALBUFFER 3
+#define KSERIALBUFFER   3
 
-
-#define KINPUTS     35
-#define KOUTPUTS    21
+#define KINPUTS         35
+#define KOUTPUTS        21
 
 #define KMAXSPEED       400
 #define KSPEED          300
@@ -20,47 +18,61 @@
 
 
 //-------------------------
-//        Entradas
+//        INPUTS
 //-------------------------
 
+//Push button (Pull-up)
+#define  I_BUTTON	13
 
 
-#define  I_BUTTON	13   // Pulsador (Pull-Up)
+//On/off infrared sensors
 
-//Sensores de infrarrojos Analogicos
+#define  O_IRON_AN	29   // Analogical infrared (Pull-Up)
+#define  O_IRON_DG	27   // Digital infrared (Pull-Down)
 
-#define I_IR10	53   //
-#define I_IR11	51   //
-#define I_IR12	49   //
-#define I_IR13	47   //
-#define I_IR14	45   //
-#define I_IR15	43  //
-#define I_IR16	41   //
-#define I_IR17	39   //
-#define I_IR18	37   //
-#define I_IR19	35   //
-#define I_IR20	33   //
-#define I_IR21	31   //
+//Analogical infrared sensors
 
-//Sensores de infrarrojos Digitales
+#define NUMFRONTS  12
 
-#define I_IR1	4   //
-#define I_IR2	5   //
-#define I_IR3	A0  //
-#define I_IR4	A1  //
-#define I_IR5	6   //
-#define I_IR6	A2 	//
-#define I_IR7	A3 	//
-#define I_IR8	11 	//
-#define I_IR9	12  //
+#define I_IR10	53 
+#define I_IR11	51
+#define I_IR12	49 
+#define I_IR13	47  
+#define I_IR14	45  
+#define I_IR15	43  
+#define I_IR16	41  
+#define I_IR17	39  
+#define I_IR18	37  
+#define I_IR19	35  
+#define I_IR20	33  
+#define I_IR21	31
+
+//Digital infrared sensors
+
+#define NUMMIDS  9  
+
+#define I_IR1	4
+#define I_IR2	5 
+#define I_IR3	A0
+#define I_IR4	A1
+#define I_IR5	6
+#define I_IR6	A2
+#define I_IR7	A3
+#define I_IR8	11
+#define I_IR9	12
 
 //-------------------------
-//        Salidas
+//        OUTPUTS
 //-------------------------
 
-#define  O_BUZZER	23   // Zumbador (Pull-Down)
+//Buzzer (Pull-Down)
+#define  O_BUZZER	23
 
-//On/off infrarrojos
+
+//LEDs
+
+#define  NUMLEDS        12
+#define  NUMBLUELEDS    2
 
 #define  O_LED4		52
 #define  O_LED5		50
@@ -78,24 +90,16 @@
 #define  O_LED17	22
 
 
-//LEDs de Linea
-
-#define  O_IRON_AN	29   // Infrarrojos Anal�gicos (Pull-Up)
-#define  O_IRON_DG	27   // Infrarojos Digitales (Pull-Down)
-
-
 //------------------------
-//			Motor
+//          Motor
 //------------------------
 
-//Canal A
-#define  O_Ain1	9   //
-#define  O_Ain2	7   //
+//A channel
+#define  O_Ain1	9
+#define  O_Ain2	7
 
-//Canal B
-#define  O_Bin1	10   //
-#define  O_Bin2	 8   //
-
-
+//B channel
+#define  O_Bin1	10
+#define  O_Bin2	 8
 
 #endif
