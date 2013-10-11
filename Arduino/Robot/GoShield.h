@@ -17,6 +17,7 @@ class GoShield
         void setMotors(int left, int right);
         void Move(byte speed, byte balance);
         void Stop();
+        void Beep(byte status);
     public:
         GoShield();
         void loop();

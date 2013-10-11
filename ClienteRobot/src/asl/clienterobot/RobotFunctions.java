@@ -28,19 +28,17 @@ public class RobotFunctions
 	
 	public void beepOn()
 	{
-		socket.sendManyTimes(
+		socket.send(
 				DatagramCommands.BEEP, 
 				DatagramCommands.ON, 
-				DatagramCommands.NOPARAM,
-				2);
+				DatagramCommands.NOPARAM);
 	}
 	
 	public void beepOff()
 	{
-		socket.sendManyTimes(
+		socket.send(
 				DatagramCommands.BEEP, 
 				DatagramCommands.OFF, 
-				DatagramCommands.NOPARAM,
-				2);
+				DatagramCommands.NOPARAM);
 	}
 }

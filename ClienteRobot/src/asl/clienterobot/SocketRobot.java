@@ -78,7 +78,7 @@ public class SocketRobot
 	}
 	
 	/**
-	 * Class for creating a thread that will send the message
+	 * Class for creating a thread that will send the message in the msg variable
 	 */
 	class SendDatagramThread implements Runnable 
 	{
