@@ -3,10 +3,10 @@
 
     <string name="app_name">ClienteRobot</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Click start</string>
     <string name="X">X</string>
     <string name="Y">Y</string>
     <string name="Z">Z</string>
     <string name="start">Start</string>
-
+    <string name="beep">Claxon</string>
 </resources>

@@ -25,11 +25,11 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f08000b;
-        public static final int button1=0x7f08000a;
+        public static final int buttonBeep=0x7f08000a;
+        public static final int buttonMove=0x7f080009;
         public static final int tableRow1=0x7f080000;
         public static final int tableRow2=0x7f080003;
         public static final int tableRow3=0x7f080006;
-        public static final int tableRow4=0x7f080009;
         public static final int textView1=0x7f080001;
         public static final int textView2=0x7f080004;
         public static final int textView3=0x7f080007;
@@ -49,6 +49,7 @@ public final class R {
         public static final int Z=0x7f050005;
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
+        public static final int beep=0x7f050007;
         public static final int hello_world=0x7f050002;
         public static final int start=0x7f050006;
     }

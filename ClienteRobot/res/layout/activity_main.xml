@@ -74,17 +74,21 @@
         </TextView>
     </TableRow>
 
-    <TableRow
-        android:id="@+id/tableRow4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </TableRow>
+
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonMove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.53"
         android:text="@string/start" />
+    
+    <Button
+        android:id="@+id/buttonBeep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/beep" />
+
+
 
 </TableLayout>
