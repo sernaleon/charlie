@@ -18,12 +18,13 @@ case "$1" in
   start)
     echo "Starting robotManager"
     # run application you want to start
-    python2.7 /home/pi/server/server.py
+    python2.7 /home/pi/server/server.py &
     ;;
   stop)
     echo "Stopping robotManager"
     # kill application you want to stop
     killall robotManager2
+    killall python2.7
     ;;
   *)
     echo "Usage: robotManager {start|stop}"

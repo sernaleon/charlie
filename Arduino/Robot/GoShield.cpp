@@ -39,6 +39,11 @@ GoShield::GoShield()
 
 void GoShield::loop()
 {
+    getAndRunCommandFromUSB();
+}
+
+void GoShield::getAndRunCommandFromUSB()
+{
     //Receive a message (3 bytes)
     if (Serial.available() >= 3)
     {
@@ -50,12 +55,12 @@ void GoShield::loop()
         {
             //Command 0 -> Stop
             case 0:
-                Stop();
+                stop();
                 break;
 
             //Command 1 -> Move forward
             case 1:
-                Move(p1,p2);
+                moveForward(p1,p2);
                 break;
 
             //Command 4 -> Beep
@@ -66,7 +71,7 @@ void GoShield::loop()
     }
 }
 
-void GoShield::Move(byte speed, byte balance)
+void GoShield::moveForward(byte speed, byte balance)
 {
     //Sets speed between 0 and KMAXSPEED
     int speedMapped = map(speed,0,255,0,KSPEED);
@@ -81,12 +86,12 @@ void GoShield::Move(byte speed, byte balance)
     setMotors(left,right);
 }
 
-void GoShield::Stop()
+void GoShield::stop()
 {
     setMotors(0,0);
 }
 
-void GoShield::Beep(byte status)
+void GoShield::beep(byte status)
 {
     if  (status == 1)   digitalWrite(O_BUZZER,HIGH);
     else                digitalWrite(O_BUZZER,LOW);
@@ -100,11 +105,11 @@ void GoShield::setMotors(int left, int right)
 
 void GoShield::setForwardSpeedRight(int speed)
 {
-        //Check if numbers are out of range
+    //Check if numbers are out of range
 	if      (speed < 0)         speed = 0;
 	else if (speed > KMAXSPEED) speed = KMAXSPEED;
 
-        //Set motor speed
+    //Set motor speed
 	analogWrite(O_Ain1,speed);
 	digitalWrite(O_Ain2,LOW);
 }

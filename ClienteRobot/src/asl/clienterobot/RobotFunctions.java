@@ -19,6 +19,7 @@ public class RobotFunctions
 	
 	public void stop()
 	{
+		//! TODO: Deprecate function. Use (implement) sendWithACK instead.
 		socket.sendManyTimes(
 				DatagramCommands.STOP,
 				DatagramCommands.NOPARAM,

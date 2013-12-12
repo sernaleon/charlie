@@ -12,12 +12,13 @@ class GoShield
         byte middleSensor[NUMMIDS];
         byte frontSensor[NUMFRONTS];
 
+        void getAndRunCommandFromUSB();
+        void moveForward(byte speed, byte balance);
+        void stop();
+        void beep(byte status);
+        void setMotors(int left, int right);
         void setForwardSpeedRight(int speed);
         void setForwardSpeedLeft(int speed);
-        void setMotors(int left, int right);
-        void Move(byte speed, byte balance);
-        void Stop();
-        void Beep(byte status);
     public:
         GoShield();
         void loop();
