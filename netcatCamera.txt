@@ -1,0 +1,6 @@
+C:\Users\monkey\Documents\Archivos\Programas\nc111nt\nc.exe -L -p 5001 | C:\Users\monkey\Documents\Archivos\Programas\mplayer-svn-36251\mplayer-svn-36251\mplayer.exe -fps 32-cache 512 -
+
+C:\Users\monkey\Documents\Archivos\Programas\nc111nt\nc.exe -L -p 5001 | C:\Users\monkey\Documents\Archivos\Programas\mplayer-svn-36251\mplayer-svn-36251\mplayer.exe -fps 32 -cache 512 -
+
+
+raspivid -vf -w 640 -h 480 -fps 32 -t 999999 -o - | nc 192.168.0.193 5001

@@ -1,19 +1,21 @@
 package asl.clienterobot;
 
-import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 import android.util.Log;
 
 public class SocketRobot 
 {
 	private byte[] msg;
+	byte checkNumber;
+	boolean receivedACK;
 	
 	public SocketRobot()
 	{
-		msg = new byte[3];
+		msg = new byte[4];
+		checkNumber = 0;
+		receivedACK = false;
 	}
 	
 	/**
@@ -41,14 +43,30 @@ public class SocketRobot
 	 * @param p2 Third byte of the message
 	 * @param times Number of times that the message will be sent
 	 */
-	public void sendManyTimes(byte cmd, byte p1, byte p2, int times)
+	public void sendWithACK(byte cmd, byte p1, byte p2)
 	{
-		setDatagram(cmd, p1, p2);
-		
-		for (int i = 0; i < times; i++)
-		{
-	    	new Thread(new SendDatagramThread()).start();
-		}
+			setDatagram(cmd, p1, p2);
+
+			
+			//Log.d("Cargando receptor UDP", "Cargando receptor UDP");
+	
+			//new Thread(new ReceiveACK()).start();
+						
+			//Log.d("Receptor UDP cargado", "Receptor UDP cargado");
+			
+			//while(!receivedACK)
+			for (int i = 0; i < 10 && !receivedACK ; i++)
+			{
+				//Log.d("Enviando datagrama", "Enviando datagrama");
+		    	new Thread(new SendDatagramThread()).start();
+				//Log.d("Datagrama enviado", "Datagrama enviado");
+			}
+
+			//Log.d("Saliendo", "Saliendo");
+			
+			//Reset value
+			receivedACK = false;
+
 	}
 	
 	/**
@@ -63,18 +81,43 @@ public class SocketRobot
 		msg[0]= cmd;
 		msg[1]= p1;
 		msg[2]= p2;
-	}
+		msg[3]= checkNumber;
 		
-	/**
-	 * This function is called when the function gets an error trying to send the UDP datagram 
-	 * 
-	 * @param m Message
-	 * @param e Exception
-	 */
-	private void errorDatagram(String m, Exception e) // throws Exception 
+		if (checkNumber >= 255) checkNumber = 0;
+		else checkNumber++;
+		
+		//return checkNumber;
+	}
+	
+
+	class ReceiveACK implements Runnable
 	{
-		Log.d("ErrorSocket", m);
-//		throw e;
+		@Override
+		public void run () {
+			try {
+				byte[] message = new byte[1];
+				
+				DatagramPacket p = new DatagramPacket(message, message.length);
+				DatagramSocket s;
+				s = new DatagramSocket(GlobalValues.SERVER_UDP_PORT);
+		
+
+				Log.d("Escuchando...","Escuchando...");
+				//do 
+				//{
+					s.receive(p);
+				//}
+				//while (message[0] != check);
+				
+					Log.d("ACK RECIBIDO!!!!","ACK RECIBIDO!!!!");
+					
+				receivedACK = true;
+				s.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+				Log.d("ErrorSocket", e.getMessage());
+			}
+		}
 	}
 	
 	/**
@@ -93,21 +136,14 @@ public class SocketRobot
 			{
 				DatagramSocket s = new DatagramSocket();
 				InetAddress local = InetAddress.getByName(GlobalValues.SERVER_IP);
-				DatagramPacket p = new DatagramPacket(msg, msg.length,local,GlobalValues.SERVER_PORT);	
+				DatagramPacket p = new DatagramPacket(msg, msg.length,local,GlobalValues.SERVER_UDP_PORT);	
 				s.send(p);	
 				s.close();
     		} 
-			catch (UnknownHostException e) 
-    		{
-				errorDatagram("UnknownHostException",e);
-    		} 
-			catch (IOException e) 
-    		{
-				errorDatagram("IOException",e);
-    		}
 			catch (Exception e) 
 			{
-				errorDatagram("Exception",e);
+				e.printStackTrace();
+				Log.d("ErrorSocket", e.getMessage());
 			}
 		}
 	}

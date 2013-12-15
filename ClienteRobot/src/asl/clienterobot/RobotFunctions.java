@@ -3,10 +3,13 @@ package asl.clienterobot;
 public class RobotFunctions 
 {	
 	SocketRobot socket;
+	SocketRobot client;
 	
 	public RobotFunctions() 
 	{
 		socket = new SocketRobot();
+		
+		new Thread(new SocketClient()).start(); 
 	}
 	
 	public void move(float acceleration, float rotation)
@@ -19,12 +22,10 @@ public class RobotFunctions
 	
 	public void stop()
 	{
-		//! TODO: Deprecate function. Use (implement) sendWithACK instead.
-		socket.sendManyTimes(
+		socket.sendWithACK(
 				DatagramCommands.STOP,
 				DatagramCommands.NOPARAM,
-				DatagramCommands.NOPARAM,
-				10);		
+				DatagramCommands.NOPARAM);		
 	}
 	
 	public void beepOn()

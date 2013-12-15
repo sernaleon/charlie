@@ -8,16 +8,20 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity implements SensorEventListener 
 {
+	
 	boolean isMoving;
 	RobotFunctions robotFunctions;
 	
 	Button buttonMove;
 	Button buttonBeep;
+	Button buttonCamera;
 	
 	SensorManager manager;
 	Sensor orientationSensor;
@@ -25,6 +29,7 @@ public class MainActivity extends Activity implements SensorEventListener
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
+    	requestWindowFeature(Window.FEATURE_NO_TITLE);
     	//Sets view
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -36,10 +41,17 @@ public class MainActivity extends Activity implements SensorEventListener
         //Sets beep button
         buttonBeep = (Button)findViewById(R.id.buttonBeep);
         buttonBeep.setOnTouchListener(btnTouch);
+
+        //Sets camera button
+        //buttonCamera = (Button)findViewById(R.id.buttonCamera);
+        //buttonCamera.setOnClickListener(btnCam);
         
         //Sets accelerometer
         manager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        orientationSensor = manager.getDefaultSensor(Sensor.TYPE_ORIENTATION);        
+        orientationSensor = manager.getDefaultSensor(Sensor.TYPE_ORIENTATION);     
+        
+        WebView myWebView = (WebView) this.findViewById(R.id.webView);
+		myWebView.loadUrl("http://"+GlobalValues.SERVER_IP+":"+GlobalValues.SERVER_CAM_PORT+"/");
         
 		//Creates instance to robot functions
 		robotFunctions = new RobotFunctions();
@@ -75,6 +87,17 @@ public class MainActivity extends Activity implements SensorEventListener
     		}
     	}
     };
+    
+//    View.OnClickListener btnCam = new View.OnClickListener() 
+//    {
+//    	public void onClick(View v) 
+//    	{
+//
+//
+//            Intent i = new Intent(MainActivity.this, CameraActivity.class );
+//            startActivity(i);
+//    	}
+//    };
     
     View.OnTouchListener btnTouch = new View.OnTouchListener() 
     {

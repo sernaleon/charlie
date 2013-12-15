@@ -9,4 +9,7 @@
     <string name="Z">Z</string>
     <string name="start">Start</string>
     <string name="beep">Claxon</string>
+    <string name="title_activity_camera">Camera View</string>
+    <string name="camera_view_bt">Camera</string>
+
 </resources>
