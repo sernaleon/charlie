@@ -17,7 +17,7 @@
 //-------------------------
 
 //EMERGENCY STOP SONAR
-#define SONARPIN        A11
+#define SONARPIN        A10
 
 //Push button (Pull-up)
 #define  I_BUTTON	13

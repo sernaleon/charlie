@@ -4,25 +4,18 @@ byte leds[NUMLEDS];
 byte blueLeds[NUMBLUELEDS];
 byte middleSensor[NUMMIDS];
 byte frontSensor[NUMFRONTS];
-bool emergencyStop;
-
-int currentLeftSpeed;
-int currentRightSpeed;
 
 void setup()
 {
   //Disables interrups for the initialization
   noInterrupts();
 
-  emergencyStop = false;
-  currentLeftSpeed =0;
-  currentRightSpeed = 0;
-
   //Enables USB port for communication with Raspberry
   Serial.begin(9600);
 
   //Resolution of analogic port: 10 = 1024 (can be configured up to 12 = 4095)
   analogWriteResolution(10);
+
 
   //Constants
   blueLeds = { O_LED8, O_LED13 };
@@ -67,35 +60,27 @@ void getAndRunCommandFromUSB()
     byte p1  = Serial.read();  //First parameter
     byte p2  = Serial.read();  //Second parameter
     
-    if (emergencyStop)
-    {  
-        //Command 50 -> Restore from emergency stop
-        if (cmd == 50) restoreFromEmergencyStop();
-    }
-    else
+    switch (cmd)
     {
-      switch (cmd)
-      {
-        //Command 0 -> Stop
-        case 0:
-          stopMotors();
-          break;
-    
-        //Command 1 -> Move forwards
-        case 1:
-          moveForward(p1,p2);
-          break;
-    
-        //Command 2 -> Move backwards
-        case 2:
-          //TODO
-          break;
-    
-        //Command 4 -> Beep
-        case 3:
-          beep(p1);
-          break;
-      }
+      //Command 0 -> Stop
+      case 0:
+        stopMotors();
+        break;
+  
+      //Command 1 -> Move forwards
+      case 1:
+        moveForward(p1,p2);
+        break;
+  
+      //Command 2 -> Move backwards
+      case 2:
+        //TODO
+        break;
+  
+      //Command 4 -> Beep
+      case 3:
+        beep(p1);
+        break;
     }
   }
 }
@@ -138,8 +123,6 @@ void setForwardSpeedRight(int speed)
   if      (speed < 0)         speed = 0;
   else if (speed > KMAXSPEED) speed = KMAXSPEED;
 
-  currentRightSpeed = speed;
-
   //Set motor speed
   analogWrite(O_Ain1,speed);
   digitalWrite(O_Ain2,LOW);
@@ -150,8 +133,6 @@ void setForwardSpeedLeft(int speed)
   //Check if numbers are out of range
   if      (speed < 0)         speed = 0;
   else if (speed > KMAXSPEED) speed = KMAXSPEED;
-  
-  currentLeftSpeed = speed;
 
   //Set motor speed
   analogWrite(O_Bin1,speed);
@@ -165,24 +146,34 @@ void checkSonar()
   if (digitalRead(SONARPIN) == HIGH)
   {
     stopMotors();
-  //  emergencyStop = true;
+    
+    //Send to Raspberry signal 5 -> Emergency Stop Activated
+    Serial.print(5);
+    
     digitalWrite(leds[0],HIGH);
     digitalWrite(leds[1],HIGH);
     digitalWrite(leds[2],HIGH);
     
-    //Send to Raspberry signal 51 -> Emergency Stop Activated
-    Serial.print(5);
+    delay(3000);
+    
+    digitalWrite(leds[0],LOW);
+    digitalWrite(leds[1],LOW);
+    digitalWrite(leds[2],LOW);
+    
+    emptySerialBuffer();
+    
   }
 }
 
-void restoreFromEmergencyStop()
+//Empty buffer by reading 3 bytes
+void emptySerialBuffer()
 {
-    digitalWrite(leds[0],LOW);
-    digitalWrite(leds[1],LOW);
-    digitalWrite(leds[2],LOW);       
-    emergencyStop = false;
+  while(Serial.available() >= 3)
+  {
+    Serial.read();
+    Serial.read();
+    Serial.read();
+  }
 }
-
-
 
 
