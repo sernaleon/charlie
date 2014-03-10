@@ -1,0 +1,31 @@
+<div data-options="dxView : { name: 'Exercise' } " >
+    <div data-bind="dxCommand: { title: 'Cancel', id: 'back', action: handleCancel, visible: cancelVisible }"></div>
+
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxScrollView: {}">
+            <div class="content edit-sets" data-bind="foreach: exercise().sets">
+                <div>
+                    <div class="dx-field-label">Set <span data-bind="text: ($index() + 1)"></span></div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxNumberBox: { value: reps, min: 1, placeholder: 'Reps', valueUpdateEvent: 'keyup' } "></div>
+                        <span>&times;</span>
+                        <div data-bind="dxNumberBox: { value: weight, min: 0, placeholder: 'Weight', valueUpdateEvent: 'keyup' } "></div>
+                        <span data-bind="text: weightUnit"></span>
+
+                        <!-- ko if: canDelete() -->
+                        <div class="minus" data-bind="dxAction: handleDelete" />
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions" data-bind="with: workout">
+                <div data-bind="dxButton: { text: 'Add set', clickAction: handleAddSet }"></div>
+                <div data-bind="dxButton: { text: 'Next exercise', clickAction: handleAddExercise }"></div>
+                <div data-bind="dxButton: { text: 'Show results', clickAction: handleShowResults }"></div>
+            </div>
+        </div>
+
+        <div data-bind="dxActionSheet: { title: 'Choose action', cancelText: 'Dismiss', dataSource: cancelCommands, visible: commandsVisible }"></div>
+    </div>
+</div>

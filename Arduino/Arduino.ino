@@ -1,9 +1,12 @@
+#include <Wire.h>
 #include "Types.h"
 
 byte leds[NUMLEDS];
 byte blueLeds[NUMBLUELEDS];
 byte middleSensor[NUMMIDS];
 byte frontSensor[NUMFRONTS];
+
+int sonarValue;
 
 void setup()
 {
@@ -38,6 +41,11 @@ void setup()
     pinMode(listOUT[i],OUTPUT);
     digitalWrite(listOUT[i], LOW);
   }
+  
+  //Sonar init
+  sonarValue = 0;
+  Wire.begin(ARDUINO_ADDR);
+  Wire.onReceive(receiveSonarEvent);
 
   //Activates interrups again
   interrupts();
@@ -47,7 +55,7 @@ void loop()
 {
   getAndRunCommandFromUSB();
 
-  checkSonar();
+  //checkSonar();
 }
 
 
@@ -173,6 +181,15 @@ void emptySerialBuffer()
     Serial.read();
     Serial.read();
     Serial.read();
+  }
+}
+
+void receiveSonarEvent(int howMany) {
+  if (howMany == 2) {
+    sonarValue = word(Wire.read(), Wire.read());
+    
+    #warning BORRAR
+    Serial.println(sonarValue); 
   }
 }
 

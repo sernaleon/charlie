@@ -6,7 +6,7 @@
 //            SYSTEM CONSTANTS
 //
 /**********************************************/
-
+#define ARDUINO_ADDR    4     //
 #define KMAXSPEED       400
 #define KSPEED          300
 #define KTURNSPEED      200

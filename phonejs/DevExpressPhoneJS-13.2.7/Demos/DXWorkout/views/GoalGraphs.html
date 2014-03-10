@@ -1,0 +1,20 @@
+﻿<div data-options="dxView : { name: 'GoalGraphs', title: 'Graphs' } " >
+   
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxTabs: tabOptions"></div>
+        <div class="full-height">
+
+            <!-- ko if: isGoalsDataLoaded -->
+                <!-- ko if: goalsChartHasData() -->
+                    <div class="graph-area">
+                        <div id="goalsChart" data-bind="dxPieChart: goalsChartOptions"></div>
+                    </div> 
+                <!-- /ko -->
+                <!-- ko if: !goalsChartHasData() -->
+                    <div class="graph-empty-comment">No logs have been added</div>
+                <!-- /ko -->
+            <!-- /ko -->
+  
+        </div>          
+    </div>
+</div>

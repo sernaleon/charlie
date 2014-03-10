@@ -1,0 +1,25 @@
+﻿<script type="text/html" id="list-template">
+    <div class="image">
+        <img data-bind="attr: { src: Images[0] }"  />
+    </div>
+    <div class="info">
+        <div data-bind="template: { name: 'price-template' }"></div>
+        <div class="about"><span data-bind="text: Globalize.format(HouseSize, 'n0')"></span> sq. ft.<br><span data-bind="text: Beds"></span > beds, <span data-bind="text: Baths"></span> bathrooms</div>
+    </div>
+    <div class="clear-both"></div>
+    <!-- ko if: $data.changeFavState -->
+    <div class="fav" data-bind="dxAction: changeFavState">
+        <div data-bind="css: { 'selected': IsFavorite() }" class="fav-img"></div>
+    </div>
+    <!-- /ko -->
+</script>
+
+<script type="text/html" id="price-template">
+    <div class="price"><span data-bind="text: Globalize.format(Price, 'c0')"></span></div>
+    <div class="place">
+        <span data-bind="text: Address"></span>,
+        <span data-bind="text: City"></span>,
+        <span data-bind="text: State"></span>
+        <span data-bind="text: ZipCode"></span>
+    </div>
+</script>

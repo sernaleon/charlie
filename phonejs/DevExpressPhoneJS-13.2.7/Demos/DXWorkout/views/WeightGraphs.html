@@ -1,0 +1,22 @@
+<div data-options="dxView : { name: 'WeightGraphs', title: 'Graphs' } " >
+   
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxTabs: tabOptions"></div>
+        <div class="full-height">
+            <!-- ko if: isWeightDataLoaded  -->
+                <!-- ko if: weightChartHasData() -->
+                <div class="graph-settings">
+                    <div data-bind="dxLookup:{dataSource: exerciseTypes, value: selectedExerciseType }"></div>
+                </div>
+                <div class="graph-area">
+                    <div id="weightChart" class="with-selects" data-bind="dxChart: chartOptions" />
+                </div>  
+                <!-- /ko -->
+                <!-- ko if: !weightChartHasData() -->
+                    <div class="graph-empty-comment">There are no exercises with filled weight info</div>
+                <!-- /ko -->
+            <!-- /ko -->
+
+        </div>
+    </div>
+</div>

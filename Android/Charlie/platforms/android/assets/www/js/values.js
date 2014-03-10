@@ -1,0 +1,11 @@
+/**
+ * Created by monkey on 10/03/14.
+ */
+
+SERVER_TCP_PORT = 4999;
+SERVER_UDP_PORT = 5000;
+SERVER_CAM_PORT = 8080;
+WEBSERVER_PORT = 8000;
+SERVER_IP = window.location.hostname; //"192.168.0.123";
+
+ACCELEROMETER_FREQUENCY = 100;

@@ -1,0 +1,37 @@
+<div data-options="dxView : { name: 'Cart', title: 'Build a new skateboard' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div class="view-content cart-content">
+            <div class="cart">
+                <div class="cart-skate">
+                    <div class="price">
+                        <span class="price-title">Total Price:</span><br />
+                        $<span data-bind="text: totalPrice"></span>
+                    </div>
+                    <div class="item deck" data-bind="template: { name: 'item-template', data: deck }"></div>
+                    <div class="item truck" data-bind="template: { name: 'item-template', data: truck }"></div>
+                    <div class="item wheels" data-bind="template: { name: 'item-template', data: wheels }"></div>
+                </div>
+
+                <div class="cart-standard-small">
+                    <hr />
+                    <div>
+                        <div class="panel-block list-feedback" data-bind="dxAction: '#Skates'">
+                            <div class="panel-link">Choose standard model</div>
+                            <div class="list-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <div data-bind="dxButton: { text: 'Order Skateboard', clickAction: processOrder }"></div>
+                </div>
+            </div>
+
+            <div class="cart-standard-big">
+                <div class="partial-title">Choose standard model</div>
+                <hr />
+                <div data-options="dxViewPlaceholder: { viewName: 'SkatesPartial' }"></div>
+            </div>
+        </div>
+    </div>
+</div>

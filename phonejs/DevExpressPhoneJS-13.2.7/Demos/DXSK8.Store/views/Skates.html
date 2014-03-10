@@ -1,0 +1,15 @@
+<div data-options="dxView : { name: 'Skates', title: 'Choose standard model', screenSize: 'small' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-options="dxViewPlaceholder: { viewName: 'SkatesPartial' }"></div>
+    </div>
+</div>
+
+<div data-options="dxView : { name: 'SkatesPartial' } " class="skates-partial-content" >
+    <div data-bind="dxList: { dataSource: skates, itemClickAction: selectSkate }">
+        <div data-options="dxTemplate : { name: 'item' }" class="skate-item">
+            <img data-bind="attr: { src: image, alt: title }" />
+            <div class="skate-name" data-bind="text: title"></div>
+            <span class="price">$<span data-bind="text: price"></span></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div data-options="dxView : { name: 'Profile', title: 'Profile' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div class="view-content profile">
+            <div class="profile-main-info">
+
+                <div class="profile-block logout-block" data-bind="with: user">
+                    <img class="user-photo" data-bind=" attr: { src: photo } " />
+                    <div data-bind="dxButton: { text: 'Logout', clickAction: logout }"></div>
+                </div>
+
+                <div class="profile-block profile-main-block">
+                         <div class="dx-fieldset contact-block" data-bind="with: user">
+                            <div class="dx-field">
+                                <div class="dx-field-label">First Name</div>
+                                <div class="dx-field-value" data-bind="dxTextBox: { value: name }"></div>
+                            </div>
+                            <div class="dx-field">
+                                <div class="dx-field-label">Last Name</div>
+                                <div class="dx-field-value" data-bind="dxTextBox: { value: surname }"></div>
+                            </div>
+                            <div class="dx-field">
+                                <div class="dx-field-label">Email</div>
+                                <div class="dx-field-value" data-bind="dxTextBox: { value: email, mode: 'email' }"></div>
+                            </div>
+                        </div>
+                    <h2>Notifications</h2>
+                    <div class="dx-fieldset notification-block" data-bind="with: user.notifications">
+                        <div class="dx-field">
+                            <span class="dx-field-label">Package Shipped</span>
+                            <div class="dx-field-value" data-bind="dxCheckBox: { checked: packageShip }"></div>
+                        </div><div class="dx-field last">
+                            <span class="dx-field-label">Package Delivered</span>
+                            <div class="dx-field-value" data-bind="dxCheckBox: { checked: packageArrive }"></div>
+                        </div><div  class="dx-field">
+                            <span class="dx-field-label">Weekly Deals</span>
+                            <div class="dx-field-value" data-bind="dxCheckBox: { checked: weekDeals }"></div>
+                        </div><div class="dx-field last">
+                            <span class="dx-field-label">Partner Deals</span>
+                            <div class="dx-field-value" data-bind="dxCheckBox: { checked: partnerDeals }"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-address-info">
+                <div class="profile-block profile-address-block billing">
+                    <h2>Billing Address</h2>
+                    <div class="dx-fieldset" data-bind="template: { name: 'address-template', data: user.billingAddress }"></div>
+                </div><div class="profile-block profile-address-block shipping">    
+                    <h2>Shipping Address</h2>
+                    <div class="dx-fieldset" data-bind="template: { name: 'address-template', data: user.shippingAddress }"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

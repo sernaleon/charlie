@@ -1,1 +1,0 @@
-"C:\Python27\python.exe" "C:\Users\monkey\Dropbox\Asignaturas\0. SI\RaspberryScripts\dev_websocket.py"

@@ -1,0 +1,20 @@
+<div data-options="dxView : { name: 'Home', title: 'Home' } " > 
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div class="actions">
+            <div data-bind="dxButton: { text: 'Start workout', clickAction: handleAddWorkout }"></div>
+        </div>
+        <div class="content">
+            <div>
+                <div class="dx-field-label">Last workout date</div>
+                <div class="dx-field-value" data-bind="text: lastWorkoutDate"></div>
+            </div>
+            <div>
+                <div class="dx-field-label">Days since last workout</div>
+                <div class="dx-field-value" data-bind="text: daysFromLastWorkout"></div>
+            </div>
+        </div>
+        <div class="graph-area" data-bind="if: hasWorkouts">
+            <div id="goalsChart" class="home-graph" data-bind="dxChart: chartOptions"></div>
+        </div>
+    </div>
+</div>

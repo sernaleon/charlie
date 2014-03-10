@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Charlie drive</title>
+    <style>
+        html, body,iframe {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            border: 0;
+            overflow:hidden;
+        }
+    </style>
+    <script type="text/javascript" src="js/values.js"></script>
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        function loadCamFrame(){
+           document.getElementById('camframe').src =  "http://"+SERVER_IP+":"+SERVER_CAM_PORT+"/";
+        }
+
+
+        // El identificador del visor de aceleracion `watchAcceleration`
+        var watchID = null;
+
+        // Espera a que PhoneGap se inicie
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // PhoneGap esta listo
+        //
+        function onDeviceReady() {
+            document.getElementById('accelerometer').innerHTML = "Waiting for accelerometer";
+            startWatch();
+        }
+
+        // Empieza a observar la aceleracion
+        //
+        function startWatch() {
+
+            // Actualizar cada 3 segundos
+            var options = { frequency: ACCELEROMETER_FREQUENCY };
+
+            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+        }
+
+        // Dejar de observar la aceleracion
+        //
+        function stopWatch() {
+            if (watchID) {
+                navigator.accelerometer.clearWatch(watchID);
+                watchID = null;
+            }
+        }
+
+        // onSuccess: Obtiene el resultado
+        //
+        function onSuccess(acceleration) {
+            var element = document.getElementById('accelerometer');
+            element.innerHTML = 'Aceleracion X: '  + acceleration.x + '<br />' +
+                    'Aceleración Y: '  + acceleration.y + '<br />' +
+                    'Aceleración Z: '  + acceleration.z + '<br />' +
+                    'Timestamp: '      + acceleration.timestamp + '<br />';
+        }
+
+        // onError: Ocurrio un error
+        //
+        function onError() {
+            alert('onError!');
+        }
+
+    </script>
+</head>
+<body>
+<div id="accelerometer">Preparing...</div>
+<iframe id="camframe" onload="loadCamFrame();"></iframe>
+</body>
+</html>

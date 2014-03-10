@@ -1,0 +1,350 @@
+﻿.screen-size:after {
+    content: "small";
+}
+
+.view-content { 
+    padding: 0px 10px 15px;
+}
+
+.home-container {
+    position: relative;
+}
+
+.home-create-image {
+    display: none;
+}
+
+.home-last-orders {
+    display: none;
+}
+
+.product-name {
+    display: none;
+}
+
+.cart-standard-big {
+    display: none;
+}
+
+.cart .actions {
+    margin-bottom: 10px;
+}
+
+.orders-title {
+    width: auto;
+}
+
+.orders-partial-content .view-content {
+    padding-right: 0;
+}
+
+.dx-theme-generic .profile .dx-widget.dx-editbox > input,
+.dx-theme-generic .profile .dx-widget.dx-editbox > textarea {
+    font-size: 15px;
+}
+
+@media (orientation:landscape) {
+    div.dx-viewport .dx-navbar.dx-tabs {
+        display: inline-block;
+    }
+
+    div.dx-viewport .navbar-layout .layout-content {
+        left: 0;
+        right: 60px;
+        bottom: 0;
+        width: auto;
+    }
+
+    div.dx-viewport .navbar-layout .layout-footer {
+        width: 60px;
+        height: auto;
+        top: 44px;
+        right: 0;
+        bottom: 0;
+    }
+
+    div.dx-viewport .dx-tabs.dx-navbar {
+        height: 100%;
+        width: 60px;
+    }
+
+    div.dx-viewport .dx-tabs .dx-indent-wrapper {
+        display: table;
+        height: 100%;
+    }
+
+    div.dx-viewport .dx-tabs .dx-tab {
+        display: table-row;
+    }
+
+    div.dx-viewport .dx-tabs.dx-navbar .dx-tab .dx-nav-item-content {
+        display: table-cell;
+        vertical-align: middle;
+        width: 80px;		
+        bottom:  3px;
+    }
+
+    .dx-theme-generic .dx-navbar.dx-tabs .dx-tab .dx-tab-text,
+    .dx-theme-generic .dx-navbar.dx-tabs .dx-tab.dx-tab-selected .dx-tab-text {
+        margin-top: -3px;
+    }
+
+    .dx-theme-generic .dx-navbar.dx-tabs .dx-tab .dx-icon {
+        opacity: 1;
+    }
+
+    .home-container {
+        padding: 20px 0 20px 20px;
+    }
+
+    .home-login {
+        width: 150px;
+    }
+
+    .middle-content {
+        top: 0;
+        right: 10px;
+        position: absolute;
+        left: 150px;
+    }
+
+    .home-login-content {
+        display: inline-block;
+        line-height: normal;
+    }
+
+    .panel-title {
+        padding: 10px 0 12px 0;
+    }
+
+    .panel-value {
+        padding: 10px 0 12px 0;
+    }
+
+    .product-image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 70px;
+        margin-right: 20px;
+    }
+
+    .product-choose-button {
+        position: absolute;
+        top: 167px;
+        left: 0;
+        width: 150px;
+    }
+
+    .product-info {
+        border-bottom: 1px solid #DFE0E1;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        margin-left: 170px;
+    }
+
+    .home-create-button {
+        right: 20px;
+        left: 180px;
+        top: 181px;
+    }
+
+    .home-create-image {
+        display: none;
+    }
+
+    .home-last-orders {
+        display: none;
+    }
+
+    .orders-price {
+        width: 15%;
+    }
+
+    .profile .logout-block {
+        margin: 0;
+        width: 140px;
+        height: 200px;
+        float: left;
+    }
+
+    .dx-viewport.dx-theme-generic .dx-fieldset.contact-block {
+        margin-left: 160px;
+        margin-bottom: 50px;
+        margin-top: 16px;
+    }
+
+    .dx-fieldset.contact-block .dx-field {
+        height: 37px;
+    }
+
+    .dx-fieldset.contact-block .dx-field:last-child .dx-field-label {
+        width: 30%;
+    }
+
+    .dx-fieldset.contact-block .dx-field:last-child .dx-field-value {
+        width: 70%;
+    }
+}
+
+
+@media (orientation:portrait) {
+    div.dx-viewport .navbar-layout .layout-content {
+        bottom: 59px;
+    }
+
+    div.dx-viewport .navbar-layout .layout-footer {
+        height: 59px;
+        bottom: 0;
+    }
+
+    div.dx-viewport .dx-tabs.dx-navbar {
+        height: 59px;
+        width: 100%;
+    }
+
+    .dx-theme-generic .dx-navbar.dx-tabs .dx-tab .dx-icon {
+        top: -1px;
+        position: relative;
+    }
+
+    div.dx-viewport .dx-tabs .dx-indent-wrapper
+    {
+        display: table-row;
+    }
+
+    div.dx-viewport .dx-tabs .dx-tab {
+        display: table-cell;
+    }
+
+    .home-container {
+        padding: 20px 15px 10px 10px;
+        margin-bottom: 70px;
+    }
+
+    .home-login {
+        height: 158px;
+    }
+
+    .home-login-content {
+        position: absolute;
+        left: 132px;
+        right: 0;
+    }
+
+    .middle-content {
+        float: none;
+    }
+
+    .panel-title {
+        padding: 6px 0 8px 0;
+    }
+
+    .panel-value {
+        padding: 6px 0 8px 0;
+    }
+
+    .home-login-content {
+        display: inline-block;
+        width: auto;
+        vertical-align: top;
+        margin-top: 30px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    .home-create-button {
+        top: 272px;
+    }
+
+    .product-choose-button {
+        position: absolute;
+        top: 59px;
+        left: 180px;
+        right: 0px;
+    }
+
+    .product-info {
+        padding-top: 123px;
+        margin-left: 190px;
+    }
+
+    .orders-price {
+        width: 42px;
+    }
+
+    .profile .logout-block {
+        height: 140px;
+        margin: 0px;
+        margin-top: 20px;
+        float: none;
+    }
+
+    div.dx-viewport .dx-tabs.dx-navbar .dx-tab {
+        height: 100%;
+        min-width: 52px;
+    }
+
+    .header-info,
+    .skates .title {
+        font-size: 16px;
+        font-weight: bold;
+        height: 20px;
+    }
+
+    .home-login, .home-cart {
+        float: none;
+        width: 100%;
+    }
+
+    .panel-block {
+        border-bottom: none;
+    }
+
+    .panel-block:first-child {
+        border-bottom: 1px solid #DFDFDF;
+    }
+
+    .user-photo {
+        display: inline-block;
+        margin-right: 0;
+    }
+
+    .product-item .small-image {
+        margin-right: 10px;
+    }
+
+    .product-item > div {
+        max-width: 65%;
+    }
+
+    .product-details {
+        margin-top: 22px;
+    }
+
+    .product-description {
+        border-top: 1px solid #DFE0E1;
+        padding-top: 15px;
+        margin-top: 20px;
+    }
+
+    .orders-date {
+        width: 48px;
+    }
+
+    .profile .logout-block .dx-button {
+        width: 140px;
+        position: absolute;
+        top: 65px;
+        left: 155px;
+    }
+
+    .cart-standard-small {
+        display: block;
+        margin: 0 10px 20px;
+    }
+
+    .dx-viewport.dx-theme-generic .profile-block .dx-fieldset {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
