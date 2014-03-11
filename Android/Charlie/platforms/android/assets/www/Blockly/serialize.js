@@ -6,7 +6,7 @@
 function save(n){
 
     if (n == null) {
-        n = navigator.notification.prompt("Save as ",'s'+localStorage.length);
+        n = window.prompt("Save as ",'s'+localStorage.length); //navigator.notification.prompt(
 
         if (n==null) return false;
     }
@@ -28,7 +28,7 @@ function load(n){
             n = storedName;
         }
         text += "Load program name: ";
-        n = navigator.notification.prompt(text,n);
+        n = window.prompt(text,n);
 
         if (n==null) return false;
     }

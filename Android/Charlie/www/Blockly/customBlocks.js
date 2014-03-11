@@ -90,17 +90,23 @@ Blockly.Python['read_infrared'] = function(block) {
 };
 
 
-Blockly.Blocks[''] = {
+Blockly.Blocks['wait'] = {
     init: function() {
         this.setHelpUrl('http://www.example.com/');
         this.appendDummyInput()
-            .appendField("Stop motors");
+            .appendField("Wait")
+        this.appendValueInput("timeD")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("miliseconds");
+        this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip('');
     }
 };
 
-Blockly.Python['stop_motors'] = function(block) {
-    return 'stopMotors()\n';
+Blockly.Python['wait'] = function(block) {
+    var value_wait = Blockly.Python.valueToCode(block, 'timeD', Blockly.Python.ORDER_ATOMIC);
+    return 'wait('+value_wait+')\n';
 };

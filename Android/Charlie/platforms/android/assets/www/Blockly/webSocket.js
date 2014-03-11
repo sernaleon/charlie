@@ -2,12 +2,9 @@
  * Created by monkey on 26/02/14.
  */
 
-
-HOST = "ws://" + SERVER_IP + ":"+WEBSERVER_PORT;
-
 function sendToRaspi(){
     var code = Blockly.Python.workspaceToCode()
-    var websocket = new WebSocket(HOST);
+    var websocket = new WebSocket(WEBHOST);
 
     websocket.onopen = function(evt) {
         console.log("connected\n");

@@ -1,6 +1,2 @@
-"C:\Python27\python.exe" "C:\Users\monkey\Dropbox\Asignaturas\0. SI\RaspberryScripts\websocket.py"
-
-
-
-"C:\Python27\python.exe" "C:\Users\monkey\Dropbox\Asignaturas\0. SI\RaspberryScripts\WebSocket\SimpleExampleServer.py"
+C:\Users\monkey\Dropbox\Asignaturas\0. SI\Raspberry>"C:\Python27\python.exe" "C:\Users\monkey\Dropbox\Asignaturas\0. SI\Raspberry\websocket.py"
 

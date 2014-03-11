@@ -15,37 +15,48 @@
     <script type="text/javascript" src="js/values.js"></script>
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8">
+        
         function loadCamFrame(){
            document.getElementById('camframe').src =  "http://"+SERVER_IP+":"+SERVER_CAM_PORT+"/";
         }
 
-
-        // El identificador del visor de aceleracion `watchAcceleration`
         var watchID = null;
+        var websocket = null;
 
-        // Espera a que PhoneGap se inicie
-        //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap esta listo
-        //
         function onDeviceReady() {
             document.getElementById('accelerometer').innerHTML = "Waiting for accelerometer";
-            startWatch();
+            connectWS();
         }
 
-        // Empieza a observar la aceleracion
-        //
+        function connectWS(){
+            websocket = new WebSocket(WEBHOST);
+
+            websocket.onopen = function(evt) {
+                startWatch()
+            };
+
+            websocket.onerror = function(evt) {
+                websocket.close();
+                connectWS();
+            };
+        }
+
         function startWatch() {
-
-            // Actualizar cada 3 segundos
             var options = { frequency: ACCELEROMETER_FREQUENCY };
-
-            watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+            watchID = navigator.accelerometer.watchAcceleration(onAccelerometerChanged, onAccelerometerError, options);
         }
 
-        // Dejar de observar la aceleracion
-        //
+        function onAccelerometerChanged(acceleration) {
+            var element = document.getElementById('accelerometer');
+            element.innerHTML = 'X: '  + acceleration.x + '<br />' +
+                    'Y: '  + acceleration.y + '<br />' +
+                    'Z: '  + acceleration.z + '<br />' +
+                    'Timestamp: '      + acceleration.timestamp + '<br />';
+            websocket.send(acceleration.x+";"+acceleration.y+";"+acceleration.z+";"+acceleration.timestamp)
+        }
+
         function stopWatch() {
             if (watchID) {
                 navigator.accelerometer.clearWatch(watchID);
@@ -53,21 +64,18 @@
             }
         }
 
-        // onSuccess: Obtiene el resultado
-        //
-        function onSuccess(acceleration) {
-            var element = document.getElementById('accelerometer');
-            element.innerHTML = 'Aceleracion X: '  + acceleration.x + '<br />' +
-                    'Aceleración Y: '  + acceleration.y + '<br />' +
-                    'Aceleración Z: '  + acceleration.z + '<br />' +
-                    'Timestamp: '      + acceleration.timestamp + '<br />';
+        function disconnectWS(){
+            websocket.close();
         }
 
-        // onError: Ocurrio un error
-        //
-        function onError() {
+
+
+
+        function onAccelerometerError() {
             alert('onError!');
         }
+
+
 
     </script>
 </head>
