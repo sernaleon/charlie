@@ -83,7 +83,7 @@ h1 {
     text-align:center;
 }
 
-.event, .btStd  {
+.event  {
     border-radius:4px;
     -webkit-border-radius:4px;
     color:#FFFFFF;
@@ -92,9 +92,19 @@ h1 {
     padding:2px 0px;
 }
 
-.event.listening, .btStd  {
+.event.listening  {
     background-color:#333333;
     display:block;
+}
+
+.button, .btStd {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:24px;
+    margin:5px 30px;
+    padding:2px 0px;
+    background-color:#333333;
 }
 
 .event.received{

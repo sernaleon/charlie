@@ -3,8 +3,14 @@ from threading import Thread
 
 sock = socket.socket() 
 sock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM) 
-sock.bind(('192.168.0.123', 5000)) 
-ser = serial.Serial('/dev/ttyACM0',9600) 
+#sock.bind(('192.168.0.123', 5000)) 
+sock.bind(('', 5000)) 
+#ser = serial.Serial('/dev/ttyACM0',9600) 
+
+DUE_PORT = 'COM7' #'/dev/ttyACM0'
+DUE_BAUDS = 9600
+ser = serial.Serial(DUE_PORT,DUE_BAUDS) 
+
 
 lastReceived = -1 
 remoteIP = None 

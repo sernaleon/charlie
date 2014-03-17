@@ -33,10 +33,10 @@ Raspi
 
 Android
 
-- Portar web a android		- 1h
+- Portar web a android		- 1h DONE!
 - (bonus) migrar todo el proyecto - 15h
 - Blockly
-	Delay/slee/wait		- 10m
+	Delay/slee/wait		- 10m DONE!
 	
 
 Para la siguiente (última) iteración

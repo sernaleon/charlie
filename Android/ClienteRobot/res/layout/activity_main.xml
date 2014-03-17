@@ -5,6 +5,20 @@
     android:keepScreenOn="true"
     android:orientation="horizontal" >
 
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="" >
+    </EditText>
+
+    <Button
+        android:id="@+id/btChangeIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change IP" />
+
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
@@ -85,8 +99,8 @@
     
     <WebView
         android:id="@+id/webView"
-        android:layout_width="320dp"
-        android:layout_height="240dp" />
+        android:layout_width="160dp"
+        android:layout_height="120dp" />
     
     	<TableLayout
     		android:layout_width="fill_parent"
@@ -95,13 +109,13 @@
     		
     	      <TableRow 
         android:id="@+id/tableRow5"
-        android:layout_width="300dp"
-        android:layout_height="300dp">
+        android:layout_width="150dp"
+        android:layout_height="150dp">
        
         <Button
         android:id="@+id/buttonMove"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:text="@string/start" />
     
    </TableRow>

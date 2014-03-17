@@ -1,1 +1,9 @@
-{"prepare_queue":{"installed":[],"uninstalled":[]},"config_munge":{"res/xml/config.xml":{"/*":{"<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>":1}}},"installed_plugins":{"org.apache.cordova.device-motion":{"PACKAGE_NAME":"es.sernaleon.charlie"}},"dependent_plugins":{}}
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {},
+    "installed_plugins": {},
+    "dependent_plugins": {}
+}

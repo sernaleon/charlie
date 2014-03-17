@@ -1,4 +1,4 @@
-import signal, sys, ssl, logging
+import sys, struct, serial, signal, ssl, logging 
 from SimpleWebSocketServer import WebSocket, SimpleWebSocketServer, SimpleSSLWebSocketServer
 from optparse import OptionParser
 
@@ -7,6 +7,10 @@ logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
 SERVER_IP = ''
 WS_PORT = 8000
 
+DUE_PORT = 'COM7' #'/dev/ttyACM0'
+DUE_BAUDS = 9600
+
+
 class SimpleEcho(WebSocket):
 
 	def handleMessage(self):
@@ -14,10 +18,18 @@ class SimpleEcho(WebSocket):
 			self.data = ''                            
 		
 		try:
-			print str(self.data)
-			#self.sendMessage(str(self.data))
+			msg = str(self.data)
+			
+			if len(msg) == 3:
+				cmd = struct.unpack('B', msg[0])[0]
+				p1 = struct.unpack('B', msg[1])[0]
+				p2 = struct.unpack('B', msg[2])[0]
+				print cmd, p1,p2
+				ser.write(msg)
+			else:
+				print msg
 		except Exception as n:
-			print n
+			print "Err: ", n
 			
 	def handleConnected(self):
 		print self.address, 'connected'
@@ -40,6 +52,8 @@ if __name__ == "__main__":
 	(options, args) = parser.parse_args()
 
 	cls = SimpleEcho
+	
+	ser = serial.Serial(DUE_PORT,DUE_BAUDS) 
 
 	if options.ssl == 1:
 		server = SimpleSSLWebSocketServer(options.host, options.port, cls, options.cert, options.cert, version=options.ver)

@@ -2,15 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <script type="text/javascript" src="phonegap.js"></script>
-      <script type="text/javascript" src="../js/values.js"></script>
+
+      <!--<script type="text/javascript" src="phonegap.js"></script>-->
+
     <script type="text/javascript" src="Blockly/blockly_compressed.js"></script>
     <script type="text/javascript" src="Blockly/blocks_compressed.js"></script>
     <script type="text/javascript" src="Blockly/msg/js/en.js"></script>
       <script type="text/javascript" src="Blockly/python_compressed.js"></script>
       <script type="text/javascript" src="customBlocks.js"></script>
-      <script type="text/javascript" src="webSocket.js"></script>
-      <script type="text/javascript" src="serialize.js"></script>
     <style>
       html, body {
         background-color: #fff;
@@ -23,20 +22,56 @@
         height: 100%;
         width: 100%;
       }
+
+      .button, .btStd {
+          border-radius:4px;
+          -webkit-border-radius:4px;
+          color:#222;
+          font-size:15px;
+          margin:10px 30px;
+          padding:10px 10px;
+          background-color:#eee;
+          border: 1px solid #ddd;
+      }
+        a {
+            text-decoration: none;
+            color:white;
+            font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+        }
     </style>
     <script>
       function init() {
         Blockly.inject(document.body,
             {path: 'Blockly/', toolbox: document.getElementById('toolbox')});
+
+          window.parent.blocklyLoaded(Blockly);
+
+//
+//          document.getElementById('btSend').onclick = sendToRaspi;
+//          document.getElementById('btSave').onclick = save;
+//          document.getElementById('btLoad').onclick = load;
+//          document.getElementById('test').onclick = tedst;
       }
     </script>
   </head>
   <body onload="init()">
 
-  <button onclick="javascript:sendToRaspi();">Execute</button>
-  <button onclick="javascript:save();">Save</button>
-  <button onclick="javascript:load();">Load</button>
+  <!--
+  <a  class="button" href="#" id="btSend">Execute</a>
+  <a class="button" href="#" id="btSave">Save</a>
+  <a class="button" href="#" id="btLoad">Load</a>
+  <a class="button" href="#" id="test">t</a>
 
+    <a class="button" href="javascript:test();" >TEST1223</a>
+    <form onclick="test(); return false;"><input type="submit" value="t"> </form>
+    <form ontap="test();"><input type="submit" value="td"> </form>
+    <button onclick="alert('hoo');">ds</button>
+
+    <button ontap="javascript:sendToRaspi();">Execute</button>
+    <button ontap="javascript:save();">Save</button>
+    <button ontap="javascript:load();">Load</button>
+
+  -->
   <xml id="toolbox" style="display: none">
     <category name="Logic">
       <block type="controls_if"></block>

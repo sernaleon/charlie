@@ -25,15 +25,30 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+
+
+        <script>
+            function init() {
+                document.getElementById('test').onclick = test;
+            }
+
+
+            function test(){
+                alert("miijij")
+            }
+        </script>
+
     </head>
-    <body>
+    <body onload="init()">
         <div class="app">
-            <h1>PhoneGap</h1>
+            <h1>CHARLIE</h1>
+            <br/>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
 
+            <br/>
             <br/>
             <div class="btStd">
                 <a class="blink" href="Blockly/blocklyIndex.html">Scripts</a>
@@ -42,6 +57,11 @@
             <div class="btStd">
                 <a href="drive.html">Drive</a>
             </div>
+
+            <br/>
+            <!--
+            <a class="button" href="#" id="test">t</a>
+            -->
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

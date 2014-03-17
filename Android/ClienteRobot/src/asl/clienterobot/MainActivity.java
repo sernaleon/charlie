@@ -11,7 +11,9 @@ import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements SensorEventListener 
 {
@@ -22,9 +24,12 @@ public class MainActivity extends Activity implements SensorEventListener
 	Button buttonMove;
 	Button buttonBeep;
 	Button buttonCamera;
+	Button btIP;
 	
 	SensorManager manager;
 	Sensor orientationSensor;
+	
+	EditText et;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -56,7 +61,27 @@ public class MainActivity extends Activity implements SensorEventListener
 		//Creates instance to robot functions
 		robotFunctions = new RobotFunctions();
         isMoving = false;
+        
+
+        //Sets beep button
+        et = (EditText) findViewById(R.id.editText1);
+        et.setText(GlobalValues.SERVER_IP);
+        
+        //Sets camera button
+        btIP = (Button)findViewById(R.id.btChangeIP);
+        btIP.setOnClickListener(btnIP);
     }
+    
+    View.OnClickListener btnIP = new View.OnClickListener() {
+    	public void onClick(View v) 
+    	{
+    		GlobalValues.SERVER_IP = et.getText().toString();
+    		
+
+    		Toast toast = Toast.makeText(getApplicationContext(), GlobalValues.SERVER_IP, Toast.LENGTH_LONG);
+    		toast.show();
+    	}
+    };
     
     private void activateSensors()
     {
