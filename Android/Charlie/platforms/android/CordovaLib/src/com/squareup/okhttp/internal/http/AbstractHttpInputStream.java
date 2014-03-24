@@ -79,11 +79,11 @@ abstract class AbstractHttpInputStream extends InputStream {
    * Closes the cache entry and makes the socket available for reuse. This
    * should be invoked when the end of the body has been reached.
    */
-  protected final void endOfInput() throws IOException {
+  protected final void endOfInput(boolean streamCancelled) throws IOException {
     if (cacheRequest != null) {
       cacheBody.close();
     }
-    httpEngine.release(false);
+    httpEngine.release(streamCancelled);
   }
 
   /**

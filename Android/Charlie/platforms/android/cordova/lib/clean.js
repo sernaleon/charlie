@@ -19,17 +19,16 @@
        under the License.
 */
 
-var build = require('./build'),
-    spawn = require('./spawn'),
-    path  = require('path');
+var exec  = require('./exec'),
+    path  = require('path'),
+    ROOT = path.join(__dirname, '..', '..');
 
 /*
  * Cleans the project using ant
  * Returns a promise.
  */
 module.exports.run = function() {
-    var args = build.getAntArgs('clean');
-    return spawn('ant', args);
+    return exec('ant clean -f "' + path.join(ROOT, 'build.xml') + '"');
 }
 
 module.exports.help = function() {

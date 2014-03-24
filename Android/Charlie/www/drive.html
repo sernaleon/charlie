@@ -43,8 +43,8 @@
             websocket = new WebSocket(WEBHOST);
 
             websocket.onopen = function(evt) {
-                //document.getElementById('accelerometer').innerHTML = "Connected. Ready to start"
-                startWatch()
+                document.getElementById('accelerometer').innerHTML = "Connected. Ready to start"
+                //startWatch()
             };
 
             websocket.onerror = function(evt) {
@@ -72,9 +72,10 @@
             //websocket.send(acceleration.x+";"+acceleration.y+";"+acceleration.z+";"+acceleration.timestamp)
         }
 
+
         function formatAcceleration(acceleration){
             var res = new Uint8Array(3)
-            res[0] = CMD_MOVE_FORWARD
+            res[0] = CMD_MOVE_FORWARD;
             res[1] = map(acceleration.x * 100,0,1000,255,0)
             res[2] = map(acceleration.y * 100,-1000,1000,0,255)
             return res
@@ -91,18 +92,23 @@
             websocket.close();
         }
 
+
+
+
         function onAccelerometerError() {
             alert('onError!');
         }
 
+
         function stopCharlie(){
             var msg = new Uint8Array(3)
-            msg[0] = CMD_STOP
+            msg[0] = CMD_STOP;
             msg[1] = CMD_NOPARAM
             msg[2] = CMD_NOPARAM
             websocket.send(msg)
             stopWatch()
         }
+
 
     </script>
 </head>
@@ -113,6 +119,8 @@
 <iframe id="camframe" onload="loadCamFrame();"></iframe>
 
 <script>
+
+
     document.getElementById('btStop').onclick = stopCharlie;
     document.getElementById('btStart').onclick = startWatch;
 </script>

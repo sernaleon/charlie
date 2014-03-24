@@ -19,7 +19,6 @@ import com.squareup.okhttp.Address;
 import com.squareup.okhttp.Connection;
 import com.squareup.okhttp.ConnectionPool;
 import com.squareup.okhttp.Route;
-import com.squareup.okhttp.RouteDatabase;
 import com.squareup.okhttp.internal.Dns;
 import java.io.IOException;
 import java.net.InetAddress;
@@ -33,6 +32,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Set;
+import javax.net.ssl.SSLHandshakeException;
 
 import static com.squareup.okhttp.internal.Util.getEffectivePort;
 
@@ -54,7 +55,7 @@ public final class RouteSelector {
   private final ProxySelector proxySelector;
   private final ConnectionPool pool;
   private final Dns dns;
-  private final RouteDatabase routeDatabase;
+  private final Set<Route> failedRoutes;
 
   /* The most recently attempted route. */
   private Proxy lastProxy;
@@ -77,13 +78,13 @@ public final class RouteSelector {
   private final List<Route> postponedRoutes;
 
   public RouteSelector(Address address, URI uri, ProxySelector proxySelector, ConnectionPool pool,
-      Dns dns, RouteDatabase routeDatabase) {
+      Dns dns, Set<Route> failedRoutes) {
     this.address = address;
     this.uri = uri;
     this.proxySelector = proxySelector;
     this.pool = pool;
     this.dns = dns;
-    this.routeDatabase = routeDatabase;
+    this.failedRoutes = failedRoutes;
     this.postponedRoutes = new LinkedList<Route>();
 
     resetNextProxy(uri, address.getProxy());
@@ -102,11 +103,11 @@ public final class RouteSelector {
    *
    * @throws NoSuchElementException if there are no more routes to attempt.
    */
-  public Connection next(String method) throws IOException {
+  public Connection next() throws IOException {
     // Always prefer pooled connections over new connections.
-    for (Connection pooled; (pooled = pool.get(address)) != null; ) {
-      if (method.equals("GET") || pooled.isReadable()) return pooled;
-      pooled.close();
+    Connection pooled = pool.get(address);
+    if (pooled != null) {
+      return pooled;
     }
 
     // Compute the next route to attempt.
@@ -127,11 +128,11 @@ public final class RouteSelector {
 
     boolean modernTls = nextTlsMode() == TLS_MODE_MODERN;
     Route route = new Route(address, lastProxy, lastInetSocketAddress, modernTls);
-    if (routeDatabase.shouldPostpone(route)) {
+    if (failedRoutes.contains(route)) {
       postponedRoutes.add(route);
       // We will only recurse in order to skip previously failed routes. They will be
       // tried last.
-      return next(method);
+      return next();
     }
 
     return new Connection(route);
@@ -148,7 +149,12 @@ public final class RouteSelector {
       proxySelector.connectFailed(uri, failedRoute.getProxy().address(), failure);
     }
 
-    routeDatabase.failed(failedRoute, failure);
+    failedRoutes.add(failedRoute);
+    if (!(failure instanceof SSLHandshakeException)) {
+      // If the problem was not related to SSL then it will also fail with
+      // a different Tls mode therefore we can be proactive about it.
+      failedRoutes.add(failedRoute.flipTlsMode());
+    }
   }
 
   /** Resets {@link #nextProxy} to the first option. */

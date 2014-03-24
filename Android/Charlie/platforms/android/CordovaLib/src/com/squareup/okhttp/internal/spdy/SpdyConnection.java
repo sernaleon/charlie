@@ -32,6 +32,8 @@ import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import static java.util.concurrent.Executors.defaultThreadFactory;
+
 /**
  * A socket connection to a remote peer. A connection hosts streams which can
  * send and receive data.
@@ -46,21 +48,38 @@ public final class SpdyConnection implements Closeable {
   // Internal state of this connection is guarded by 'this'. No blocking
   // operations may be performed while holding this lock!
   //
-  // Socket writes are guarded by frameWriter.
+  // Socket writes are guarded by spdyWriter.
   //
   // Socket reads are unguarded but are only made by the reader thread.
   //
   // Certain operations (like SYN_STREAM) need to synchronize on both the
-  // frameWriter (to do blocking I/O) and this (to create streams). Such
+  // spdyWriter (to do blocking I/O) and this (to create streams). Such
   // operations must synchronize on 'this' last. This ensures that we never
   // wait for a blocking operation while holding 'this'.
 
-  private static final ExecutorService executor = new ThreadPoolExecutor(0,
-      Integer.MAX_VALUE, 60, TimeUnit.SECONDS, new SynchronousQueue<Runnable>(),
-      Util.daemonThreadFactory("OkHttp SpdyConnection"));
+  static final int FLAG_FIN = 0x1;
+  static final int FLAG_UNIDIRECTIONAL = 0x2;
 
-  /** The protocol variant, like SPDY/3 or HTTP-draft-06/2.0. */
-  final Variant variant;
+  static final int TYPE_DATA = 0x0;
+  static final int TYPE_SYN_STREAM = 0x1;
+  static final int TYPE_SYN_REPLY = 0x2;
+  static final int TYPE_RST_STREAM = 0x3;
+  static final int TYPE_SETTINGS = 0x4;
+  static final int TYPE_NOOP = 0x5;
+  static final int TYPE_PING = 0x6;
+  static final int TYPE_GOAWAY = 0x7;
+  static final int TYPE_HEADERS = 0x8;
+  static final int TYPE_WINDOW_UPDATE = 0x9;
+  static final int TYPE_CREDENTIAL = 0x10;
+  static final int VERSION = 3;
+
+  static final int GOAWAY_OK = 0;
+  static final int GOAWAY_PROTOCOL_ERROR = 1;
+  static final int GOAWAY_INTERNAL_ERROR = 2;
+
+  private static final ExecutorService executor =
+      new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60, TimeUnit.SECONDS,
+          new SynchronousQueue<Runnable>(), defaultThreadFactory());
 
   /** True if this peer initiated the connection. */
   final boolean client;
@@ -70,8 +89,8 @@ public final class SpdyConnection implements Closeable {
    * run on the callback executor.
    */
   private final IncomingStreamHandler handler;
-  private final FrameReader frameReader;
-  private final FrameWriter frameWriter;
+  private final SpdyReader spdyReader;
+  private final SpdyWriter spdyWriter;
 
   private final Map<Integer, SpdyStream> streams = new HashMap<Integer, SpdyStream>();
   private final String hostName;
@@ -84,15 +103,14 @@ public final class SpdyConnection implements Closeable {
   private Map<Integer, Ping> pings;
   private int nextPingId;
 
-  /** Lazily-created settings for the peer. */
+  /** Lazily-created settings for this connection. */
   Settings settings;
 
   private SpdyConnection(Builder builder) {
-    variant = builder.variant;
     client = builder.client;
     handler = builder.handler;
-    frameReader = variant.newReader(builder.in, client);
-    frameWriter = variant.newWriter(builder.out, client);
+    spdyReader = new SpdyReader(builder.in);
+    spdyWriter = new SpdyWriter(builder.out);
     nextStreamId = builder.client ? 1 : 2;
     nextPingId = builder.client ? 1 : 2;
 
@@ -122,18 +140,15 @@ public final class SpdyConnection implements Closeable {
   }
 
   private synchronized void setIdle(boolean value) {
-    idleStartTimeNs = value ? System.nanoTime() : Long.MAX_VALUE;
+    idleStartTimeNs = value ? System.nanoTime() : 0L;
   }
 
   /** Returns true if this connection is idle. */
   public synchronized boolean isIdle() {
-    return idleStartTimeNs != Long.MAX_VALUE;
+    return idleStartTimeNs != 0L;
   }
 
-  /**
-   * Returns the time in ns when this connection became idle or Long.MAX_VALUE
-   * if connection is not idle.
-   */
+  /** Returns the time in ns when this connection became idle or 0L if connection is not idle. */
   public synchronized long getIdleStartTimeNs() {
     return idleStartTimeNs;
   }
@@ -142,80 +157,80 @@ public final class SpdyConnection implements Closeable {
    * Returns a new locally-initiated stream.
    *
    * @param out true to create an output stream that we can use to send data
-   *     to the remote peer. Corresponds to {@code FLAG_FIN}.
+   * to the remote peer. Corresponds to {@code FLAG_FIN}.
    * @param in true to create an input stream that the remote peer can use to
-   *     send data to us. Corresponds to {@code FLAG_UNIDIRECTIONAL}.
+   * send data to us. Corresponds to {@code FLAG_UNIDIRECTIONAL}.
    */
   public SpdyStream newStream(List<String> requestHeaders, boolean out, boolean in)
       throws IOException {
-    boolean outFinished = !out;
-    boolean inFinished = !in;
+    int flags = (out ? 0 : FLAG_FIN) | (in ? 0 : FLAG_UNIDIRECTIONAL);
     int associatedStreamId = 0;  // TODO: permit the caller to specify an associated stream?
     int priority = 0; // TODO: permit the caller to specify a priority?
     int slot = 0; // TODO: permit the caller to specify a slot?
     SpdyStream stream;
     int streamId;
 
-    synchronized (frameWriter) {
+    synchronized (spdyWriter) {
       synchronized (this) {
         if (shutdown) {
           throw new IOException("shutdown");
         }
         streamId = nextStreamId;
         nextStreamId += 2;
-        stream = new SpdyStream(
-            streamId, this, outFinished, inFinished, priority, requestHeaders, settings);
+        stream = new SpdyStream(streamId, this, flags, priority, slot, requestHeaders, settings);
         if (stream.isOpen()) {
           streams.put(streamId, stream);
           setIdle(false);
         }
       }
 
-      frameWriter.synStream(outFinished, inFinished, streamId, associatedStreamId, priority, slot,
-          requestHeaders);
+      spdyWriter.synStream(flags, streamId, associatedStreamId, priority, slot, requestHeaders);
     }
 
     return stream;
   }
 
-  void writeSynReply(int streamId, boolean outFinished, List<String> alternating)
-      throws IOException {
-    frameWriter.synReply(outFinished, streamId, alternating);
+  void writeSynReply(int streamId, int flags, List<String> alternating) throws IOException {
+    spdyWriter.synReply(flags, streamId, alternating);
   }
 
-  public void writeData(int streamId, boolean outFinished, byte[] buffer, int offset, int byteCount)
-      throws IOException {
-    frameWriter.data(outFinished, streamId, buffer, offset, byteCount);
+  /** Writes a complete data frame. */
+  void writeFrame(byte[] bytes, int offset, int length) throws IOException {
+    synchronized (spdyWriter) {
+      spdyWriter.out.write(bytes, offset, length);
+    }
   }
 
-  void writeSynResetLater(final int streamId, final ErrorCode errorCode) {
-    executor.submit(new NamedRunnable("OkHttp SPDY Writer %s stream %d", hostName, streamId) {
-      @Override public void execute() {
-        try {
-          writeSynReset(streamId, errorCode);
-        } catch (IOException ignored) {
-        }
-      }
-    });
+  void writeSynResetLater(final int streamId, final int statusCode) {
+    executor.submit(
+        new NamedRunnable(String.format("Spdy Writer %s stream %d", hostName, streamId)) {
+          @Override public void execute() {
+            try {
+              writeSynReset(streamId, statusCode);
+            } catch (IOException ignored) {
+            }
+          }
+        });
   }
 
-  void writeSynReset(int streamId, ErrorCode statusCode) throws IOException {
-    frameWriter.rstStream(streamId, statusCode);
+  void writeSynReset(int streamId, int statusCode) throws IOException {
+    spdyWriter.rstStream(streamId, statusCode);
   }
 
   void writeWindowUpdateLater(final int streamId, final int deltaWindowSize) {
-    executor.submit(new NamedRunnable("OkHttp SPDY Writer %s stream %d", hostName, streamId) {
-      @Override public void execute() {
-        try {
-          writeWindowUpdate(streamId, deltaWindowSize);
-        } catch (IOException ignored) {
-        }
-      }
-    });
+    executor.submit(
+        new NamedRunnable(String.format("Spdy Writer %s stream %d", hostName, streamId)) {
+          @Override public void execute() {
+            try {
+              writeWindowUpdate(streamId, deltaWindowSize);
+            } catch (IOException ignored) {
+            }
+          }
+        });
   }
 
   void writeWindowUpdate(int streamId, int deltaWindowSize) throws IOException {
-    frameWriter.windowUpdate(streamId, deltaWindowSize);
+    spdyWriter.windowUpdate(streamId, deltaWindowSize);
   }
 
   /**
@@ -234,28 +249,26 @@ public final class SpdyConnection implements Closeable {
       if (pings == null) pings = new HashMap<Integer, Ping>();
       pings.put(pingId, ping);
     }
-    writePing(false, pingId, 0x4f4b6f6b /* ASCII "OKok" */, ping);
+    writePing(pingId, ping);
     return ping;
   }
 
-  private void writePingLater(
-      final boolean reply, final int payload1, final int payload2, final Ping ping) {
-    executor.submit(new NamedRunnable("OkHttp SPDY Writer %s ping %08x%08x",
-        hostName, payload1, payload2) {
+  private void writePingLater(final int streamId, final Ping ping) {
+    executor.submit(new NamedRunnable(String.format("Spdy Writer %s ping %d", hostName, streamId)) {
       @Override public void execute() {
         try {
-          writePing(reply, payload1, payload2, ping);
+          writePing(streamId, ping);
         } catch (IOException ignored) {
         }
       }
     });
   }
 
-  private void writePing(boolean reply, int payload1, int payload2, Ping ping) throws IOException {
-    synchronized (frameWriter) {
+  private void writePing(int id, Ping ping) throws IOException {
+    synchronized (spdyWriter) {
       // Observe the sent time immediately before performing I/O.
       if (ping != null) ping.send();
-      frameWriter.ping(reply, payload1, payload2);
+      spdyWriter.ping(0, id);
     }
   }
 
@@ -265,11 +278,13 @@ public final class SpdyConnection implements Closeable {
 
   /** Sends a noop frame to the peer. */
   public void noop() throws IOException {
-    frameWriter.noop();
+    spdyWriter.noop();
   }
 
   public void flush() throws IOException {
-    frameWriter.flush();
+    synchronized (spdyWriter) {
+      spdyWriter.out.flush();
+    }
   }
 
   /**
@@ -277,9 +292,12 @@ public final class SpdyConnection implements Closeable {
    * locally, nor accepted from the remote peer. Existing streams are not
    * impacted. This is intended to permit an endpoint to gracefully stop
    * accepting new requests without harming previously established streams.
+   *
+   * @param statusCode one of {@link #GOAWAY_OK}, {@link
+   * #GOAWAY_INTERNAL_ERROR} or {@link #GOAWAY_PROTOCOL_ERROR}.
    */
-  public void shutdown(ErrorCode statusCode) throws IOException {
-    synchronized (frameWriter) {
+  public void shutdown(int statusCode) throws IOException {
+    synchronized (spdyWriter) {
       int lastGoodStreamId;
       synchronized (this) {
         if (shutdown) {
@@ -288,7 +306,7 @@ public final class SpdyConnection implements Closeable {
         shutdown = true;
         lastGoodStreamId = this.lastGoodStreamId;
       }
-      frameWriter.goAway(lastGoodStreamId, statusCode);
+      spdyWriter.goAway(0, lastGoodStreamId, statusCode);
     }
   }
 
@@ -298,14 +316,14 @@ public final class SpdyConnection implements Closeable {
    * internal executor services.
    */
   @Override public void close() throws IOException {
-    close(ErrorCode.NO_ERROR, ErrorCode.CANCEL);
+    close(GOAWAY_OK, SpdyStream.RST_CANCEL);
   }
 
-  private void close(ErrorCode connectionCode, ErrorCode streamCode) throws IOException {
+  private void close(int shutdownStatusCode, int rstStatusCode) throws IOException {
     assert (!Thread.holdsLock(this));
     IOException thrown = null;
     try {
-      shutdown(connectionCode);
+      shutdown(shutdownStatusCode);
     } catch (IOException e) {
       thrown = e;
     }
@@ -327,7 +345,7 @@ public final class SpdyConnection implements Closeable {
     if (streamsToClose != null) {
       for (SpdyStream stream : streamsToClose) {
         try {
-          stream.close(streamCode);
+          stream.close(rstStatusCode);
         } catch (IOException e) {
           if (thrown != null) thrown = e;
         }
@@ -341,12 +359,12 @@ public final class SpdyConnection implements Closeable {
     }
 
     try {
-      frameReader.close();
+      spdyReader.close();
     } catch (IOException e) {
       thrown = e;
     }
     try {
-      frameWriter.close();
+      spdyWriter.close();
     } catch (IOException e) {
       if (thrown == null) thrown = e;
     }
@@ -354,30 +372,12 @@ public final class SpdyConnection implements Closeable {
     if (thrown != null) throw thrown;
   }
 
-  /**
-   * Sends a connection header if the current variant requires it. This should
-   * be called after {@link Builder#build} for all new connections.
-   */
-  public void sendConnectionHeader() throws IOException {
-    frameWriter.connectionHeader();
-    frameWriter.settings(new Settings());
-  }
-
-  /**
-   * Reads a connection header if the current variant requires it. This should
-   * be called after {@link Builder#build} for all new connections.
-   */
-  public void readConnectionHeader() throws IOException {
-    frameReader.readConnectionHeader();
-  }
-
   public static class Builder {
     private String hostName;
     private InputStream in;
     private OutputStream out;
     private IncomingStreamHandler handler = IncomingStreamHandler.REFUSE_INCOMING_STREAMS;
-    private Variant variant = Variant.SPDY3;
-    private boolean client;
+    public boolean client;
 
     public Builder(boolean client, Socket socket) throws IOException {
       this("", client, socket.getInputStream(), socket.getOutputStream());
@@ -411,119 +411,110 @@ public final class SpdyConnection implements Closeable {
       return this;
     }
 
-    public Builder spdy3() {
-      this.variant = Variant.SPDY3;
-      return this;
-    }
-
-    public Builder http20Draft06() {
-      this.variant = Variant.HTTP_20_DRAFT_06;
-      return this;
-    }
-
     public SpdyConnection build() {
       return new SpdyConnection(this);
     }
   }
 
-  private class Reader implements Runnable, FrameReader.Handler {
+  private class Reader implements Runnable, SpdyReader.Handler {
     @Override public void run() {
-      ErrorCode connectionErrorCode = ErrorCode.INTERNAL_ERROR;
-      ErrorCode streamErrorCode = ErrorCode.INTERNAL_ERROR;
+      int shutdownStatusCode = GOAWAY_INTERNAL_ERROR;
+      int rstStatusCode = SpdyStream.RST_INTERNAL_ERROR;
       try {
-        while (frameReader.nextFrame(this)) {
+        while (spdyReader.nextFrame(this)) {
         }
-        connectionErrorCode = ErrorCode.NO_ERROR;
-        streamErrorCode = ErrorCode.CANCEL;
+        shutdownStatusCode = GOAWAY_OK;
+        rstStatusCode = SpdyStream.RST_CANCEL;
       } catch (IOException e) {
-        connectionErrorCode = ErrorCode.PROTOCOL_ERROR;
-        streamErrorCode = ErrorCode.PROTOCOL_ERROR;
+        shutdownStatusCode = GOAWAY_PROTOCOL_ERROR;
+        rstStatusCode = SpdyStream.RST_PROTOCOL_ERROR;
       } finally {
         try {
-          close(connectionErrorCode, streamErrorCode);
+          close(shutdownStatusCode, rstStatusCode);
         } catch (IOException ignored) {
         }
       }
     }
 
-    @Override public void data(boolean inFinished, int streamId, InputStream in, int length)
+    @Override public void data(int flags, int streamId, InputStream in, int length)
         throws IOException {
       SpdyStream dataStream = getStream(streamId);
       if (dataStream == null) {
-        writeSynResetLater(streamId, ErrorCode.INVALID_STREAM);
+        writeSynResetLater(streamId, SpdyStream.RST_INVALID_STREAM);
         Util.skipByReading(in, length);
         return;
       }
       dataStream.receiveData(in, length);
-      if (inFinished) {
+      if ((flags & SpdyConnection.FLAG_FIN) != 0) {
         dataStream.receiveFin();
       }
     }
 
-    @Override public void headers(boolean outFinished, boolean inFinished, int streamId,
-        int associatedStreamId, int priority, List<String> nameValueBlock,
-        HeadersMode headersMode) {
-      SpdyStream stream;
+    @Override
+    public void synStream(int flags, int streamId, int associatedStreamId, int priority, int slot,
+        List<String> nameValueBlock) {
+      final SpdyStream synStream;
+      final SpdyStream previous;
       synchronized (SpdyConnection.this) {
-        // If we're shutdown, don't bother with this stream.
-        if (shutdown) return;
-
-        stream = getStream(streamId);
-
-        if (stream == null) {
-          // The headers claim to be for an existing stream, but we don't have one.
-          if (headersMode.failIfStreamAbsent()) {
-            writeSynResetLater(streamId, ErrorCode.INVALID_STREAM);
-            return;
-          }
-
-          // If the stream ID is less than the last created ID, assume it's already closed.
-          if (streamId <= lastGoodStreamId) return;
-
-          // If the stream ID is in the client's namespace, assume it's already closed.
-          if (streamId % 2 == nextStreamId % 2) return;
-
-          // Create a stream.
-          final SpdyStream newStream = new SpdyStream(streamId, SpdyConnection.this, outFinished,
-              inFinished, priority, nameValueBlock, settings);
-          lastGoodStreamId = streamId;
-          streams.put(streamId, newStream);
-          executor.submit(new NamedRunnable("OkHttp Callback %s stream %d", hostName, streamId) {
-            @Override public void execute() {
-              try {
-                handler.receive(newStream);
-              } catch (IOException e) {
-                throw new RuntimeException(e);
-              }
-            }
-          });
+        synStream =
+            new SpdyStream(streamId, SpdyConnection.this, flags, priority, slot, nameValueBlock,
+                settings);
+        if (shutdown) {
           return;
         }
+        lastGoodStreamId = streamId;
+        previous = streams.put(streamId, synStream);
       }
-
-      // The headers claim to be for a new stream, but we already have one.
-      if (headersMode.failIfStreamPresent()) {
-        stream.closeLater(ErrorCode.PROTOCOL_ERROR);
+      if (previous != null) {
+        previous.closeLater(SpdyStream.RST_PROTOCOL_ERROR);
         removeStream(streamId);
         return;
       }
 
-      // Update an existing stream.
-      stream.receiveHeaders(nameValueBlock, headersMode);
-      if (inFinished) stream.receiveFin();
+      executor.submit(
+          new NamedRunnable(String.format("Callback %s stream %d", hostName, streamId)) {
+        @Override public void execute() {
+          try {
+            handler.receive(synStream);
+          } catch (IOException e) {
+            throw new RuntimeException(e);
+          }
+        }
+      });
     }
 
-    @Override public void rstStream(int streamId, ErrorCode errorCode) {
-      SpdyStream rstStream = removeStream(streamId);
-      if (rstStream != null) {
-        rstStream.receiveRstStream(errorCode);
+    @Override public void synReply(int flags, int streamId, List<String> nameValueBlock)
+        throws IOException {
+      SpdyStream replyStream = getStream(streamId);
+      if (replyStream == null) {
+        writeSynResetLater(streamId, SpdyStream.RST_INVALID_STREAM);
+        return;
+      }
+      replyStream.receiveReply(nameValueBlock);
+      if ((flags & SpdyConnection.FLAG_FIN) != 0) {
+        replyStream.receiveFin();
       }
     }
 
-    @Override public void settings(boolean clearPrevious, Settings newSettings) {
+    @Override public void headers(int flags, int streamId, List<String> nameValueBlock)
+        throws IOException {
+      SpdyStream replyStream = getStream(streamId);
+      if (replyStream != null) {
+        replyStream.receiveHeaders(nameValueBlock);
+      }
+    }
+
+    @Override public void rstStream(int flags, int streamId, int statusCode) {
+      SpdyStream rstStream = removeStream(streamId);
+      if (rstStream != null) {
+        rstStream.receiveRstStream(statusCode);
+      }
+    }
+
+    @Override public void settings(int flags, Settings newSettings) {
       SpdyStream[] streamsToNotify = null;
       synchronized (SpdyConnection.this) {
-        if (settings == null || clearPrevious) {
+        if (settings == null || (flags & Settings.FLAG_CLEAR_PREVIOUSLY_PERSISTED_SETTINGS) != 0) {
           settings = newSettings;
         } else {
           settings.merge(newSettings);
@@ -537,9 +528,8 @@ public final class SpdyConnection implements Closeable {
           // The synchronization here is ugly. We need to synchronize on 'this' to guard
           // reads to 'settings'. We synchronize on 'stream' to guard the state change.
           // And we need to acquire the 'stream' lock first, since that may block.
-          // TODO: this can block the reader thread until a write completes. That's bad!
           synchronized (stream) {
-            synchronized (SpdyConnection.this) {
+            synchronized (this) {
               stream.receiveSettings(settings);
             }
           }
@@ -550,19 +540,19 @@ public final class SpdyConnection implements Closeable {
     @Override public void noop() {
     }
 
-    @Override public void ping(boolean reply, int payload1, int payload2) {
-      if (reply) {
-        Ping ping = removePing(payload1);
+    @Override public void ping(int flags, int streamId) {
+      if (client != (streamId % 2 == 1)) {
+        // Respond to a client ping if this is a server and vice versa.
+        writePingLater(streamId, null);
+      } else {
+        Ping ping = removePing(streamId);
         if (ping != null) {
           ping.receive();
         }
-      } else {
-        // Send a reply to a client ping if this is a server and vice versa.
-        writePingLater(true, payload1, payload2, null);
       }
     }
 
-    @Override public void goAway(int lastGoodStreamId, ErrorCode errorCode) {
+    @Override public void goAway(int flags, int lastGoodStreamId, int statusCode) {
       synchronized (SpdyConnection.this) {
         shutdown = true;
 
@@ -572,28 +562,18 @@ public final class SpdyConnection implements Closeable {
           Map.Entry<Integer, SpdyStream> entry = i.next();
           int streamId = entry.getKey();
           if (streamId > lastGoodStreamId && entry.getValue().isLocallyInitiated()) {
-            entry.getValue().receiveRstStream(ErrorCode.REFUSED_STREAM);
+            entry.getValue().receiveRstStream(SpdyStream.RST_REFUSED_STREAM);
             i.remove();
           }
         }
       }
     }
 
-    @Override public void windowUpdate(int streamId, int deltaWindowSize, boolean endFlowControl) {
-      if (streamId == 0) {
-        // TODO: honor whole-stream flow control
-        return;
-      }
-
-      // TODO: honor endFlowControl
+    @Override public void windowUpdate(int flags, int streamId, int deltaWindowSize) {
       SpdyStream stream = getStream(streamId);
       if (stream != null) {
         stream.receiveWindowUpdate(deltaWindowSize);
       }
-    }
-
-    @Override public void priority(int streamId, int priority) {
-      // TODO: honor priority.
     }
   }
 }

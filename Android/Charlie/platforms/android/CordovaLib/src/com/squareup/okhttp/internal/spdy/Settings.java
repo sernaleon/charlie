@@ -31,29 +31,23 @@ final class Settings {
   static final int PERSISTED = 0x2;
 
   /** Sender's estimate of max incoming kbps. */
-  static final int UPLOAD_BANDWIDTH = 1;
+  static final int UPLOAD_BANDWIDTH = 0x1;
   /** Sender's estimate of max outgoing kbps. */
-  static final int DOWNLOAD_BANDWIDTH = 2;
+  static final int DOWNLOAD_BANDWIDTH = 0x2;
   /** Sender's estimate of milliseconds between sending a request and receiving a response. */
-  static final int ROUND_TRIP_TIME = 3;
+  static final int ROUND_TRIP_TIME = 0x3;
   /** Sender's maximum number of concurrent streams. */
-  static final int MAX_CONCURRENT_STREAMS = 4;
+  static final int MAX_CONCURRENT_STREAMS = 0x4;
   /** Current CWND in Packets. */
-  static final int CURRENT_CWND = 5;
+  static final int CURRENT_CWND = 0x5;
   /** Retransmission rate. Percentage */
-  static final int DOWNLOAD_RETRANS_RATE = 6;
+  static final int DOWNLOAD_RETRANS_RATE = 0x6;
   /** Window size in bytes. */
-  static final int INITIAL_WINDOW_SIZE = 7;
+  static final int INITIAL_WINDOW_SIZE = 0x7;
   /** Window size in bytes. */
-  static final int CLIENT_CERTIFICATE_VECTOR_SIZE = 8;
-  /** Flow control options. */
-  static final int FLOW_CONTROL_OPTIONS = 9;
-
+  static final int CLIENT_CERTIFICATE_VECTOR_SIZE = 0x8;
   /** Total number of settings. */
-  static final int COUNT = 10;
-
-  /** If set, flow control is disabled for streams directed to the sender of these settings. */
-  static final int FLOW_CONTROL_OPTIONS_DISABLED = 0x1;
+  static final int COUNT = 0x9;
 
   /** Bitfield of which flags that values. */
   private int set;
@@ -150,13 +144,6 @@ final class Settings {
   int getClientCertificateVectorSize(int defaultValue) {
     int bit = 1 << CLIENT_CERTIFICATE_VECTOR_SIZE;
     return (bit & set) != 0 ? values[CLIENT_CERTIFICATE_VECTOR_SIZE] : defaultValue;
-  }
-
-  // TODO: honor this setting.
-  boolean isFlowControlDisabled() {
-    int bit = 1 << FLOW_CONTROL_OPTIONS;
-    int value = (bit & set) != 0 ? values[FLOW_CONTROL_OPTIONS] : 0;
-    return (value & FLOW_CONTROL_OPTIONS_DISABLED) != 0;
   }
 
   /**

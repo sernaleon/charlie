@@ -80,9 +80,8 @@ public class ConnectionPool {
   private final LinkedList<Connection> connections = new LinkedList<Connection>();
 
   /** We use a single background thread to cleanup expired connections. */
-  private final ExecutorService executorService = new ThreadPoolExecutor(0, 1,
-      60L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(),
-      Util.daemonThreadFactory("OkHttp ConnectionPool"));
+  private final ExecutorService executorService =
+      new ThreadPoolExecutor(0, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
   private final Callable<Void> connectionsCleanupCallable = new Callable<Void>() {
     @Override public Void call() throws Exception {
       List<Connection> expiredConnections = new ArrayList<Connection>(MAX_CONNECTIONS_TO_CLEANUP);
@@ -216,6 +215,8 @@ public class ConnectionPool {
    * <p>It is an error to use {@code connection} after calling this method.
    */
   public void recycle(Connection connection) {
+    executorService.submit(connectionsCleanupCallable);
+
     if (connection.isSpdy()) {
       return;
     }
@@ -238,8 +239,6 @@ public class ConnectionPool {
       connections.addFirst(connection);
       connection.resetIdleStartTime();
     }
-
-    executorService.submit(connectionsCleanupCallable);
   }
 
   /**

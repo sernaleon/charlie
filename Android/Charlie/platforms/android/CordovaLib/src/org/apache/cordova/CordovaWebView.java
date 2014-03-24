@@ -68,7 +68,7 @@ import android.widget.FrameLayout;
 public class CordovaWebView extends WebView {
 
     public static final String TAG = "CordovaWebView";
-    public static final String CORDOVA_VERSION = "3.4.0";
+    public static final String CORDOVA_VERSION = "3.3.0";
 
     private ArrayList<Integer> keyDownCodes = new ArrayList<Integer>();
     private ArrayList<Integer> keyUpCodes = new ArrayList<Integer>();
@@ -361,13 +361,18 @@ public class CordovaWebView extends WebView {
 
     private void exposeJsInterface() {
         int SDK_INT = Build.VERSION.SDK_INT;
-        if ((SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1)) {
+        boolean isHoneycomb = (SDK_INT >= Build.VERSION_CODES.HONEYCOMB && SDK_INT <= Build.VERSION_CODES.HONEYCOMB_MR2);
+        if (isHoneycomb || (SDK_INT < Build.VERSION_CODES.GINGERBREAD)) {
             Log.i(TAG, "Disabled addJavascriptInterface() bridge since Android version is old.");
             // Bug being that Java Strings do not get converted to JS strings automatically.
             // This isn't hard to work-around on the JS side, but it's easier to just
             // use the prompt bridge instead.
             return;            
-        } 
+        } else if (SDK_INT < Build.VERSION_CODES.HONEYCOMB && Build.MANUFACTURER.equals("unknown")) {
+            // addJavascriptInterface crashes on the 2.3 emulator.
+            Log.i(TAG, "Disabled addJavascriptInterface() bridge callback due to a bug on the 2.3 emulator");
+            return;
+        }
         this.addJavascriptInterface(exposedJsApi, "_cordovaNative");
     }
 
@@ -440,22 +445,17 @@ public class CordovaWebView extends WebView {
         }
     }
 
-    public void loadUrlIntoView(final String url) {
-        loadUrlIntoView(url, true);
-    }
-
     /**
      * Load the url into the webview.
      *
      * @param url
      */
-    public void loadUrlIntoView(final String url, boolean recreatePlugins) {
+    public void loadUrlIntoView(final String url) {
         LOG.d(TAG, ">>> loadUrl(" + url + ")");
 
-        if (recreatePlugins) {
-            this.url = url;
-            this.pluginManager.init();
-        }
+        this.url = url;
+        this.pluginManager.init();
+
 
         // Create a timeout timer for loadUrl
         final CordovaWebView me = this;
@@ -630,24 +630,29 @@ public class CordovaWebView extends WebView {
                 // TODO: What about params?
                 // Load new URL
                 this.loadUrl(url);
-                return;
             }
             // Load in default viewer if not
-            LOG.w(TAG, "showWebPage: Cannot load URL into webview since it is not in white list.  Loading into browser instead. (URL=" + url + ")");
-        }
-        try {
-            // Omitting the MIME type for file: URLs causes "No Activity found to handle Intent".
-            // Adding the MIME type to http: URLs causes them to not be handled by the downloader.
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            Uri uri = Uri.parse(url);
-            if ("file".equals(uri.getScheme())) {
-                intent.setDataAndType(uri, resourceApi.getMimeType(uri));
-            } else {
-                intent.setData(uri);
+            else {
+                LOG.w(TAG, "showWebPage: Cannot load URL into webview since it is not in white list.  Loading into browser instead. (URL=" + url + ")");
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(url));
+                    cordova.getActivity().startActivity(intent);
+                } catch (android.content.ActivityNotFoundException e) {
+                    LOG.e(TAG, "Error loading url " + url, e);
+                }
             }
-            cordova.getActivity().startActivity(intent);
-        } catch (android.content.ActivityNotFoundException e) {
-            LOG.e(TAG, "Error loading url " + url, e);
+        }
+
+        // Load in default view intent
+        else {
+            try {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                cordova.getActivity().startActivity(intent);
+            } catch (android.content.ActivityNotFoundException e) {
+                LOG.e(TAG, "Error loading url " + url, e);
+            }
         }
     }
 
@@ -755,11 +760,11 @@ public class CordovaWebView extends WebView {
                     if (this.backHistory()) {
                         return true;
                     }
-                    // If not, then invoke default behavior
+                    // If not, then invoke default behaviour
                     else {
                         //this.activityState = ACTIVITY_EXITING;
                     	//return false;
-                    	// If they hit back button when app is initializing, app should exit instead of hang until initialization (CB2-458)
+                    	// If they hit back button when app is initializing, app should exit instead of hang until initilazation (CB2-458)
                     	this.cordova.getActivity().finish();
                     }
                 }
@@ -958,7 +963,7 @@ public class CordovaWebView extends WebView {
 
     public void hideCustomView() {
         // This code is adapted from the original Android Browser code, licensed under the Apache License, Version 2.0
-        Log.d(TAG, "Hiding Custom View");
+        Log.d(TAG, "Hidding Custom View");
         if (mCustomView == null) return;
 
         // Hide the custom view.
