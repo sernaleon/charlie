@@ -22,3 +22,14 @@ CMD_MOVE_FORWARD 	    = 1;
 CMD_MOVE_BACKWARD 	    = 2;
 CMD_BEEP			    = 3;
 CMD_LED			        = 4;
+
+
+
+
+//Global utils
+
+function map(x, in_min, in_max, out_min, out_max){
+    if 		(x < in_min) x = in_min;
+    else if 	(x > in_max) x = in_max;
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}

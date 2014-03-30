@@ -13,12 +13,20 @@ module.exports = [
         "clobbers": [
             "navigator.accelerometer"
         ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.toast/www/Toast.js",
+        "id": "nl.x-services.plugins.toast.Toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "org.apache.cordova.device-motion": "0.2.6"
+    "org.apache.cordova.device-motion": "0.2.6",
+    "nl.x-services.plugins.toast": "1.0"
 }
 // BOTTOM OF METADATA
 });
