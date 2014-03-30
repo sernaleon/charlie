@@ -41,27 +41,32 @@
     </head>
     <body onload="init()">
         <div class="app">
-            <h1>CHARLIE</h1>
-            <br/>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+            <div id="btContainer">
+                <div id="heading">
+                    <h1>CHARLIE</h1>
+                    <br/>
 
-            <br/>
-            <br/>
-            <div class="btStd">
-                <a class="blink" href="Blockly/blocklyIndex.html">Scripts</a>
-            </div>
-            <br/>
-            <div class="btStd">
-                <a href="drive.html">Drive</a>
-            </div>
 
-            <br/>
-            <!--
-            <a class="button" href="#" id="test">t</a>
-            -->
+                    <div id="deviceready" class="blink">
+                        <p class="event listening">Connecting to Device</p>
+                        <p class="event received">Device is Ready</p>
+                    </div>
+
+                    <br/>
+                    <br/>
+                </div>
+                <div id="buttons">
+                    <div class="btStd">
+                        <a class="blink" href="Blockly/blocklyIndex.html">Scripts</a>
+                    </div>
+                    <br/>
+                    <div class="btStd">
+                        <a href="drive.html">Drive</a>
+                    </div>
+
+                    <br/>
+                </div>
+            </div>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

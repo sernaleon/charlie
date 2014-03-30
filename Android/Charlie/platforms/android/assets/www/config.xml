@@ -9,8 +9,7 @@
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
-
-    <preference name="Orientation" value="landscape" />
+    <preference name="orientation" value="landscape" />
 
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />

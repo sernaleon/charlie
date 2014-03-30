@@ -18,7 +18,6 @@ C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\asse
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\cordova_plugins.js \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\css \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\drive.html \
-C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\drive2.html \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\driveCam.html \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\icon.png \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\img \
@@ -28,7 +27,6 @@ C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\asse
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\res \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\spec \
-C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\spec.html \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\Blockly\Blockly \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\Blockly\blocklyFrame.html \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\Blockly\blocklyIndex.html \
