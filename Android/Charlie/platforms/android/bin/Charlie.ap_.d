@@ -971,6 +971,8 @@ C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\asse
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\Blockly\Blockly\tests\generators\variables.xml \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\css\index.css \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\img\logo.png \
+C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\js\drive.js \
+C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\js\globalFunctions.js \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\js\index.js \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\js\values.js \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\com.boyvanderlaak.cordova.plugin.orientationchanger \

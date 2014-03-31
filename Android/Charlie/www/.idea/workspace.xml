@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="driveCam.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/driveCam.html">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="63" selection-start="343" selection-end="343" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="2261">
+            <state line="50" column="14" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.6304348" vertical-offset="618" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drive.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="drive.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drive.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="186" selection-end="186" vertical-scroll-proportion="0.22934233" vertical-offset="0" max-vertical-offset="2329">
+            <state line="27" column="7" selection-start="803" selection-end="803" vertical-scroll-proportion="-10.076923" vertical-offset="197" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -44,25 +44,7 @@
       <file leaf-file-name="values.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/values.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="10" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="22" selection-start="2631" selection-end="2631" vertical-scroll-proportion="-16.423077" vertical-offset="729" max-vertical-offset="1326">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="17" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.0" vertical-offset="1429" max-vertical-offset="2380">
+            <state line="24" column="0" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -71,7 +53,7 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+            <state line="32" column="94" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.0" vertical-offset="579" max-vertical-offset="1020">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -79,28 +61,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serialize.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/serialize.js">
+      <file leaf-file-name="drive.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/drive.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
+            <state line="15" column="29" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="1309">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customBlocks.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/customBlocks.js">
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="2" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0" vertical-offset="1217" max-vertical-offset="1989">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blocklyFrame.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/blocklyFrame.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="49" selection-start="106" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="4726">
+            <state line="75" column="16" selection-start="2986" selection-end="2986" vertical-scroll-proportion="0.0" vertical-offset="1004" max-vertical-offset="2533">
               <folding />
             </state>
           </provider>
@@ -124,14 +97,16 @@
         <option value="$PROJECT_DIR$/Blockly/blocklyIndex.html" />
         <option value="C:/xampp/htdocs/index.html" />
         <option value="$PROJECT_DIR$/driveAux.html" />
-        <option value="$PROJECT_DIR$/driveCam.html" />
         <option value="$PROJECT_DIR$/drive2.html" />
         <option value="$PROJECT_DIR$/config.xml" />
-        <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/js/values.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/js/globalFunctions.js" />
         <option value="$PROJECT_DIR$/drive.html" />
+        <option value="$PROJECT_DIR$/driveCam.html" />
+        <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/drive.js" />
       </list>
     </option>
   </component>
@@ -197,6 +172,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -270,6 +259,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32868218" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18155198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -279,7 +269,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -322,20 +311,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Blockly/serialize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockly/customBlocks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="2" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0" vertical-offset="1217" max-vertical-offset="1989">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/blocklyFrame.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="49" selection-start="106" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="4726">
@@ -556,23 +531,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="17" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.0" vertical-offset="1429" max-vertical-offset="2380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Thumbs.db">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
@@ -582,39 +545,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/values.js">
+    <entry file="file://$PROJECT_DIR$/js/globalFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="10" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+        <state line="20" column="0" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/driveCam.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="63" selection-start="343" selection-end="343" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="2261">
+        <state line="7" column="25" selection-start="156" selection-end="156" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="476">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="22" selection-start="2631" selection-end="2631" vertical-scroll-proportion="-16.423077" vertical-offset="729" max-vertical-offset="1326">
+        <state line="75" column="16" selection-start="2986" selection-end="2986" vertical-scroll-proportion="0.0" vertical-offset="1004" max-vertical-offset="2533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/values.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+        <state line="32" column="94" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.0" vertical-offset="477" max-vertical-offset="1020">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/drive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/drive.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="186" selection-end="186" vertical-scroll-proportion="0.22934233" vertical-offset="0" max-vertical-offset="2329">
+        <state line="27" column="7" selection-start="803" selection-end="803" vertical-scroll-proportion="-10.076923" vertical-offset="197" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="14" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.6304348" vertical-offset="618" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>

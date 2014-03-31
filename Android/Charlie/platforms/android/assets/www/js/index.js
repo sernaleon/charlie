@@ -29,6 +29,8 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.getElementById('btScripts').addEventListener('click',function(){location.href="Blockly/blocklyIndex.html"});
+        document.getElementById('btDrive').addEventListener('click',function(){location.href="drive.html"});
     },
     // deviceready Event Handler
     //

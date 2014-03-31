@@ -187,9 +187,6 @@ void emptySerialBuffer()
 void receiveSonarEvent(int howMany) {
   if (howMany == 2) {
     sonarValue = word(Wire.read(), Wire.read());
-    
-    #warning BORRAR
-    Serial.println(sonarValue); 
   }
 }
 
