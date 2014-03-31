@@ -6,7 +6,7 @@ SERVER_TCP_PORT         = 4999;
 SERVER_UDP_PORT         = 5000;
 WEBSERVER_PORT          = 8000;
 SERVER_CAM_PORT         = 8080;
-SERVER_IP               = "192.168.173.1" // "10.0.2.2" // window.location.hostname; //"192.168.0.123";
+SERVER_IP               = "192.168.0.123"; //"192.168.173.1" // "10.0.2.2" // window.location.hostname;
 
 WEBHOST                 = "ws://" + SERVER_IP + ":"+WEBSERVER_PORT;
 

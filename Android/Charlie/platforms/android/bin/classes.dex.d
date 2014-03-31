@@ -1,4 +1,5 @@
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\bin\classes.dex : \
+C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\bin\classes\com\boyvanderlaak\cordova\plugin\orientationchanger\OrientationChanger.class \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\bin\classes\es\sernaleon\charlie\BuildConfig.class \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\bin\classes\es\sernaleon\charlie\Charlie.class \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\bin\classes\es\sernaleon\charlie\R$attr.class \

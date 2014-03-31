@@ -15,6 +15,9 @@
     <feature name="Toast">
         <param name="android-package" value="nl.xservices.plugins.Toast" />
     </feature>
+    <feature name="OrientationChanger">
+        <param name="android-package" value="com.boyvanderlaak.cordova.plugin.orientationchanger.OrientationChanger" />
+    </feature>
     <name>Charlie</name>
     <description>
         Charlie the robot.

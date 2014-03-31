@@ -33,13 +33,10 @@
     var state = false;
 
     document.addEventListener("deviceready", onDeviceReady, false);
-
-
-
     document.getElementById("overlay").onclick = onTap;
 
     function onDeviceReady() {
-        toast("Waiting for accelerometer")
+        window.plugins.orientationchanger.lockOrientation('landscape');
         connectWS();
     }
 
@@ -110,12 +107,10 @@
     }
 
     function toast(msg){
-        window.plugins.toast.showLongBottom(msg,
+        window.plugins.toast.showShortBottom(msg,
                 function(a){console.log('toast success: ' + a)},
                 function(b){console.log('toast error: ' + b)})
     }
-
-
 
     function onTap(){
         if (state){
@@ -128,7 +123,6 @@
             state = true;
             toast("STARTED");
         }
-
 //        toast(state?"START":"STOP");
 //        state = !state;
     }

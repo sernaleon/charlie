@@ -20,13 +20,21 @@ module.exports = [
         "clobbers": [
             "window.plugins.toast"
         ]
+    },
+    {
+        "file": "plugins/com.boyvanderlaak.cordova.plugin.orientationchanger/www/orientationchanger.js",
+        "id": "com.boyvanderlaak.cordova.plugin.orientationchanger.OrientationChanger",
+        "clobbers": [
+            "window.plugins.orientationchanger"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "org.apache.cordova.device-motion": "0.2.6",
-    "nl.x-services.plugins.toast": "1.0"
+    "nl.x-services.plugins.toast": "1.0",
+    "com.boyvanderlaak.cordova.plugin.orientationchanger": "0.1.1"
 }
 // BOTTOM OF METADATA
 });

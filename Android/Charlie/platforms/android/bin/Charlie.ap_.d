@@ -973,8 +973,11 @@ C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\asse
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\img\logo.png \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\js\index.js \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\js\values.js \
+C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\com.boyvanderlaak.cordova.plugin.orientationchanger \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\nl.x-services.plugins.toast \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\org.apache.cordova.device-motion \
+C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\com.boyvanderlaak.cordova.plugin.orientationchanger\www \
+C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\com.boyvanderlaak.cordova.plugin.orientationchanger\www\orientationchanger.js \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\nl.x-services.plugins.toast\www \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\nl.x-services.plugins.toast\www\Toast.js \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\org.apache.cordova.device-motion\www \

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.boyvanderlaak.cordova.plugin.orientationchanger"
+        version="0.1.1">
+
+    <name>Android Orientation Changer</name>
+
+    <description>Simple plugin to change the android main activity orientation during runtime. </description>
+    <repo>https://github.com/Hless/cordova-plugin-orientation-changer</repo>
+    <keywords>orientation, android</keywords>
+    <license>MIT</license>
+
+    <author>Boy van der Laak</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/orientationchanger.js" name="OrientationChanger">
+        <clobbers target="window.plugins.orientationchanger" />
+    </js-module>
+
+    
+
+    <!-- android -->
+    <platform name="android">
+        <source-file src="src/android/OrientationChanger.java" target-dir="src/com/boyvanderlaak/cordova/plugin/orientationchanger" />
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="OrientationChanger">
+                <param name="android-package" value="com.boyvanderlaak.cordova.plugin.orientationchanger.OrientationChanger" />
+            </feature>
+        </config-file>
+    </platform>
+
+</plugin>
