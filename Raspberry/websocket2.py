@@ -1,18 +1,29 @@
-import sys, struct, serial, signal, ssl, logging 
+import  time,sys, struct, serial, signal, ssl, logging
 from SimpleWebSocketServer import WebSocket, SimpleWebSocketServer, SimpleSSLWebSocketServer
 from optparse import OptionParser
 
 logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
 
-SERVER_IP = ''
-WS_PORT = 8000
+class WebServer(WebSocket):
 
-DUE_PORT = 'COM7' #'/dev/ttyACM0'
-DUE_BAUDS = 9600
+	def sendToArduino(self,cmd,p1,p2):
+		print "send:	", cmd, p1, p2
 
-
-class SimpleEcho(WebSocket):
-
+	def receiveFromArduino(self,cmd,p1,p2):
+		msg = bytearray(3)
+		msg[0] = struct.pack('B', int(cmd))
+		msg[1] = struct.pack('B', int(p1))
+		msg[2] = struct.pack('B', int(p2))
+		
+		print "receive:	", cmd, p1, p2, msg, len(msg), msg[0]
+		#TODO: 
+		# ser.write
+		# outMsg = ser.read
+		# self.sendMessage(outMsg)
+		
+		self.sendMessage(msg)
+		
+	
 	def handleMessage(self):
 		if self.data is None:
 			self.data = ''                            
@@ -24,10 +35,13 @@ class SimpleEcho(WebSocket):
 				cmd = struct.unpack('B', msg[0])[0]
 				p1 = struct.unpack('B', msg[1])[0]
 				p2 = struct.unpack('B', msg[2])[0]
-				print cmd, p1,p2
+				print cmd, p1,p2				
 				#ser.write(msg)
 			else:
 				print msg
+				exec(msg)
+				#self.sendMessage('0')
+				self.sendClose()
 		except Exception as n:
 			print "Err: ", n
 			
@@ -36,10 +50,12 @@ class SimpleEcho(WebSocket):
 
 	def handleClose(self):
 		print self.address, 'closed'
-
-
-
-if __name__ == "__main__":
+		
+def main():
+	SERVER_IP = ''
+	WS_PORT = 8000
+	#DUE_PORT = 'COM7' #'/dev/ttyACM0'
+	#DUE_BAUDS = 9600
 
 	parser = OptionParser(usage="usage: %prog [options]", version="%prog 1.0")
 	parser.add_option("--host", default=SERVER_IP, type='string', action="store", dest="host", help="hostname (localhost)")
@@ -51,10 +67,10 @@ if __name__ == "__main__":
 	
 	(options, args) = parser.parse_args()
 
-	cls = SimpleEcho
+	cls = WebServer
 	
-	#ser = serial.Serial(DUE_PORT,DUE_BAUDS) 
-
+	#ser = serial.Serial(DUE_PORT,DUE_BAUDS) 	
+	
 	if options.ssl == 1:
 		server = SimpleSSLWebSocketServer(options.host, options.port, cls, options.cert, options.cert, version=options.ver)
 	else:	
@@ -63,7 +79,11 @@ if __name__ == "__main__":
 	def close_sig_handler(signal, frame):
 		server.close()
 		sys.exit()
-
+	
 	signal.signal(signal.SIGINT, close_sig_handler)
-
 	server.serveforever()
+
+
+if __name__ == "__main__":
+	main()
+	

@@ -3,7 +3,11 @@ Blockly.Blocks['move_motor'] = {
       this.setHelpUrl('http://www.example.com/');
       this.appendDummyInput()
           .appendField("Set")
-          .appendField(new Blockly.FieldDropdown([["left", "left"], ["right", "right"], ["both", "both"]]), "motor")
+          .appendField(new Blockly.FieldDropdown([
+              ["left", CMD_LEFT_MOTOR.toString()],
+              ["right", CMD_RIGHT_MOTOR.toString()],
+              ["both", CMD_BOTH_MOTORS.toString() ]]),
+              "motor")
           .appendField("motor speed at");
       this.appendValueInput("speed")
           .setCheck("Number");
@@ -17,9 +21,10 @@ Blockly.Blocks['move_motor'] = {
 };
 
 Blockly.Python['move_motor'] = function(block) {
-    var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
-    var dropdown_motor = block.getFieldValue('motor');
-    return 'moveMotor('+dropdown_motor+','+value_speed+')\n';
+    var cmd = block.getFieldValue('motor');
+    var p1 = Math.round(map(Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC),0,100,0,255));
+
+    return PYT_SEND+'('+cmd+','+p1+','+CMD_NOPARAM+')\n';
 };
 
 Blockly.Blocks['stop_motors'] = {
@@ -34,7 +39,7 @@ Blockly.Blocks['stop_motors'] = {
 };
 
 Blockly.Python['stop_motors'] = function(block) {
-    return 'stopMotors()\n';
+    return PYT_SEND+'('+CMD_STOP+','+CMD_NOPARAM+','+CMD_NOPARAM+')\n';
 };
 
 
@@ -50,8 +55,7 @@ Blockly.Blocks['read_sonar'] = {
 };
 
 Blockly.Python['read_sonar'] = function(block) {
-    var code = 'readSonar()';
-    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+    return [PYT_RECEIVE+'('+CMD_SONAR+','+CMD_NOPARAM+','+CMD_NOPARAM+')', Blockly.Python.ORDER_FUNCTION_CALL];
 };
 
 Blockly.Blocks['read_infrared'] = {
@@ -76,7 +80,8 @@ Blockly.Blocks['read_infrared'] = {
 		["14", "14"],
 		["15 (Middle-middle)", "15"],
 		["16", "16"],
-		["17 (Middle-right", "17"]]), "sensor");
+		["17 (Middle-right", "17"]]),
+            "sensor");
     this.setInputsInline(true);
     this.setOutput(true);
     this.setTooltip('');
@@ -84,9 +89,7 @@ Blockly.Blocks['read_infrared'] = {
 };
   
 Blockly.Python['read_infrared'] = function(block) {
-  var dropdown_sensor = block.getFieldValue('sensor');
-  var code = 'readInfrared('+dropdown_sensor+')';
-  return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+    return [PYT_RECEIVE+'('+CMD_INFRA+','+block.getFieldValue('sensor')+','+CMD_NOPARAM+')', Blockly.Python.ORDER_FUNCTION_CALL];
 };
 
 
@@ -107,6 +110,12 @@ Blockly.Blocks['wait'] = {
 };
 
 Blockly.Python['wait'] = function(block) {
-    var value_wait = Blockly.Python.valueToCode(block, 'timeD', Blockly.Python.ORDER_ATOMIC);
-    return 'wait('+value_wait+')\n';
+    try {
+        var value_wait = Blockly.Python.valueToCode(block, 'timeD', Blockly.Python.ORDER_ATOMIC) / 1000;
+        return "time.sleep("+value_wait+")\n";
+    }
+    catch (e)
+    {
+        alert("Error:"+e);
+    }
 };

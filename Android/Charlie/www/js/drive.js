@@ -10,6 +10,7 @@ document.getElementById("overlay").onclick = onTap;
 
 function onDeviceReady() {
     window.plugins.orientationchanger.lockOrientation('landscape');
+    window.plugins.insomnia.keepAwake();
     websocket = new WebSocket(WEBHOST);
 
     websocket.onopen = function(evt) {

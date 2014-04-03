@@ -18,6 +18,9 @@
     <feature name="OrientationChanger">
         <param name="android-package" value="com.boyvanderlaak.cordova.plugin.orientationchanger.OrientationChanger" />
     </feature>
+    <feature name="Insomnia">
+        <param name="android-package" value="nl.xservices.plugins.Insomnia" />
+    </feature>
     <name>Charlie</name>
     <description>
         Charlie the robot.

@@ -27,6 +27,13 @@ module.exports = [
         "clobbers": [
             "window.plugins.orientationchanger"
         ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.insomnia/www/Insomnia.js",
+        "id": "nl.x-services.plugins.insomnia.WebViewColor",
+        "clobbers": [
+            "window.plugins.insomnia"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -34,7 +41,8 @@ module.exports.metadata =
 {
     "org.apache.cordova.device-motion": "0.2.6",
     "nl.x-services.plugins.toast": "1.0",
-    "com.boyvanderlaak.cordova.plugin.orientationchanger": "0.1.1"
+    "com.boyvanderlaak.cordova.plugin.orientationchanger": "0.1.1",
+    "nl.x-services.plugins.insomnia": "3.0"
 }
 // BOTTOM OF METADATA
 });

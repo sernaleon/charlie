@@ -4,13 +4,48 @@
   <meta charset="utf-8">
   <title>Charlie script generator</title>
   <style>
-    html, body,iframe {
-        height: 100%;
-        width: 100%;
+
+    html, body, div, iframe {
         margin: 0;
+        padding: 0;
         border: 0;
         overflow:hidden;
     }
+    html,body{
+        height:100%;
+        width: 100%;
+    }
+    iframe {
+        height: 90%;
+        width: 100%;
+    }
+    #btContainer {
+        height: 10%;
+        width: 100%;
+
+        margin: auto;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .button {
+        height: 100%;
+        padding: 10px;
+        font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+        text-transform:uppercase;
+        border-radius:4px;
+        color:#000;
+        font-size:16px;
+        margin:auto 30px;
+        text-align: center;
+        vertical-align: middle;
+        background-color:#ddd;
+        float: left;
+        border: 1px solid #ccc;
+    }
+
+     .left {
+         float:right;
+     }
   </style>
 
     <script type="text/javascript" src="../js/values.js"></script>
@@ -33,68 +68,66 @@
             alert(Blockly.Python.workspaceToCode())
         }
 
-        function save(n){
-
-            if (n == null) {
-                n = window.prompt("Save as ",'s'+localStorage.length); //navigator.notification.prompt(
-
-                if (n==null) return false;
+        function save(){
+            var n = window.prompt("Save as ",'s'+localStorage.length);
+            if (n){
+                var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+                var xml_text = Blockly.Xml.domToText(xml);
+                localStorage.setItem(n,xml_text)
+                alert("Saved as "+n)
             }
-
-            var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
-            var xml_text = Blockly.Xml.domToText(xml);
-            localStorage.setItem(n,xml_text)
-
-
-            alert("Saved as "+n)
         }
 
-        function load(n){
-
-            if (n == null) {
-                var text = "Stored files: \n";
-                for (var storedName in localStorage) {
-                    text += storedName + '\n';
-                    n = storedName;
-                }
-                text += "Load program name: ";
-                n = window.prompt(text,n);
-
-                if (n==null) return false;
+        function load(){
+            var text = "Stored files: \n";
+            for (var storedName in localStorage) {
+                text += storedName + '\n';
+                n = storedName;
             }
+            text += "Load program name: ";
 
-            var xml_text = localStorage.getItem(n)
-            var xml = Blockly.Xml.textToDom(xml_text);
-            Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+            var n = window.prompt(text,n);
+            if (n){
+                var xml_text = localStorage.getItem(n)
+                var xml = Blockly.Xml.textToDom(xml_text);
+                Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+            }
         }
 
         function sendToRaspi(){
 
-            document.body.innerHTML = "Open<br/>" + document.body.innerHTML
+            //document.body.innerHTML = "Open<br/>" + document.body.innerHTML
             var code = Blockly.Python.workspaceToCode()
             var websocket = new WebSocket(WEBHOST);
 
             websocket.onopen = function(evt) {
-                document.body.innerHTML = "connected<br/>" + document.body.innerHTML
+                //document.body.innerHTML = "connected<br/>" + document.body.innerHTML
                 //console.log("connected\n");
                 websocket.send(code);
-                document.body.innerHTML = "sent:\n" + code + "<br/>" + document.body.innerHTML
-                //console.log("sent:\n" + code + '\n');
-                websocket.close();
+                //document.body.innerHTML = "sent:\n" + code + "<br/>" + document.body.innerHTML
+                console.log("sent:\n" + code + '\n');
+
+
+                //websocket.close();
             };
 
             websocket.onclose = function(evt) {
-                document.body.innerHTML = "disconnected<br/>" + document.body.innerHTML
-                //console.log("disconnected\n");
+                //document.body.innerHTML = "disconnected<br/>" + document.body.innerHTML
+                console.log("disconnected\n");
             };
 
             websocket.onmessage = function(evt) {
-                document.body.innerHTML = "response:\n" + evt.data + "<br/>" + document.body.innerHTML
-                //console.log("response:\n" + evt.data + '\n');
+                //document.body.innerHTML = "response:\n" + evt.data + "<br/>" + document.body.innerHTML
+                console.log("Received: "+ evt.data);
+//                console.log(evt.data == '0')
+//                if (evt.data == '0')
+//                {
+//
+//                }
             };
 
             websocket.onerror = function(evt) {
-                document.body.innerHTML = 'error: ' +evt.data+"<br/>" + document.body.innerHTML
+                //document.body.innerHTML = 'error: ' +evt.data+"<br/>" + document.body.innerHTML
                 //console.log('error: ' + evt.data + '\n');
                 websocket.close();
             };
@@ -104,11 +137,18 @@
 </head>
 <body onload="init()">
 
-<a class="button" href="#" id="test">test</a>
+<div id="btContainer">
+    <div id="test" class="button">Show code</div>
+    <div id="btSend" class="button">Execute</div>
+    <div id="btSave" class="button left">Save</div>
+    <div id="btLoad" class="button left">Load</div>
+</div>
 
-<a  class="button" href="#" id="btSend">Execute</a>
-<a class="button" href="#" id="btSave">Save</a>
-<a class="button" href="#" id="btLoad">Load</a>
+<!--<a class="button" href="#" id="test">test</a>-->
+
+<!--<a  class="button" href="#" id="btSend">Execute</a>-->
+<!--<a class="button" href="#" id="btSave">Save</a>-->
+<!--<a class="button" href="#" id="btLoad">Load</a>-->
 <iframe src="blocklyFrame.html"></iframe>
 </body>
 </html>
