@@ -56,8 +56,8 @@ void setup()
   
   //Sonar init
   sonarValue = 0;
-  Wire.begin(ARDUINO_ADDR);
-  Wire.onReceive(receiveSonarEvent);
+  //Wire.begin(ARDUINO_ADDR);
+  //Wire.onReceive(receiveSonarEvent);
 
   //Activates interrups again
   interrupts();
@@ -97,12 +97,17 @@ void getAndRunCommandFromUSB()
   
       //Command 2 -> Move backwards
       case 2:
-        //TODO
+        moveBackward(p1,p2);
         break;
   
-      //Command 4 -> Beep
+      //Command 3 -> Beep
       case 3:
         beep(p1);
+        break;
+  
+      //Command 4 -> LED X (ON|OFF)
+      case 4:
+        led(p1,p2);
         break;
         
       //Command 10 -> Send all CNY70 values
@@ -111,6 +116,11 @@ void getAndRunCommandFromUSB()
         break;
     }
   }
+}
+
+void led(byte num,bool state)
+{
+  digitalWrite(leds[num],state);
 }
 
 void sendSensorValues()
@@ -142,9 +152,29 @@ void moveForward(byte speed, byte balance)
   setMotors(left,right);
 }
 
+void moveBackward(byte speed, byte balance)
+{
+  //Sets speed between 0 and KMAXSPEED
+  int speedMapped = map(speed,0,255,0,KSPEED);
+
+  //Sets balance between -KTURNSPEED and KTURNSPEED
+  int balanceMapped = map(balance,0,255,-KTURNSPEED,KTURNSPEED);
+
+  //Sets speed of left and right motors
+  int left = speedMapped - balanceMapped;
+  int right = speedMapped + balanceMapped;
+
+  setBackwardSpeedLeft(left);
+  setBackwardSpeedRight(right);
+}
+
 void stopMotors()
 {
-  setMotors(0,0);
+  //setMotors(0,0);
+  analogWrite(O_Bin1,1023); 
+  digitalWrite(O_Bin2,HIGH);
+  analogWrite(O_Ain1,1023); 
+  digitalWrite(O_Ain2,HIGH);
 }
 
 void beep(byte status)
@@ -181,48 +211,28 @@ void setForwardSpeedLeft(int speed)
   digitalWrite(O_Bin2,LOW);
 }
 
-void checkSonar()
+void setBackwardSpeedLeft(int speed)
 {
-  //if (!emergencyStop && digitalRead(SONARPIN) == HIGH)
-  
-  if (digitalRead(SONARPIN) == HIGH)
-  {
-    stopMotors();
-    
-    //Send to Raspberry signal 5 -> Emergency Stop Activated
-    Serial.print(5);
-    
-    digitalWrite(leds[0],HIGH);
-    digitalWrite(leds[1],HIGH);
-    digitalWrite(leds[2],HIGH);
-    
-    delay(3000);
-    
-    digitalWrite(leds[0],LOW);
-    digitalWrite(leds[1],LOW);
-    digitalWrite(leds[2],LOW);
-    
-    emptySerialBuffer();
-    
-  }
+  //Check if numbers are out of range
+  if      (speed < 0)         speed = 0;
+  else if (speed > KMAXSPEED) speed = KMAXSPEED;
+
+  //Set motor speed
+  analogWrite(O_Bin1,RESOLUTION-speed);
+  digitalWrite(O_Bin2,HIGH);
 }
 
-//Empty buffer by reading 3 bytes
-void emptySerialBuffer()
+void setBackwardSpeedRight(int speed)
 {
-  while(Serial.available() >= 3)
-  {
-    Serial.read();
-    Serial.read();
-    Serial.read();
-  }
+  //Check if numbers are out of range
+  if      (speed < 0)         speed = 0;
+  else if (speed > KMAXSPEED) speed = KMAXSPEED;
+
+  //Set motor speed
+  analogWrite(O_Ain1,RESOLUTION-speed);
+  digitalWrite(O_Ain2,HIGH);
 }
 
-void receiveSonarEvent(int howMany) {
-  if (howMany == 2) {
-    sonarValue = word(Wire.read(), Wire.read());
-  }
-}
 
 
 
