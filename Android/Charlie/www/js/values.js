@@ -28,6 +28,7 @@ CMD_RIGHT_MOTOR			= 6;
 CMD_BOTH_MOTORS			= 7;
 CMD_INFRA               = 8;
 CMD_SONAR               = 9;
+CMD_SENSORS             = 10;
 
 PYT_SEND    = "self.sendToArduino"
 PYT_RECEIVE = "self.receiveFromArduino"

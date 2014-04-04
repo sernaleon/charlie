@@ -6,6 +6,18 @@ byte blueLeds[NUMBLUELEDS];
 byte middleSensor[NUMMIDS];
 byte frontSensor[NUMFRONTS];
 
+unsigned int frontSensorValue [12];
+
+unsigned int middleSensorValue;
+unsigned int sensorAux [12];
+
+bool middleSensorAux [9];
+bool frontSensorBool [12];
+bool sensorLeido [12];
+unsigned int calibrateMin[12];
+unsigned int calibrateMax[12];
+
+
 int sonarValue;
 
 void setup()
@@ -55,6 +67,9 @@ void loop()
 {
   getAndRunCommandFromUSB();
 
+  //Serial.println("hola1");
+
+
   //checkSonar();
 }
 
@@ -89,8 +104,27 @@ void getAndRunCommandFromUSB()
       case 3:
         beep(p1);
         break;
+        
+      //Command 10 -> Send all CNY70 values
+      case 10:
+        sendSensorValues();
+        break;
     }
   }
+}
+
+void sendSensorValues()
+{
+    read_line();
+    read_middle();
+    
+    for(int i = 0; i < 12; i++)
+    {
+      Serial.print(sensorAux[i]);
+      Serial.print('.');
+    }
+    Serial.print(middleSensorValue);
+    Serial.println();
 }
 
 void moveForward(byte speed, byte balance)
@@ -189,5 +223,105 @@ void receiveSonarEvent(int howMany) {
     sonarValue = word(Wire.read(), Wire.read());
   }
 }
+
+
+
+/********************** LECTURA CNY70***********************/
+
+
+void read_middle(){
+	middleSensorValue = 0;
+	
+	//TurnOnIRMiddle();	
+        digitalWrite(O_IRON_DG,HIGH);
+        
+	delay(1); //REDUCIR!!!
+	
+	for ( int i = 0 ;  i < 9; i++)
+	{
+		 if (digitalRead(middleSensor[i]) == HIGH)
+		 {
+			middleSensorAux[i] = false;
+			middleSensorValue &= ~( 1 << i );
+		 }
+		 else
+		 {
+			middleSensorAux[i] = true;
+			middleSensorValue |= ( 1 << i );
+		 }
+	}
+	
+	//TurnOffIRMiddle();	
+        digitalWrite(O_IRON_DG,LOW);
+
+
+
+	//REURN middleSensorValue;
+}
+
+void read_line(){
+
+	//Descargo	
+	for (int i = 0; i < 12; i++)
+	{
+		pinMode(frontSensor[i], OUTPUT);
+		digitalWrite(frontSensor[i],HIGH);
+	}
+	
+	delayMicroseconds(15);	
+	
+	//Cargo
+	for (int i = 0; i < 12; i++)
+	{
+		pinMode(frontSensor[i], INPUT);	
+		digitalWrite(frontSensor[i],LOW);
+	}
+	
+	//Enciendo fila
+	digitalWrite(O_IRON_AN,HIGH);
+	
+	delayMicroseconds(5);
+	
+	//Cuento 
+	unsigned int cTiempo = 0;
+	unsigned int cSensores = 0;
+	while (cTiempo < 2000 && cSensores < 12)
+	{
+		for (int i = 0; i < 12; i++)
+		{
+			if (digitalRead(frontSensor[i]) == LOW && !sensorLeido[i])
+			{
+				sensorAux[i] = cTiempo;
+				frontSensorValue[i] = map(cTiempo,calibrateMin[i],calibrateMax[i],0,100);				
+				if (frontSensorValue[i] < 10) frontSensorValue[i] = 0;
+				frontSensorBool[i] = frontSensorValue[i] > 0;
+				sensorLeido[i] = true;
+				cSensores++;
+			}
+		}
+		cTiempo++;			
+		delayMicroseconds(1);
+	}	
+	
+	//Pongo los sensores a false (y relleno posibles valores time_out)
+	for (int i = 0; i < 12; i++)
+	{
+		if (sensorLeido[i])
+		{
+			sensorLeido[i] = false;
+		}
+		else
+		{
+			sensorAux[i] = 2000;
+			frontSensorValue[i] = 100; //map(2000,calibrateMin[i],calibrateMax[i],0,100);		
+			frontSensorBool[i] = true;
+		}
+	}
+		
+	//Desactivo fila
+	digitalWrite(O_IRON_AN,LOW);
+}
+
+
 
 
