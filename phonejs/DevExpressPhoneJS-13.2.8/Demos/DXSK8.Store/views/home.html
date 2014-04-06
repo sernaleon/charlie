@@ -1,0 +1,42 @@
+<div data-options="dxView : { name: 'Home', title: 'Skateboard Store' } " >
+    <div class="home-view"  data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div class="home-container">
+            <div class ="home-content">
+                  <div class="home-login">
+                      <div class="info-panel-container">
+                          <img class="user-photo" data-bind="attr: { src: userPhoto }" />
+                          <div class="home-login-content">
+                              Welcome back,
+                              <div class="user-name" data-bind="text: userName"></div>
+                              <div class="user-address" data-bind="text: userAddress"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="middle-content">
+                      <hr />
+                      <div class="info-panel-container">
+                          <div class="panel-block">
+                              <div class="panel-title">Skateboards purchased:</div><!--
+                            --><div class="panel-value"><span data-bind="text: orderCount"></span></div>
+                          </div>
+                          <div class="panel-block">
+                              <div class="panel-title">Current skateboard cost:</div><!--
+                            --><div class="panel-value">$<span data-bind="text: cartCost"></span></div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+        <div class="home-create-button">
+            <div data-bind="dxButton: { text: 'Build Your Skateboard', clickAction: cartHandler }"></div>
+        </div>
+        <div class="home-create-image" data-bind="dxAction: cartHandler">
+            <div class="banner-arrow"></div>
+        </div>
+        <div class="home-last-orders">
+            <div class="partial-title">Your Previous Orders</div>
+            <hr />
+            <div data-options="dxViewPlaceholder: { viewName: 'OrdersPartial' }"></div>
+        </div>
+    </div>
+</div>

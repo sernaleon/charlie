@@ -1,0 +1,11 @@
+<div data-options="dxView : { name: 'Results' } " >
+    <div data-bind="dxCommand: { title: '', id: 'list', icon: iconList, action: goToList }"></div>
+    <div data-bind="dxCommand: { title: '', id: 'map', icon: iconMap, action: goToMap }"></div>
+    <div data-bind="dxCommand: { title: '', id: 'gallery', icon: iconGallery, action: goToGallery }"></div>
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " data-bind="css: activeItem">
+        <div data-bind="dxLoadPanel: { message: loadPanelMessage, visible: loadPanelVisible }"></div>
+        <div class="results list-content" data-options="dxViewPlaceholder: { viewName: 'ResultsList' }"></div>
+        <div class="results map-content" data-options="dxViewPlaceholder: { viewName: 'ResultsMap' }"></div>
+        <div class="results gallery-content" data-options="dxViewPlaceholder: { viewName: 'ResultsGallery' }"></div>
+    </div>
+</div>

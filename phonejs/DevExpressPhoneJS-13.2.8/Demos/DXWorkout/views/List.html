@@ -1,0 +1,16 @@
+<div data-options="dxView : { name: 'List' } " >
+    <div data-bind="dxCommand: { title: 'Back', type: 'back', id: 'back', action: handleCancel, visible: !DXWorkout.hardwareBackButton }"></div>
+
+    <div class="action-list" data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div class="search-wrapper" data-bind="ifnot: isEdit">
+            <div data-bind="dxTextBox: { placeholder: 'Search', mode: 'search', value: searchQuery, valueUpdateEvent: 'keyup' } "></div>
+        </div>
+        <div class="new-item" data-bind="if: isEdit">
+            <div data-bind="dxTextBox: { value: newValue, placeholder: emptyValue, valueUpdateEvent: 'keyup' } "></div>
+            <div data-bind="dxButton: { text: 'Add', clickAction: handleAddClick, disabled: addButtonDisabled }"></div>
+        </div>
+        <div data-bind="dxList: { dataSource: keySettings, itemClickAction: handleItemClick, editEnabled: canDelete, editConfig: { deleteEnabled: true, deleteMode: deleteMode }, itemDeleteAction: handleDeleteClick }">
+
+        </div>
+    </div>
+</div>

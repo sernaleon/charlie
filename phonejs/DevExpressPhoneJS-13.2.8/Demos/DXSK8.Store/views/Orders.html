@@ -1,0 +1,24 @@
+<div data-options="dxView : { name: 'Orders', title: 'Orders' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div data-options="dxViewPlaceholder: { viewName: 'OrdersPartial' }"></div>
+    </div>
+</div>
+
+<div data-options="dxView : { name: 'OrdersPartial' } " class="orders-partial-content">
+    <div class="view-content" data-bind="dxScrollView: { }">
+        <div>
+            <table class="orders-list">
+                <tbody>
+                    <!-- ko foreach: orders -->
+                    <tr>
+                        <td data-bind="text: Globalize.format(date, 'MMM d, yyyy')" class="right orders-date"></td>
+                        <td class="left orders-title"><div data-bind="text: title"></div></td>
+                        <td class="orders-price">$<span data-bind="text: price"></span></td>
+                        <td data-bind="css: { 'completed': state === 'completed', 'in-progress': state === 'in progress' }" class="orders-state"></td>
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

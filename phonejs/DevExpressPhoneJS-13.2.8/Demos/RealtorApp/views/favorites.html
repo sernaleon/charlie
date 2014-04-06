@@ -1,0 +1,7 @@
+<div data-options="dxView : { name: 'Favorites', title: 'Favorites' } " >
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+      <div class="favorites-list" data-bind="dxList: { dataSource: RealtorApp.faves, noDataText: noDataText }">
+        <div data-options="dxTemplate: { name: 'item' }" data-bind="template: { name: 'list-template' }, dxAction: $root.favoritesItemClick" class="list-item"></div>
+      </div>
+    </div>
+</div>

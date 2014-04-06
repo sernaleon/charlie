@@ -1,0 +1,86 @@
+<div data-options="dxView : { name: 'ProductDetails', screenSize: 'small' } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+      <div data-bind="dxScrollView: {}" data-options="dxViewPlaceholder: { viewName: 'ProductDetailsPartial' }"></div>
+  </div>
+</div>
+
+<div data-options="dxView : { name: 'ProductDetailsPartial' } " >
+    <div class="product-details">
+    <!-- ko with: currentProduct -->
+        <div class="product-image">
+            <img data-bind="attr: { src: image, alt: name }, css: { 'truck': $root.productType === 'truck' }" />
+        </div>
+        <div class="product-choose-button" data-bind="dxButton: { text: 'Select', clickAction: $root.chooseProduct }, css: { 'truck': $root.productType === 'truck' }"></div>
+        <div class="product-info">
+            <div class="product-name">
+                <span data-bind="text: name"></span>
+            </div>
+            <div class="product-property">
+                Price <span data-bind="text: '$' + price" />
+            </div>
+            <div class="product-property">
+                Quantity <span data-bind="text: quantity" />
+            </div>
+        </div>
+    <!-- /ko -->
+
+    <!-- ko if: currentProduct -->
+        <div class="product-description">
+            <p>
+                A traditional complete skateboard consists of the deck (often with griptape applied on top to enhance traction),
+                trucks (with urethane bushings), wheels (with sealed bearings),
+                bushings and nuts and bolts to fasten the truck and wheel assembly to the bottom of the deck.
+            </p>
+            <br />
+            <!-- ko if: productType === 'deck' -->
+            <p>
+                Modern decks vary in size, but most are 7 to 10.5 inches (17.78 to 26.67 centimeters) wide.
+                Wider decks can be used for greater stability when transition or ramp skating.
+                Skateboard decks are usually between 28 and 33 inches (71.12 and 83.82 centimetres) long.
+                The underside of the deck can be printed with a design by the manufacturer, blank, or decorated by any other means. 
+            </p>
+            <p>
+                The longboard, a common variant of the skateboard, has a longer deck.
+                One of the first deck companies was called "Drapped" taken from Jonny's second name.
+                "Old school" boards (those made in the 1970s–80s or modern boards that mimic their shape) are generally wider and often have only one kicktail.
+                Variants of the 1970s often have little or no concavity, whereas 1980s models have deeper concavities and steeper kicktails.
+            </p>
+            <!-- /ko -->
+
+            <!-- ko if: productType === 'truck' -->
+            <p>
+                Attached to the deck are two metal (usually aluminum alloy) trucks, which connect to the wheels and bearings to the deck.
+                The trucks are further composed of two parts. The top part of the truck is screwed to the deck and is called the baseplate,
+                and beneath it is the hanger. The axle runs through the hanger. Between the baseplate and the hanger are bushings,
+                also rubbers or grommets, that provide the cushion mechanism for turning the skateboard.
+            </p>
+            <p>
+                Skateboard trucks are manufactured in a number of different axle widths.
+                In general an axle width should be chosen that is close to the width of the deck it will be used with.
+                For example, a 7.75" wide deck will usually be fitted with trucks that have axles between 7.5" wide and 8.0" wide.
+                Trucks that are too wide can make doing tricks difficult and can cause the wheels to get in the way when the skateboard is being ridden.
+                Trucks that are too small can be hard to maintain stability and can cause wheel bite to occur when turning.
+            </p>
+            <!-- /ko -->
+
+            <!-- ko if: productType === 'wheels' -->
+            <p>
+                The wheels of a skateboard, usually made of polyurethane, come in many different sizes and shapes to suit different types of skating.
+                Larger sizes like 55–85 mm roll faster, and move more easily over cracks in pavement and are better for transition skateboarding.
+                Smaller sizes like 48–54 mm keep the board closer to the ground, require less force to accelerate and produce a lower center of gravity,
+                but also make for a slower top speed and are better for street skateboarding.
+            </p>
+            <p>
+                Wheels also are available in a variety of hardnesses usually measured on the Shore durometer "A" scale.
+                Wheels range from the very soft (about Shore A 75) to the very hard (about Shore A 101).
+                As the A scale stops at 100, any wheels labeled 101A or higher are harder, but do not use the appropriate durometer scale.
+            </p>
+            <!-- /ko -->
+            <br />
+            <p>
+                http://en.wikipedia.org/wiki/Skateboard &copy; Wikipedia
+            </p>
+        </div>
+    <!-- /ko -->
+    </div>
+</div>

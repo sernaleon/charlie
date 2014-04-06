@@ -1,0 +1,18 @@
+Settings
+
+Network settings
+
+IP
+CAM PORT
+CMD PORT
+
+Charlie configurations
+
+FORWARD SPEED
+TURN SPEED
+
+BACKWARD SPEED
+BACKWARD TURN SPEED
+
+Position sending
+Sensor read rate

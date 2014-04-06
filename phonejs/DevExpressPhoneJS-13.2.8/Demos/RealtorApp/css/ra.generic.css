@@ -1,0 +1,208 @@
+﻿.dx-view {
+     height: 100%;
+}
+
+.dx-viewport {
+    font-size: 11px;
+    background: white;
+}
+
+.results .dx-list, .favorites-list.dx-list {
+    padding: 0;
+}
+
+.results .dx-list .dx-list-item, .favorites-list.dx-list .dx-list-item {
+    white-space: normal;
+    position: relative;
+}
+
+.dx-theme-generic .dx-widget:not(.dx-scrollable-scrollbar) {
+    background-color: white;
+}
+
+.dx-theme-generic .dx-widget.dx-loadindicator {
+    background-color: transparent;
+}
+
+.dx-theme-generic .dx-toolbar .dx-toolbar-label {
+    color: white;
+    font-size: 16px;
+    text-transform: none;
+    font-weight: normal;
+}
+.dx-theme-generic .navbar-layout.has-navbar .layout-content.dx-content-placeholder {
+    top: 56px;   
+    bottom: 66px;
+}
+
+.dx-theme-generic .navbar-layout.has-navbar .hide-toolbar .layout-content.dx-content-placeholder {
+    top: 0;
+}
+
+.dx-theme-generic .navbar-layout.has-navbar .layout-header .dx-toolbar {
+    margin: 0;
+    height: 56px;
+    background:#f05b41;
+    border-bottom: 0;
+    -webkit-box-shadow: none;
+    box-shadow:none;
+}
+
+.dx-theme-generic .navbar-layout.has-navbar .hide-toolbar .layout-header {
+    display: none;
+}
+
+.dx-theme-generic .dx-navbar.dx-tabs, .dx-theme-generic .navbar-layout.has-navbar .layout-footer {
+    height: 66px;
+    background: #353742;
+}
+
+.dx-theme-generic .dx-tabs .dx-tab.dx-nav-item {
+    display: inline-block;
+    padding: 0;
+    margin: 6px 25px;
+    border-left: none;
+}
+
+.dx-icon-favorites.dx-icon {
+    background: url('../images/favorites.png');
+}
+
+.dx-icon-home.dx-icon {
+    background: url('../images/find.png');
+}
+
+.dx-icon-info.dx-icon  {
+    background: url('../images/info.png');
+}
+
+.dx-theme-generic .dx-tabs .dx-tab.dx-tab-selected {
+    background: none;
+}
+
+.dx-tabs .dx-tab-selected .dx-icon-favorites {
+    background: url('../images/favorites-active.png');
+}
+
+.dx-tabs .dx-tab-selected .dx-icon-home {
+    background: url('../images/find-active.png');
+}
+
+.dx-tabs .dx-tab-selected .dx-icon-info {
+    background: url('../images/info-active.png');
+}
+
+.dx-tab.dx-nav-item.dx-state-active,
+.dx-toolbar-item .dx-state-active {
+    opacity: 0.6;
+}
+
+.dx-theme-generic .dx-navbar.dx-tabs .dx-tab .dx-icon {
+    height: 36px;
+    width: 36px;
+    opacity: 1;
+}
+
+.dx-theme-generic .dx-navbar.dx-tabs .dx-tab .dx-tab-text{
+    font-size: 11px;
+    line-height: 17px;
+    padding: 0 8px;
+}
+
+.dx-theme-generic .dx-tabs .dx-tab .dx-tab-text, .dx-theme-generic .dx-tabs .dx-tab.dx-tab-selected .dx-tab-text {
+    color: white;
+}
+
+.dx-theme-generic .dx-tabs .dx-tab.dx-state-active {
+    background:none;
+}
+
+.dx-theme-generic .dx-widget.dx-button {
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #f05b41;
+    background-image: none;
+    box-shadow:none;
+}
+
+.dx-theme-generic .dx-button.dx-state-active {
+    opacity: 0.4;
+}
+
+.dx-theme-generic .dx-button .dx-button-content .dx-button-text {
+    font-size: 23px;
+    vertical-align: baseline;
+}
+
+.dx-theme-generic .dx-button .dx-button-content .dx-icon-list {
+    background: url('../images/listview.png');
+}
+
+.dx-theme-generic .dx-button .dx-button-content .dx-icon-map {
+    background-image: url('../images/globe.png');
+}
+
+.dx-theme-generic .dx-button .dx-button-content .dx-icon-gallery {
+    background-image: url('../images/image.png');
+}
+
+.dx-theme-generic .dx-button.dx-button-back .dx-button-back-arrow {
+    background-image: url('../images/back.png');
+}
+
+.dx-theme-generic .dx-button-content .dx-icon-list-selected.dx-icon {
+    background-image: url('../images/listview-active.png');
+}
+
+.dx-theme-generic .dx-button-content .dx-icon-map-selected.dx-icon {
+    background-image: url('../images/globe-active.png');
+}
+
+.dx-theme-generic .dx-button-content .dx-icon-gallery-selected.dx-icon {
+    background-image: url('../images/image-active.png');
+}
+
+.dx-theme-generic .dx-button .dx-button-content .dx-icon-list,
+.dx-theme-generic .dx-button .dx-button-content .dx-icon-list-selected,
+.dx-theme-generic .dx-button .dx-button-content .dx-icon-map,
+.dx-theme-generic .dx-button .dx-button-content .dx-icon-map-selected,
+.dx-theme-generic .dx-button .dx-button-content .dx-icon-gallery,
+.dx-theme-generic .dx-button .dx-button-content .dx-icon-gallery-selected,
+.dx-theme-generic .dx-button.dx-button-back .dx-button-back-arrow {
+    width:30px;
+    height:30px;
+    background-size: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0 5px;
+}
+
+.dx-theme-generic .dx-toolbar .dx-toolbar-item {
+    padding: 0;
+}
+
+.dx-theme-generic .dx-toolbar .dx-toolbar-left {
+    left: 5px;
+}
+
+.dx-theme-generic .dx-toolbar .dx-toolbar-right {
+    right: 5px;
+}
+
+.dx-theme-generic .dx-toolbar .dx-button.dx-state-active .dx-button-content {
+  background: none; 
+}
+.dx-theme-generic .dx-toolbar .dx-button.dx-state-active.dx-button-back {
+  background: none;
+}
+
+.dx-theme-generic .dx-list .dx-empty-message {
+    white-space: normal;
+    font-size: 12px;
+    border: 0;
+}
+
+.dx-loadpanel-has-indicator {
+    font-size: 11px;
+}

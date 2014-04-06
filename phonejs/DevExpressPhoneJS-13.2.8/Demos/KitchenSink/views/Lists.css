@@ -1,0 +1,98 @@
+﻿.search-wrapper {
+    margin: 0 0 5px;
+}
+.product-image-box {
+    float: left; 
+    margin-right: 15px;
+}
+.product-image-box img {
+    width: 36px;
+    height: 36px;
+}
+.product-name {
+    white-space: pre-wrap;
+}
+.product-price {
+    font-size: 12px;
+}
+
+.editType-wrapper {
+    margin: 0px 10px;
+}
+
+.list-content {
+    height: 100%;
+}
+
+.list-content .list-indentation {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+
+
+/* iOS tab height - 44px + 27px */
+.dx-theme-ios .list-content .list-indentation {
+    padding-bottom: 44px;
+}
+.dx-theme-ios .list-content .search-wrapper + .list-indentation {
+    padding-bottom: 76px;
+}
+.dx-theme-ios .list-content .editType-wrapper + .list-indentation {
+    padding-bottom: 90px;
+}
+
+/* android tab height - 46px + 40px*/
+.dx-theme-android .list-content .list-indentation {
+    padding-bottom: 46px;
+}
+.dx-theme-android .list-content .search-wrapper + .list-indentation {
+    padding-bottom: 86px;
+}
+.dx-theme-android .list-content .editType-wrapper + .list-indentation {
+    padding-bottom: 91px;
+}
+
+/* IE tab height - 21px + 40px*/
+.dx-theme-win8 .list-content .list-indentation {
+    padding-bottom: 21px;
+}
+.dx-theme-win8 .list-content .search-wrapper + .list-indentation {
+    padding-bottom: 61px;
+}
+.dx-theme-win8 .list-content .editType-wrapper + .list-indentation {
+    padding-bottom: 66px;
+}
+
+.dx-theme-tizen .list-content .list-indentation {
+    padding-bottom: 41px;
+}
+
+.dx-theme-tizen .list-content .search-wrapper + .list-indentation{
+    padding-bottom: 86px;
+}
+
+.dx-theme-tizen .list-content .editType-wrapper + .list-indentation {
+    padding-bottom: 85px;
+}
+
+/* generic  tab - 54*/
+.dx-theme-generic .list-content .list-indentation {
+    padding-bottom: 54px;
+}
+.dx-theme-generic .list-content .search-wrapper + .list-indentation {
+    padding-bottom: 86px;
+}
+.dx-theme-generic .list-content .editType-wrapper + .list-indentation {
+    padding-bottom: 107px;
+}
+
+.dx-theme-generic .editType-wrapper {
+    margin: 0px 0px 5px;
+}
+
+.dx-theme-generic .search-wrapper .dx-textbox {
+    padding: 0 15px;
+}

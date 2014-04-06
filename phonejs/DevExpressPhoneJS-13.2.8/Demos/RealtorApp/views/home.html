@@ -1,0 +1,28 @@
+<div data-options="dxView : { name: 'Home', toolbar: false } " >
+    <div class="home"  data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxLoadPanel: { message: loadPanelMessage, visible: loadPanelVisible }"></div>
+        <div class="search" data-bind="css: { 'active': isSearchActive }">
+            <div class="search-area" data-bind="dxAction: showSearchControls">
+                <div class="search-button">
+                    <div class="icon"></div>
+                    <div class="name">Search</div>
+                </div>
+                <div class="search-central">
+                    <div class="search-inner left">
+                        <div class="search-text" data-bind="dxTextBox: { value: text, valueUpdateEvent: 'keyup', valueUpdateAction: hideError, enterKeyAction: searchItemClick }"></div>
+                    </div>
+                    <div class="search-inner error" data-bind="visible: errorVisible, text: errorMessage"></div>
+                    <div class="search-inner right">
+                        <div class="button first" data-bind="dxButton: { text: 'Search', clickAction: searchItemClick }"></div>
+                        <div class="button second" data-bind="dxButton: { text: 'My Location', clickAction: locationItemClick }"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="picture-area" data-bind="foreach: listData">
+            <div class="picture-item" data-bind="dxAction: $parent.homeItemClick, css: doubleCss, style: { backgroundImage:  image }">
+                <div class="price" data-bind="css: priceCss, text: price"></div>
+            </div>
+        </div>
+    </div>  
+</div>

@@ -1,0 +1,59 @@
+<div data-options="dxView : { name: 'Details'} " >  
+    <div class="details" data-options="dxContent : { targetPlaceholder: 'content' }" >
+        <div data-bind="dxLoadPanel: { message: loadPanelMessage, visible: loadPanelVisible }"></div>
+        <div data-bind="if: isLoaded">
+        <!-- ko with: homeItem -->
+            <div class="right">
+                <div class="images">
+                    <div  data-bind="dxGallery: { dataSource: $parent.images, width: '100%', height: '100%', indicatorEnabled: false, showIndicator: false, loop: true }">
+                        <div class="gallery-item" data-options="dxTemplate: { name: 'item' }">
+                            <div class="gallery-container">
+                                <div class="image-container">
+                                    <div class="img" data-bind="style: { backgroundImage: $data }"></div>
+                                </div>
+                            </div>  
+                         </div>
+                    </div>
+                </div>        
+                <div class="phone-price">
+                    <div  data-bind="template: { name: 'price-template' }" data-options="dxTemplate:{ name:'item' }"></div>
+                </div>
+                <div class="map">
+                    <div class="map-inner"></div>
+                </div>
+            </div> 
+            <div class="left">
+                <div class="left-visible">
+                    <div class="tablet-scrollable">
+                        <div class="tablet-price">
+                            <div  data-bind="template: { name: 'price-template' }" data-options="dxTemplate:{ name:'item' }"></div>
+                        </div>
+                        <table class="prop">
+                            <tr><td class="prop-key">Status</td><td class="prop-value"><span data-bind="text: $parent.status"></span></td></tr>
+                            <tr><td class="prop-key">Beds</td><td class="prop-value" ><span data-bind="text: Beds"></span> Beds</td></tr>
+                            <tr><td class="prop-key">Baths</td><td class="prop-value"><span data-bind="text: Baths"></span> Bath</td></tr>
+                            <tr><td class="prop-key">House Size</td><td class="prop-value"><span data-bind="text: HouseSize"></span> Sq Ft</td></tr>
+                            <tr><td class="prop-key">Lot Size</td><td class="prop-value"><span data-bind="text: LotSize"></span> Sq Ft Lot</td></tr>
+                        </table>
+                        <div class="description" data-bind="text: Features"></div>
+                        <div class="agent-info" data-bind="with: Agent">
+                            <div class="agent-photo">
+                                <img data-bind="attr: { src: Photo }" />
+                            </div>
+                            <div class="agent-contact">
+                                <span class="stat">Listing agent</span><br />
+                                <span class="name" data-bind="text: Name"></span><br />
+                                 <span class="phone">Tel: </span><span class="phone" data-bind="text: Phone"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gradient"></div>
+                </div>         
+                <div class="fav-button-container">
+                    <div class="fav-button" data-bind="dxButton: { text: IsFavorite() ? 'Remove from Favorites' : 'Add to Favorites', clickAction: changeFavState }"></div>
+                </div>
+            </div>
+        <!-- /ko -->
+        </div>
+    </div>
+</div>

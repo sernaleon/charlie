@@ -1,0 +1,24 @@
+<div data-options="dxView : { name: 'ResultsGallery' } ">    
+    <div class="gallery" data-bind="dxGallery: { dataSource: listData, height: '100%', width: '100%', showIndicator: false }">
+        <div class="gallery-item" data-options="dxTemplate: { name: 'item' }">
+            <div class="gallery-container">
+                <p class="gallery-text"><span data-bind="text: ID"></span> of <span data-bind="text: $parent.listData().length"></span> found appartment</p>
+                <div data-bind="dxAction: $parent.resultsItemClick, style: { backgroundImage: 'url(' + Images[0] + ')' }" class="image-container" >
+                    <div class="fav">
+                        <div class="fav-img" data-bind="dxAction: changeFavState, css: { 'selected': IsFavorite() }"></div>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="price"><span data-bind="text: Globalize.format(Price, 'c0')"></span></div>
+                    <div class="place"> 
+                        <span data-bind="text: Address"></span>,
+                        <span data-bind="text: City"></span>,
+                        <span data-bind="text: State"></span>
+                        <span data-bind="text: ZipCode"></span>
+                    </div>
+                    <div class="square"><span  data-bind="text: Globalize.format(HouseSize, 'n0')"></span> sq. ft.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div data-options="dxView : { name: 'SelectProduct', title: 'Select', screenSize: 'small' }" >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+    <div data-bind="dxList: { dataSource: products, grouped: true }">
+      <div data-options="dxTemplate : { name: 'item' }" class="product-item" data-bind="dxAction: '#ProductDetails/{$root.productType}/{id}'">
+        <div class="small-image">
+            <img data-bind="attr: { src: image }" />
+        </div>
+        <div>
+            <div data-bind="text: name"></div>
+            <div class="bottom-description">
+                $<span data-bind="text: price"></span>,
+                Quantity: <span data-bind="text: quantity"></span>
+            </div>
+        </div>
+        <div class="list-arrow"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-options="dxView : { name: 'SelectProduct', title: 'SelectProduct', screenSize: 'medium' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div class="left-content">
+            <div data-bind="dxList: { dataSource: products, grouped: true, itemClickAction: showProduct }">
+                <div data-options="dxTemplate : { name: 'item' }" class="product-item" data-bind="css: { 'active-product': ($root.currentProduct() && id == $root.currentProduct().id) }">
+                    <div>
+                        <div data-bind="text: name"></div>
+                        <div class="bottom-description">
+                            $<span data-bind="text: price"></span>,
+                            Quantity: <span data-bind="text: quantity"></span>
+                        </div>
+                    </div>
+                    <div class="list-arrow"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-content" data-bind="dxScrollView: {}" data-options="dxViewPlaceholder: { viewName: 'ProductDetailsPartial' }">
+        </div>
+    </div>
+</div>

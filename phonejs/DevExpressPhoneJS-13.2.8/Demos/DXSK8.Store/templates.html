@@ -1,0 +1,51 @@
+﻿<script type="text/html" id="item-template">
+    <div class="image" data-bind="ifnot: $data.isEmpty, visible: !$data.isEmpty(), dxAction: selectItem">
+        <img data-bind="attr: { src: model().image, alt: model().name }" />
+        <div class="item-price">$<span data-bind="text: model().price "></span></div>
+    </div>
+    <div class="no-image" data-bind="if: $data.isEmpty, visible: $data.isEmpty(), dxAction: selectItem">
+        <img src="images/plus.png" />
+        <div>
+            <span data-bind="text: 'Select ' + name"></span>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="address-template">
+    <div class="dx-field">
+        <div class="dx-field-label">Country</div>
+        <div class="dx-field-value">
+            <div data-bind="dxLookup: { value: country, dataSource: countries, searchEnabled: false, title: 'Choose country', clickAction: $root.showLookup, fullScreen: $root.isPhone, usePopover: !$root.isPhone }"></div>
+        </div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">Zip Code</div>
+        <div class="dx-field-value">
+            <div data-bind="dxNumberBox: { value: zipCode, placeholder: 'Enter code' }"></div>
+        </div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">State</div>
+        <div class="dx-field-value">
+            <div data-bind="dxTextBox: { value: state }"></div>
+        </div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">City</div>
+        <div class="dx-field-value">
+            <div data-bind="dxTextBox: { value: city }"></div>
+        </div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">Address</div>
+        <div class="dx-field-value">
+            <div data-bind="dxTextArea: { value: address }"></div>
+        </div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">Phone</div>
+        <div class="dx-field-value">
+            <div data-bind="dxTextBox: { value: phoneNumber }"></div>
+        </div>
+    </div>
+</script>

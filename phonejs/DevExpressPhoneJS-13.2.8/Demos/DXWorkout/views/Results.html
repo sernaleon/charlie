@@ -1,0 +1,59 @@
+﻿<div data-options="dxView : { name: 'Results', title: 'Workout Results' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxScrollView: {}, with: workout">
+            <div class="content">
+                <div>
+                    <div class="dx-field-label">Workout date</div>
+                    <div class="dx-field-value" data-bind="text: Globalize.format(startDate(), 'MMM d, yyyy')" />
+                </div>
+                <div>
+                    <div class="dx-field-label">Workout goal</div>
+                    <div class="dx-field-value goal-caption" data-bind="text: goal" />
+                </div>
+                <div>
+                    <div class="dx-field-label">Total time</div>
+                    <div class="dx-field-value" data-bind="text: duration" />
+                </div>
+                <div class="large-container">
+                    <div class="workout-results">
+                        <div class="odd label">
+                            <div class="set-exercise">Exercise</div>
+                            <div class="set-result-line">
+                                <div class="set-reps">Reps</div>
+                                <div class="set-weight">
+                                    Weight, <span data-bind="text: weightUnit"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ko foreach: exercises -->
+                        <div data-bind="attr: { class: $index() % 2 === 0 ? 'even' : 'odd' }">
+                            <div class="set-exercise" data-bind="text: name"></div>
+                            <!-- ko foreach: sets -->
+                            <div class="set-result-line">
+                                <div class="set-reps" data-bind="text: reps"></div>
+                                <div class="set-weight" data-bind="text: weight"></div>
+                            </div>
+                            <!-- /ko -->
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                </div>
+
+                <div class="large-container">
+                    <div class="dx-field-label">Notes</div>
+                    <div class="dx-field-value" data-bind="dxTextArea: { value: notes, rows: 3, placeholder: 'Notes', valueUpdateAction: handleNotesChange }"></div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <!-- ko if: id -->
+                <div data-bind="dxButton: { text: 'Delete workout', type: 'danger', clickAction: handleDelete }"></div>
+                <!-- /ko -->
+                <!-- ko ifnot: id -->
+                <div data-bind="dxButton: { text: 'Continue workout', clickAction: handleContinue }"></div>
+                <div data-bind="dxButton: { text: 'Finish workout', clickAction: handleFinish }"></div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>

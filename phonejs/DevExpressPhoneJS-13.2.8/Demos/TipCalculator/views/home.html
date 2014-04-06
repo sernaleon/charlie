@@ -1,0 +1,58 @@
+<div data-options="dxView : { name: 'home' }">
+
+    <div data-options="dxContent : { targetPlaceholder: 'content' }">
+        <div data-bind="dxToolbar: { items: [{ location: 'center', text: '@tipCalculator' }] }"></div>
+
+        <div data-bind="dxScrollView: { }" class="main-content">
+            <div class="dx-fieldset top-fieldset">            
+                <div class="dx-field">
+                    <div class="dx-field-label">@billTotal:</div>
+                    <div id="billTotalInput" class="dx-field-value" data-bind="dxNumberBox: { value: billTotal, placeholder: '@typeHere...', valueUpdateEvent: 'keyup', min: 0 }"></div>
+                </div>
+            </div>
+        
+            <div class="dx-fieldset">
+                <div class="dx-field slider-container">
+                    <div class="slider-title">@tip, %</div>
+                    <div class="slider-body">                
+                        <div data-bind="dxSlider: { min: 0, max: 25, step: 1, activeStateEnabled: true, value: tipPercent }"></div>
+                    </div>
+                    <div class="slider-value" data-bind="text: Globalize.format(0.01 * tipPercent(), 'p0')"></div>
+                </div>
+                <div class="dx-field slider-container">
+                    <div class="slider-title">@split:</div>
+                    <div class="slider-body">
+                        <div data-bind="dxSlider: { min: 1, step: 1, max: 10, activeStateEnabled: true, value: splitNum }"></div>
+                    </div>
+                    <div class="slider-value" data-bind="text: splitNum"></div>
+                </div>
+            </div>
+
+            <div class="round-buttons">
+                <div data-bind="dxButton: { text: '@roundDown', clickAction: roundDown }"></div>
+                <div data-bind="dxButton: { text: '@roundUp', clickAction: roundUp }"></div>
+            </div>
+
+            <div id="results" class="dx-fieldset">            
+                <div class="dx-field">
+                    <span class="dx-field-label">@totalToPay</span>
+                    <span class="dx-field-value" style="font-weight: bold" data-bind="text: Globalize.format(totalToPay(), 'c')"></span>
+                </div>
+                <div class="dx-field">
+                    <span class="dx-field-label">@totalPerPerson</span>
+                    <span class="dx-field-value" data-bind="text: Globalize.format(totalPerPerson(), 'c')"></span>
+                </div>
+                <div class="dx-field">
+                    <span class="dx-field-label">@totalTip</span>
+                    <span class="dx-field-value" data-bind="text: Globalize.format(totalTip(), 'c')"></span>
+                </div>
+                <div class="dx-field">
+                    <span class="dx-field-label">@tipPerPerson</span>
+                    <span class="dx-field-value" data-bind="text: Globalize.format(tipPerPerson(), 'c')"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

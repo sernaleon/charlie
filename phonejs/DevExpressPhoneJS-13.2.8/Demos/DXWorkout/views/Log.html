@@ -1,0 +1,9 @@
+<div data-options="dxView : { name: 'Log', title: 'Workout Logs' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxList: { dataSource: log, grouped: true, itemClickAction: handleItemClick }">
+            <div data-options="dxTemplate : { name: 'item' } " >
+                <div class="log-list-item" data-bind="text: caption" />
+            </div>
+        </div>
+    </div>
+</div>

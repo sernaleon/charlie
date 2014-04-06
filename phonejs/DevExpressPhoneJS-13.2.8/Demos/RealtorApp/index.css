@@ -1,0 +1,294 @@
+﻿html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.screen-size:after {
+    position: absolute;
+    left: -9999px;
+}
+
+.home .search {
+    position: absolute;
+    top:2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+}
+
+.home .search-area {
+    background-color: #f05b41;
+    text-align: center;
+}
+
+.home .search-text {
+    width: 100%;
+}
+
+.home .search-text .dx-editbox-input {
+    height:100%;
+}
+
+.home .search-central {
+  width: 88%; 
+  height: 60%;  
+  padding: 6%;
+  margin: auto;
+  text-align: center;
+}
+
+.home .search-inner.error {
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.home .search-inner div.button {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    border-bottom:none;
+    border-top:none;
+    color:#fff;
+    background: none!important;
+    box-shadow: none;
+}
+
+.home .search-inner div.button.dx-state-active {
+    opacity: 0.4;
+}
+
+.home .picture-area {
+    margin-left: 2px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+}
+
+.home .picture-item {
+    overflow: hidden;
+    float: left;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+.home .price {
+    position:absolute;
+    background-color: black;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 3px;
+    opacity: 0.7;
+}
+
+.home input {
+    -webkit-border-radius: 0;
+}
+
+.home .dx-editbox > input.dx-editbox-input {
+    padding: 0 15px;
+}
+
+.list-item {
+    border-bottom: 1px solid #cccccc;
+    position:relative;
+    margin: 0 !important;
+    padding: 8px 10px!important;
+    z-index:100;
+}
+
+.list-item .image {
+    overflow: hidden;
+    float: left;    
+    margin: 10px 10px 10px 5px;
+    box-shadow: 2px 2px #cccccc;
+}
+
+.list-item .image > img {
+    width:100%;    
+}
+
+.list-item .info {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif; 
+}
+
+.clear-both {
+    clear: both;
+}
+
+.details {
+    height: 100%;
+    background: white;
+}
+
+.details > div:not(.dx-loadpanel) {
+    height: 100%;
+}
+
+.details .map-inner {
+   display: inline-block;
+   width: 100%;
+}
+
+.details .fav-button {
+    width: 100%;  
+    margin-top: 30px;
+    font-size: 26px;
+    padding: 14px 0;
+}
+
+.details .gallery-container, .details .image-container {
+    height: 100%;
+}
+
+.details .images .img {
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.results.gallery-content .gallery.dx-gallery {
+    background-color: #353742;
+}
+
+.results .gallery .gallery-item {
+    height: 100%;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+}
+
+.results .gallery .image-container {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    box-shadow: 0px 6px #282931;
+}
+
+.results .gallery .image-container > img{
+    width:100%;
+    box-shadow:0px 7px 0 -3px #282931;
+}
+
+.results .gallery .fav {
+    position: absolute;
+    top: -8px;
+    right: -9px;
+    background: url(images/star.png) no-repeat;
+    width: 60px;
+    height: 60px;
+}
+.results .gallery .fav-img {
+    background-image: url(images/star-gal.png);
+    background-size: 100%;
+    width:26px;
+    height:26px;
+    position: absolute;
+    right:0;
+    cursor: pointer;
+}
+
+.results .gallery .fav-img.selected {
+    background-image: url('images/star-gal_selected.png');
+}
+
+.results .gallery .dx-gallery-item-selected > .gallery-container {
+     opacity: 1; 
+     -webkit-transition: opacity 0.5s ease;
+     transition: opacity 0.5s ease;  
+}
+
+
+.results .gallery .gallery-container {
+     opacity: 0.5;
+     -webkit-transition: opacity 0.5s ease;
+     transition: opacity 0.5s ease;  
+}
+
+.results .gallery .dx-gallery-item-selected .description {
+     display: block;
+     color: #fff;
+     margin: 7px 0 0 0;
+}
+
+.results .gallery .description {
+    display: none;
+}
+
+.results .map {
+    height: 100%;
+}
+
+.results {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: left 500ms ease 0s;
+    -webkit-transition: left 500ms ease 0s;
+}
+
+.list .results.list-content,
+.map .results.map-content,
+.gallery .results.gallery-content {
+    left: 0;
+}
+
+.list .results.map-content,
+.map .results.gallery-content {
+    left: 100%;
+}
+
+.map .results.list-content,
+.gallery .results.map-content {
+    left: -100%;
+}
+
+.list .results.gallery-content {
+    left: 200%;
+}
+
+.gallery .results.list-content {
+    left: -200%;
+}
+
+.favorites-list .fav {
+    display: none;
+}
+
+.about {
+    padding: 10px;
+}
+
+.about h1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.about p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 2)
+{
+    .results .gallery .fav-img {
+        background-image: url(images/star-gal@2x.png);
+    }
+
+    .results .gallery .fav-img.selected {
+        background-image: url('images/star-gal_selected@2x.png');
+    }
+}
