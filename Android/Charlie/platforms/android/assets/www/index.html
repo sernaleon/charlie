@@ -1,58 +1,142 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <meta name="mobile-web-app-capable" content="yes">
         <title>Charlie</title>
+        <link rel="stylesheet" href="fries/themes/holo-dark/holo-dark.min.css" />
+
+
+        <style>
+
+            @font-face {
+                font-family: 'title'; /*a name to be used later*/
+                src: url('style/fonts/PoiretOne-Regular.ttf'); /*URL to font*/
+            }
+
+            @font-face {
+                font-family: 'subtitle'; /*a name to be used later*/
+                src: url('style/fonts/PoiretOne-Regular.ttf'); /*URL to font*/
+            }
+            * {
+                overflow: hidden;
+            }
+
+            .robotC {
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                background-color: #eee;
+
+
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+
+
+            .rightCol {
+                position: absolute;
+                margin-left: 50%;
+                height: 100%;
+                width: 50%;
+            }
+
+            .robotC .title {
+                margin-top: 40%;
+                padding-top: 20px;
+                font-size: 80px;
+                height: 90px;
+                color: #000;
+                font-variant: small-caps;
+                font-family: title;
+                text-rendering:optimizeLegibility;
+
+            }
+            .robotC .subtitle {
+                font-size: 35px;
+                padding: 0 0 10px 80px;
+                color: #000;
+                font-family: subtitle;
+                text-rendering:optimizeLegibility;
+            }
+
+
+
+            .bottomButtons{
+                position: fixed;
+                bottom: 0px;
+            }
+
+            .leftCol {
+                position: absolute;
+                height: 100%;
+                width: 50%;
+                text-align: center;
+            }
+
+            .helper {
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
+
+            #logo {
+                vertical-align: middle;
+            }
+
+            .setBt {
+                float: right;
+            }
+        </style>
+
+
+        <script type="text/javascript" src="phonegap.js"></script>
     </head>
     <body>
-        <div class="app">
-            <div id="btContainer">
-                <div id="heading">
-                    <h1>CHARLIE</h1>
-                    <br/>
 
 
-                    <div id="deviceready" class="blink">
-                        <p class="event listening">Connecting to Device</p>
-                        <p class="event received">Device is Ready</p>
-                    </div>
-
-                    <br/>
-                    <br/>
+    <div class="page">
+        <div class="container">
+            <div class="robotC">
+                <div class="leftCol">
+                    <span class="helper"></span>
+                    <img src="img/logo.png" id="logo">
                 </div>
-                <div id="buttons">
+                <div class="rightCol">
 
-                    <div id="btScripts" class="btStd" >Scripts</div>
-                    <div id="btDrive" class="btStd" >Drive</div>
+
+                    <div class="setBt">
+                        <a href="settings.html" class="action" title="Settings"><i class="icon-settings"></i> </a>
+                    </div>
+                    <div class="title">Charlie</div>
+                    <div class="subtitle">the robot</div>
                 </div>
             </div>
+            <nav class="tab-fixed bottomButtons">
+                <ul class="tab-inner">
+                    <li><a id="btDrive" href="drive.html">Drive</a></li>
+                    <li><a id="btCode" href="code.html">Code</a></li>
+                </ul>
+            </nav>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+    </div>
+
+    <script src="fries/fries.min.js"></script>
+    <script type="text/javascript" src="js/values.js"></script>
+    <script type="text/javascript" src="js/globalFunctions.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            window.plugins.orientationchanger.lockOrientation('landscape');
+            window.plugins.insomnia.keepAwake();
+
+            document.getElementById('btDrive').addEventListener('click',function(){location.href="drive.html"});
+            document.getElementById('btCode').addEventListener('click',function(){location.href="code.html"});
+        }
+    </script>
     </body>
 </html>
