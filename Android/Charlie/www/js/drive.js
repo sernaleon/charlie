@@ -13,22 +13,29 @@ function onDeviceReady() {
     window.plugins.insomnia.keepAwake();
     websocket = new WebSocket(WEBHOST);
 
-    websocket.onopen = function(evt) {
+
+    document.addEventListener("backbutton", onBackKeyDown, false);
+
+    websocket.onopen = function (evt) {
         toast("Connected. Tap to start")
     };
 
-    websocket.onerror = function(evt) {
+    websocket.onerror = function (evt) {
         websocket.close();
         onDeviceReady();
     };
 }
 
 
-function onTap(){
-    if (isSending){
+function onBackKeyDown() {
+    window.location.href = "index.html";
+}
+
+function onTap() {
+    if (isSending) {
         stopCharlie();
     }
-    else{
+    else {
         startCharlie();
     }
 }
@@ -41,7 +48,7 @@ function startCharlie() {
     toast("STARTED. Tap to stop.");
 }
 
-function stopCharlie(){
+function stopCharlie() {
     var msg = new Uint8Array(3)
     msg[0] = CMD_STOP;
     msg[1] = CMD_NOPARAM
@@ -60,13 +67,13 @@ function stopCharlie(){
 function onAccelerometerChanged(acceleration) {
     var msg = formatCMD(
         CMD_MOVE_FORWARD,
-        map(acceleration.x * 100,0,1000,255,0),
-        map(acceleration.y * 100,-1000,1000,0,255))
+        map(acceleration.x * 100, 0, 1000, 255, 0),
+        map(acceleration.y * 100, -1000, 1000, 0, 255))
     var element = document.getElementById('accelerometer');
     websocket.send(msg)
 }
 
 function onAccelerometerError(a) {
-    console.log('onAccelerometerError!'+a);
+    console.log('onAccelerometerError!' + a);
 }
 

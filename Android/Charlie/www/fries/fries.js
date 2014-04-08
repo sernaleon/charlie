@@ -13,12 +13,12 @@
 
     // Do this only when the screen width is below or equal to 480 pixels
     if (window.innerWidth <= 480) {
-      
+
       // Iterate over all action bars
       while (a--) {
         var actions = actionBars[a].querySelector('.actions'),
             actionButtons = actionBars[a].querySelectorAll('.actions .action');
-      
+
         if (actionButtons.length > 2 && actions.getAttribute('data-overflow') !== "false") {
 
           // Maintain the first item then replace the rest with an action overflow
@@ -68,7 +68,7 @@
           actionBars[a].querySelector('.actions').appendChild(overflowListItem);
         }
       }
-      
+
     }
     else {
       // Iterate over all action bars
@@ -301,14 +301,14 @@
 
   var showSpinner = function(target) {
     var spinner = target.parentNode.querySelectorAll('.spinner')[0];
-    
+
     if (!spinner.classList.contains('active')) spinner.style.display = 'block';
 
-    setTimeout(function () { 
+    setTimeout(function () {
       spinner.classList.toggle('active');
       spinner.addEventListener('webkitTransitionEnd', popEnd);
     }, 20); // Might be better to get the timeout from the CSS transition
-    
+
     function popEnd () {
       if (!spinner.classList.contains('active')) spinner.style.display = 'none';
     }
@@ -661,7 +661,7 @@
     var targetAnchor  = getTarget(e.target);
 
     if (!targetAnchor) return;
-    
+
     e.preventDefault();
 
     e.preventDefault();
@@ -692,7 +692,7 @@
       if (sliderItems[s] == targetBody) targetIndex = s;
       if (sliderItems[s] == activeBody) activeIndex = s;
     }
-    
+
     // Slide the active body into position
     s = sliderItems.length;
     setTimeout(function () {

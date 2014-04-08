@@ -5,6 +5,10 @@
   font-weight: normal;
   font-style: normal; }
 
+
+.icon-settings:before {
+    content: "\e013"; }
+
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icomoon';
