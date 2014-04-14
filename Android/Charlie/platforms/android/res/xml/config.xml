@@ -1,10 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="es.sernaleon.charlie" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Hello Cordova</name>
-    <description>
-        A sample Apache Cordova application that responds to the deviceready event.
-    </description>
-    <content src="index.html" />
     <preference name="loglevel" value="DEBUG" />
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
@@ -36,7 +31,6 @@
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
-    <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
@@ -50,4 +44,8 @@
     <icon gap:density="hdpi" gap:platform="android" src="img/icon-72-hdpi.png" />
     <icon gap:density="xhdpi" gap:platform="android" src="img/icon-96-xhdpi.png" />
     <access origin="*" />
+    <gap:plugin name="com.boyvanderlaak.cordova.plugin.orientationchanger" version="0.1.1" />
+    <gap:plugin name="nl.x-services.plugins.insomnia" version="3.0" />
+    <gap:plugin name="nl.x-services.plugins.toast" version="1.0" />
+    <gap:plugin name="org.apache.cordova.device-motion" version="0.2.6" />
 </widget>

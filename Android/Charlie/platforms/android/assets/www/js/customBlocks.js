@@ -247,5 +247,5 @@ Blockly.Blocks['take_pic'] = {
 };
 
 Blockly.Python['take_pic'] = function (block) {
-    return PYT_SEND + '(' + CMD_STOP + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')\n';
+    return PYT_SEND + '(' + CMD_PIC + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')\n';
 };

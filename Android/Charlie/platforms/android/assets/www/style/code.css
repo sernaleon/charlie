@@ -11,7 +11,7 @@ html, body {
     width: 100%;
 }
 
-iframe {
+iframe, #blocklyContainer {
     height: 90%;
     width: 100%;
 }
@@ -49,3 +49,6 @@ iframe {
 .left {
     float: right;
 }
+
+
+
