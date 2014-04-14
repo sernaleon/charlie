@@ -219,6 +219,38 @@
             </value>
         </block>
     </category>
+
+    <category name="Motor">
+        <block type="move_fwd"></block>
+        <block type="move_l"></block>
+        <block type="move_r"></block>
+        <block type="stop_motors"></block>
+        <block type="move_motor">
+
+            <value name="speed">
+                <block type="math_number">
+                    <field name="NUM">50</field>
+                </block>
+        </block>
+    </category>
+
+    <category name="Functions">
+
+
+        <block type="read_sonar"></block>
+        <block type="read_infrared"></block>
+
+         <block type="wait">
+
+            <value name="timeD">
+                <block type="math_number">
+                        <field name="NUM">1000</field>
+                </block>
+            </value>
+        </block>
+        <block type="take_pic"></block>
+    </category>
+
 </xml>
 </body>
 </html>

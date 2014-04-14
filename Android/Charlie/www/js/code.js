@@ -1,5 +1,11 @@
-
-document.addEventListener("deviceready", onDeviceReady, false);
+//
+//document.addEventListener("deviceready", onDeviceReady, false);
+//
+//
+//function blocklyLoaded(blockly) {
+//    // Called once Blockly is fully loaded.
+//    window.Blockly = blockly;
+//}
 
 
 function blocklyLoaded(blockly) {
