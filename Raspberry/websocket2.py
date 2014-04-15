@@ -4,26 +4,44 @@ from optparse import OptionParser
 
 logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
 
-class WebServer(WebSocket):
+ArduinoConnected = True
 
+if (ArduinoConnected):
+	DUE_PORT = 'COM7' #'/dev/ttyACM0'
+	DUE_BAUDS = 9600
+	serialPortArduinoCom = serial.Serial(DUE_PORT,DUE_BAUDS) 
+	
+class ScriptHandler:
+
+	def __init__(self, msg):
+		self.receivedCommand = msg
+		
 	def sendToArduino(self,cmd,p1,p2):
-		print "send:	", cmd, p1, p2
-
-	def receiveFromArduino(self,cmd,p1,p2):
 		msg = bytearray(3)
 		msg[0] = struct.pack('B', int(cmd))
 		msg[1] = struct.pack('B', int(p1))
 		msg[2] = struct.pack('B', int(p2))
 		
-		print "receive:	", cmd, p1, p2, msg, len(msg), msg[0]
-		#TODO: 
-		# ser.write
-		# outMsg = ser.read
-		# self.sendMessage(outMsg)
+		if (ArduinoConnected):
+			serialPortArduinoCom.write(msg)
 		
-		self.sendMessage(msg)
+		print "   Send:", msg[0], msg[1], msg[2]
+
+	def receiveFromArduino(self,cmd,p1,p2):
+		self.sendToArduino(cmd,p1,p2)
+		if (ArduinoConnected):
+			recMsg = serialPortArduinoCom.read()
+		else:
+			recMsg = 123
+		print "Receive:",recMsg
 		
-	
+	def takePic(self):
+		print "PICTURE TAKEN!"
+		
+	def executeScript(self):
+		exec(self.receivedCommand)
+
+class WebServer(WebSocket):
 	def handleMessage(self):
 		if self.data is None:
 			self.data = ''                            
@@ -35,12 +53,13 @@ class WebServer(WebSocket):
 				cmd = struct.unpack('B', msg[0])[0]
 				p1 = struct.unpack('B', msg[1])[0]
 				p2 = struct.unpack('B', msg[2])[0]
-				print cmd, p1,p2				
-				#ser.write(msg)
+				print cmd, p1,p2	
+
+				if (ArduinoConnected):
+					serialPortArduinoCom.write(msg)
 			else:
-				print msg
-				exec(msg)
-				#self.sendMessage('0')
+				script = ScriptHandler(msg)
+				script.executeScript()
 				self.sendClose()
 		except Exception as n:
 			print "Err: ", n
@@ -50,7 +69,10 @@ class WebServer(WebSocket):
 
 	def handleClose(self):
 		print self.address, 'closed'
+
 		
+		
+
 def main():
 	SERVER_IP = ''
 	WS_PORT = 8000
@@ -69,7 +91,8 @@ def main():
 
 	cls = WebServer
 	
-	#ser = serial.Serial(DUE_PORT,DUE_BAUDS) 	
+	#if (ArduinoConnected):
+	#	serialPortArduinoCom = serial.Serial(DUE_PORT,DUE_BAUDS) 	
 	
 	if options.ssl == 1:
 		server = SimpleSSLWebSocketServer(options.host, options.port, cls, options.cert, options.cert, version=options.ver)

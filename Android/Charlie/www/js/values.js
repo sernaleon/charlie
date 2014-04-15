@@ -13,9 +13,9 @@ WEBHOST = "ws://" + SERVER_IP + ":" + WEBSERVER_PORT;
 ACCELEROMETER_FREQUENCY = 40;
 
 
-SLOW_SPEED = 100
-MEDIUM_SPEED = 170
-FAST_SPEED = 250
+SLOW_SPEED = 130
+MEDIUM_SPEED = 190
+FAST_SPEED = 255
 
 //COMMANDS
 
@@ -38,3 +38,4 @@ CMD_PIC = 11;
 
 PYT_SEND = "self.sendToArduino"
 PYT_RECEIVE = "self.receiveFromArduino"
+PYT_CAM= "self.takePic"

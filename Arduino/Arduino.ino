@@ -66,10 +66,6 @@ void setup()
 void loop()
 {
   getAndRunCommandFromUSB();
-
-  //Serial.println("hola1");
-
-
   //checkSonar();
 }
 
@@ -90,9 +86,9 @@ void getAndRunCommandFromUSB()
         stopMotors();
         break;
   
-      //Command 1 -> Move forwards
+      //Command 1 -> Move forwards with speed and balance
       case 1:
-        moveForward(p1,p2);
+        moveBalanced(p1,p2);
         break;
   
       //Command 2 -> Move backwards
@@ -105,9 +101,24 @@ void getAndRunCommandFromUSB()
         beep(p1);
         break;
   
-      //Command 4 -> LED X (ON|OFF)
+      //Command 4 -> LED <1..12> <ON|OFF>
       case 4:
         led(p1,p2);
+        break;
+        
+     //Command 5 -> Set left motor at <SPPED>
+      case 5:
+        setLeftSpeed(p1);
+        break;
+     
+      //Command 6 -> Set right motor at <SPPED>
+      case 6:
+        setRightSpeed(p1);
+        break;
+        
+      //Command 7 -> Move forward
+      case 7:
+        moveForward(p1);
         break;
         
       //Command 10 -> Send all CNY70 values
@@ -116,6 +127,18 @@ void getAndRunCommandFromUSB()
         break;
     }
   }
+}
+
+void setLeftSpeed(byte speed)
+{
+    int speedMapped = map(speed,0,255,0,KSPEED);
+    setForwardSpeedLeft(speedMapped);
+}
+
+void setRightSpeed(byte speed)
+{
+    int speedMapped = map(speed,0,255,0,KSPEED);
+    setForwardSpeedRight(speedMapped);
 }
 
 void led(byte num,bool state)
@@ -137,7 +160,7 @@ void sendSensorValues()
     Serial.println();
 }
 
-void moveForward(byte speed, byte balance)
+void moveBalanced(byte speed, byte balance)
 {
   //Sets speed between 0 and KMAXSPEED
   int speedMapped = map(speed,0,255,0,KSPEED);
@@ -150,6 +173,15 @@ void moveForward(byte speed, byte balance)
   int right = speedMapped + balanceMapped;
 
   setMotors(left,right);
+}
+
+
+void moveForward(byte speed)
+{
+  //Sets speed between 0 and KMAXSPEED
+  int speedMapped = map(speed,0,255,0,KSPEED);
+
+  setMotors(speedMapped,speedMapped);
 }
 
 void moveBackward(byte speed, byte balance)

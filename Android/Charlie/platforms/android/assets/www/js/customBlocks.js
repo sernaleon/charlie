@@ -29,30 +29,6 @@ Blockly.Python['move_motor'] = function (block) {
 };
 
 
-
-Blockly.Blocks['move_fwd'] = {
-    init: function () {
-        this.setHelpUrl('http://www.example.com/');
-        this.appendDummyInput()
-            .appendField("Set")
-            .appendField(new Blockly.FieldDropdown([
-                ["left", CMD_LEFT_MOTOR.toString()],
-                ["right", CMD_RIGHT_MOTOR.toString()],
-                ["both", CMD_BOTH_MOTORS.toString() ]
-            ]),
-                "motor")
-            .appendField("motor speed at");
-        this.appendValueInput("speed")
-            .setCheck("Number");
-        this.appendDummyInput()
-            .appendField("%");
-        this.setInputsInline(true);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
-        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
-    }
-};
-
 Blockly.Blocks['stop_motors'] = {
     init: function () {
         this.setHelpUrl('http://www.example.com/');
@@ -162,9 +138,9 @@ Blockly.Blocks['move_fwd'] = {
         this.appendDummyInput()
             .appendField("Move forward")
             .appendField(new Blockly.FieldDropdown([
-                ["slow", SLOW_SPEED.toString()],
-                ["medium", MEDIUM_SPEED.toString()],
-                ["fast", FAST_SPEED.toString()]
+                ["slow", SLOW_SPEED],
+                ["medium", MEDIUM_SPEED],
+                ["fast", FAST_SPEED]
             ]), "speed");
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -183,9 +159,9 @@ Blockly.Blocks['move_l'] = {
         this.appendDummyInput()
             .appendField("Move left")
             .appendField(new Blockly.FieldDropdown([
-                ["slow", SLOW_SPEED.toString()],
-                ["medium", MEDIUM_SPEED.toString()],
-                ["fast", FAST_SPEED.toString()]
+                ["slow", SLOW_SPEED],
+                ["medium", MEDIUM_SPEED],
+                ["fast", FAST_SPEED]
             ]), "speed");
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -205,9 +181,9 @@ Blockly.Blocks['move_r'] = {
         this.appendDummyInput()
             .appendField("Move right")
             .appendField(new Blockly.FieldDropdown([
-                ["slow", SLOW_SPEED.toString()],
-                ["medium", MEDIUM_SPEED.toString()],
-                ["fast", FAST_SPEED.toString()]
+                ["slow", SLOW_SPEED],
+                ["medium", MEDIUM_SPEED],
+                ["fast", FAST_SPEED]
             ]), "speed");
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -247,5 +223,5 @@ Blockly.Blocks['take_pic'] = {
 };
 
 Blockly.Python['take_pic'] = function (block) {
-    return PYT_SEND + '(' + CMD_PIC + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')\n';
+    return PYT_CAM + '()\n';
 };

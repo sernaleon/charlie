@@ -1,13 +1,3 @@
-//
-//document.addEventListener("deviceready", onDeviceReady, false);
-//
-//
-//function blocklyLoaded(blockly) {
-//    // Called once Blockly is fully loaded.
-//    window.Blockly = blockly;
-//}
-
-
 function blocklyLoaded(blockly) {
     // Called once Blockly is fully loaded.
     window.Blockly = blockly;
@@ -19,7 +9,9 @@ function onDeviceReady() {
     document.getElementById('btSave').onclick = save;
     document.getElementById('btLoad').onclick = load;
 
-    document.addEventListener("backbutton", onBackKeyDown, false);
+//    document.addEventListener("backbutton", onBackKeyDown, false);
+
+//    document.body.onunload = onBackKeyDown; //NO VA!
 }
 
 function onBackKeyDown() {
