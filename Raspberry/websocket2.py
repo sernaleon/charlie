@@ -15,6 +15,7 @@ class ScriptHandler:
 
 	def __init__(self, msg):
 		self.receivedCommand = msg
+		print msg
 		
 	def sendToArduino(self,cmd,p1,p2):
 		msg = bytearray(3)
@@ -25,15 +26,16 @@ class ScriptHandler:
 		if (ArduinoConnected):
 			serialPortArduinoCom.write(msg)
 		
-		print "   Send:", msg[0], msg[1], msg[2]
+		#print "   Send:", msg[0], msg[1], msg[2]
 
 	def receiveFromArduino(self,cmd,p1,p2):
 		self.sendToArduino(cmd,p1,p2)
 		if (ArduinoConnected):
-			recMsg = serialPortArduinoCom.read()
+			recMsg = serialPortArduinoCom.readline()
 		else:
-			recMsg = 123
-		print "Receive:",recMsg
+			recMsg = "FAKEMSG"
+		#print "Receive:",recMsg
+		return recMsg.strip()
 		
 	def takePic(self):
 		print "PICTURE TAKEN!"

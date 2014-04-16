@@ -12,8 +12,7 @@ Blockly.Blocks['move_motor'] = {
             .appendField("motor speed at");
         this.appendValueInput("speed")
             .setCheck("Number");
-        this.appendDummyInput()
-            .appendField("%");
+        this.appendDummyInput();
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -23,7 +22,8 @@ Blockly.Blocks['move_motor'] = {
 
 Blockly.Python['move_motor'] = function (block) {
     var cmd = block.getFieldValue('motor');
-    var p1 = Math.round(map(Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC), 0, 100, 0, 255));
+    var p1 = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+  //var p1 = Math.round(map(Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC), 0, 100, 0, 255));
 
     return PYT_SEND + '(' + cmd + ',' + p1 + ',' + CMD_NOPARAM + ')\n';
 };
@@ -202,7 +202,7 @@ Blockly.Blocks['read_ground'] = {
         this.appendDummyInput()
             .appendField("Read ground");
         this.setInputsInline(true);
-        this.setOutput(true, "Number");
+        this.setOutput(true);
         this.setTooltip('');
     }
 };

@@ -8,6 +8,7 @@ function onDeviceReady() {
     document.getElementById('btSend').onclick = sendToRaspi;
     document.getElementById('btSave').onclick = save;
     document.getElementById('btLoad').onclick = load;
+    document.getElementById('btClear').onclick = clearWorkspace
 
 //    document.addEventListener("backbutton", onBackKeyDown, false);
 
@@ -69,4 +70,8 @@ function sendToRaspi() {
     websocket.onerror = function (evt) {
         websocket.close();
     };
+}
+
+function clearWorkspace() {
+    Blockly.mainWorkspace.clear()
 }

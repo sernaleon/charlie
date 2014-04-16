@@ -12,13 +12,18 @@
 #define KTURNSPEED      200
 
 
+#define FRONTAL_TIMEOUT 2000
+
+#define CNY70DIVIDER 30
 //-------------------------
 //        INPUTS
 //-------------------------
 
 //EMERGENCY STOP SONAR
 #define SONARPIN        A10
-
+#define ULTRASONIC_TRIG  16
+#define ULTRASONIC_ECHO  15
+#define ULTRASONIC_TIMEOUT 2000
 //Push button (Pull-up)
 #define  I_BUTTON	13
 
