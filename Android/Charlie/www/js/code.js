@@ -1,6 +1,9 @@
 function blocklyLoaded(blockly) {
     // Called once Blockly is fully loaded.
     window.Blockly = blockly;
+
+
+    document.getElementsByClassName("blocklyToolboxDiv")[0].innerHTML += "<div id='btS'>Send</div>"
 }
 
 function onDeviceReady() {
@@ -9,6 +12,8 @@ function onDeviceReady() {
     document.getElementById('btSave').onclick = save;
     document.getElementById('btLoad').onclick = load;
     document.getElementById('btClear').onclick = clearWorkspace
+
+
 
 //    document.addEventListener("backbutton", onBackKeyDown, false);
 

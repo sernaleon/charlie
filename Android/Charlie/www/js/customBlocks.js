@@ -57,7 +57,7 @@ Blockly.Blocks['read_sonar'] = {
 };
 
 Blockly.Python['read_sonar'] = function (block) {
-    return [PYT_RECEIVE + '(' + CMD_SONAR + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')', Blockly.Python.ORDER_FUNCTION_CALL];
+    return [PYT_SONAR + '()', Blockly.Python.ORDER_FUNCTION_CALL];
 };
 
 Blockly.Blocks['read_infrared'] = {

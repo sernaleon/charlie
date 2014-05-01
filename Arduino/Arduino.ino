@@ -24,17 +24,17 @@ unsigned int calibrateMax[12];
 
 
 
-int sonarValue;
+//int sonarValue;
 
 void setup()
 {
-  //Disables interrups for the initialization
+  //Disables interrupts for the initialization
   noInterrupts();
 
   //Enables USB port for communication with Raspberry
   Serial.begin(9600);
 
-  //Resolution of analogic port: 10 = 1024 (can be configured up to 12 = 4095)
+  //Resolution of analogical port: 10 = 1024 (can be configured up to 12 = 4095)
   analogWriteResolution(10);
 
 
@@ -61,7 +61,7 @@ void setup()
   }
   
   //Sonar init
-  sonarValue = 0;
+  //sonarValue = 0;
   //Wire.begin(ARDUINO_ADDR);
   //Wire.onReceive(receiveSonarEvent);
   
@@ -69,7 +69,7 @@ void setup()
   pinMode(ULTRASONIC_TRIG, OUTPUT);
   pinMode(ULTRASONIC_ECHO, INPUT);
 
-  //Activates interrups again
+  //Activates interrupts again
   interrupts();
 }
 
@@ -135,10 +135,10 @@ void getAndRunCommandFromUSB()
         moveForward(p1);
         break;
         
-      //Command 9 -> Read ultrasonic
-     case 9:
-        readSonar();
-        break;
+      ////Command 9 -> Read ultrasonic
+     //case 9:
+        //readSonar();
+        //break;
         
       //Command 10 -> Send all CNY70 values
       case 10:
@@ -224,7 +224,7 @@ void read_middle(){
 
 void read_front()
 {
-	//Descargo	
+	//Unload capacitors	
 	for (int i = 0; i < 12; i++)
 	{
 		pinMode(frontSensor[i], OUTPUT);
@@ -232,18 +232,18 @@ void read_front()
 	}
 	delayMicroseconds(15);	
 	
-	//Cargo
+	//Load capacitors
 	for (int i = 0; i < 12; i++)
 	{
 		pinMode(frontSensor[i], INPUT);	
 		digitalWrite(frontSensor[i],LOW);
 	}
 	
-	//Enciendo fila
+	//Switch on IR matrix
 	digitalWrite(O_IRON_AN,HIGH);
 	delayMicroseconds(5);
 	
-	//Cuento 
+	//Read 
 	unsigned int cTiempo = 0;
 	unsigned int cSensores = 0;
 	while (cTiempo < FRONTAL_TIMEOUT && cSensores < 12)
@@ -282,7 +282,7 @@ void read_front()
 		}
 	}
 		
-	//Desactivo fila
+	//Switch off IR matrix
 	digitalWrite(O_IRON_AN,LOW);
 }
 
@@ -354,23 +354,24 @@ void read_line(){
 
 
 /*************************** SR04 ************************************/
-
-
-void readSonar()
-{
-  /* The following trigPin/echoPin cycle is used to determine the
- distance of the nearest object by bouncing soundwaves off of it. */ 
- digitalWrite(ULTRASONIC_TRIG, LOW); 
- delayMicroseconds(2); 
-
- digitalWrite(ULTRASONIC_TRIG, HIGH);
- delayMicroseconds(10); 
- 
- digitalWrite(ULTRASONIC_TRIG, LOW);
- int duration = pulseIn(ULTRASONIC_ECHO, HIGH,ULTRASONIC_TIMEOUT);
- 
- //Calculate the distance (in cm) based on the speed of sound.
- int distance = duration/58.2;
- 
- Serial.println(distance);
-}
+//
+//
+//void readSonar()
+//{
+  ///* The following trigPin/echoPin cycle is used to determine the
+ //distance of the nearest object by bouncing soundwaves off of it. */ 
+ //digitalWrite(ULTRASONIC_TRIG, LOW); 
+ //delayMicroseconds(2); 
+//
+ //digitalWrite(ULTRASONIC_TRIG, HIGH);
+ //delayMicroseconds(10); 
+ //
+ //digitalWrite(ULTRASONIC_TRIG, LOW);
+ //int duration = pulseIn(ULTRASONIC_ECHO, HIGH,ULTRASONIC_TIMEOUT);
+ //
+ ////Calculate the distance (in cm) based on the speed of sound.
+ //int distance = duration/58.2;
+ //																																																																																																																																																																																																																																																																																														
+ //Serial.println(distance);
+//}
+//

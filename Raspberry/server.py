@@ -1,48 +1,94 @@
+#!/usr/bin/python
 import  time,sys, struct, serial, signal, ssl, logging
+import RPi.GPIO as GPIO
+from math import sqrt
 from SimpleWebSocketServer import WebSocket, SimpleWebSocketServer, SimpleSSLWebSocketServer
 from optparse import OptionParser
 
 logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
 
 ArduinoConnected = True
+PrintDebugMessages = False
+
+ECHOPIN = 27
+TRIGPIN = 17
+SONARTIMEOUT = 500
 
 if (ArduinoConnected):
 	DUE_PORT = 'COM7' #'/dev/ttyACM0'
 	DUE_BAUDS = 9600
 	serialPortArduinoCom = serial.Serial(DUE_PORT,DUE_BAUDS) 
 	
-class ScriptHandler:
+		
+def initSonar():
+	GPIO.setwarnings(False)
+	GPIO.setmode(GPIO.BCM)
+	GPIO.setup(TRIGPIN,GPIO.OUT)
+	GPIO.setup(ECHOPIN,GPIO.IN)
+	GPIO.output(TRIGPIN, GPIO.LOW)
+	readSonar() #FIRST READ IS UNSTABLE
+	time.sleep(0.1)
+	
+def readSonar():
+	GPIO.output(TRIGPIN, True)
+	time.sleep(0.00001)
+	GPIO.output(TRIGPIN, False)
 
-	def __init__(self, msg):
-		self.receivedCommand = msg
-		print msg
-		
-	def sendToArduino(self,cmd,p1,p2):
-		msg = bytearray(3)
-		msg[0] = struct.pack('B', int(cmd))
-		msg[1] = struct.pack('B', int(p1))
-		msg[2] = struct.pack('B', int(p2))
-		
-		if (ArduinoConnected):
-			serialPortArduinoCom.write(msg)
-		
-		#print "   Send:", msg[0], msg[1], msg[2]
+	maxTime = SONARTIMEOUT
+	while GPIO.input(ECHOPIN) == 0 and maxTime > 0:
+		maxTime -= 1	
+	signaloff = time.time()
+	if maxTime == 0:
+		return -1
 
-	def receiveFromArduino(self,cmd,p1,p2):
-		self.sendToArduino(cmd,p1,p2)
-		if (ArduinoConnected):
-			recMsg = serialPortArduinoCom.readline()
-		else:
-			recMsg = "FAKEMSG"
-		#print "Receive:",recMsg
-		return recMsg.strip()
+	maxTime = SONARTIMEOUT
+	while GPIO.input(ECHOPIN) == 1 and maxTime > 0:
+		maxTime -= 1	
+	signalon = time.time()	
+	if maxTime == 0:
+		return -2	
+
+	return (signalon - signaloff) * 17953.27521508037
 		
-	def takePic(self):
+def destructSonar():	
+	GPIO.cleanup()		
+		
+		
+def sendToArduino(cmd,p1,p2):
+	msg = bytearray(3)
+	msg[0] = struct.pack('B', int(cmd))
+	msg[1] = struct.pack('B', int(p1))
+	msg[2] = struct.pack('B', int(p2))
+	
+	if (ArduinoConnected):
+		serialPortArduinoCom.write(msg)
+	
+	if (PrintDebugMessages):
+		print "   Send:", msg[0], msg[1], msg[2]
+
+def receiveFromArduino(cmd,p1,p2):
+	sendToArduino(cmd,p1,p2)
+	if (ArduinoConnected):
+		recMsg = serialPortArduinoCom.readline()
+	else:
+		recMsg = "FAKEMSG"
+	
+	if (PrintDebugMessages):
+		print "Receive:",recMsg
+	
+	return recMsg.strip()
+	
+def takePic():
+	if (PrintDebugMessages):
 		print "PICTURE TAKEN!"
-		
-	def executeScript(self):
-		exec(self.receivedCommand)
 
+	
+def executeScript(receivedCommand):
+	initSonar()
+	exec(receivedCommand)
+	destructSonar()
+
+	
 class WebServer(WebSocket):
 	def handleMessage(self):
 		if self.data is None:
@@ -60,8 +106,7 @@ class WebServer(WebSocket):
 				if (ArduinoConnected):
 					serialPortArduinoCom.write(msg)
 			else:
-				script = ScriptHandler(msg)
-				script.executeScript()
+				executeScript(msg)
 				self.sendClose()
 		except Exception as n:
 			print "Err: ", n

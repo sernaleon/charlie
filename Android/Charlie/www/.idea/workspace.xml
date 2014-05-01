@@ -23,91 +23,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="css.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/core/css.js">
+      <file leaf-file-name="code.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="593" column="56" selection-start="14048" selection-end="14052" vertical-scroll-proportion="0.0" vertical-offset="9883" max-vertical-offset="11169">
+            <state line="241" column="0" selection-start="7025" selection-end="7025" vertical-scroll-proportion="-1.2307693" vertical-offset="4065" max-vertical-offset="4658">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/core/workspace.js">
+      <file leaf-file-name="code.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/code.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="323" column="37" selection-start="8603" selection-end="8603" vertical-scroll-proportion="0.0" vertical-offset="5009" max-vertical-offset="6783">
+            <state line="9" column="33" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1479">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="procedures.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/core/procedures.js">
+      <file leaf-file-name="colour.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blockly/blocks/colour.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="2025" max-vertical-offset="4947">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2006">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customBlocks.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/customBlocks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="35" selection-start="2104" selection-end="2104" vertical-scroll-proportion="0.631664" vertical-offset="663" max-vertical-offset="3961">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="variables.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/generators/python/variables.js">
+      <file leaf-file-name="values.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/values.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="51" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="884">
+            <state line="41" column="22" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blockly_uncompressed.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/blockly_uncompressed.js">
+      <file leaf-file-name="lists.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blockly/blocks/lists.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="16762">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blocks_compressed.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/blocks_compressed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2550">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="python_compressed.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/python_compressed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="python.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Blockly/generators/python.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="2" selection-start="293" selection-end="293" vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="3485">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blockly_compressed.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/blockly_compressed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20009">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockly/build.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="7276">
+            <state line="45" column="0" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="10404">
               <folding />
             </state>
           </provider>
@@ -152,10 +118,11 @@
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$USER_HOME$/Desktop/charlie/charlie/www/config.xml" />
         <option value="$PROJECT_DIR$/style/code.css" />
+        <option value="$PROJECT_DIR$/Blockly/core/toolbox.js" />
+        <option value="$PROJECT_DIR$/code.html" />
+        <option value="$PROJECT_DIR$/js/code.js" />
         <option value="$PROJECT_DIR$/js/values.js" />
         <option value="$PROJECT_DIR$/js/customBlocks.js" />
-        <option value="$PROJECT_DIR$/js/code.js" />
-        <option value="$PROJECT_DIR$/code.html" />
       </list>
     </option>
   </component>
@@ -219,75 +186,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="style" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blockly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blockly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Blockly" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generators" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,14 +213,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -332,15 +223,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -377,11 +276,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868218" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -398,9 +297,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21229868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -420,31 +319,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="8" selection-start="1295" selection-end="1357" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/values.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="10" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/driveCam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="14" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0" vertical-offset="733" max-vertical-offset="1564" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0" vertical-offset="427" max-vertical-offset="986" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="39" selection-start="2044" selection-end="2044" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/driveCam.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="6" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="527" />
@@ -502,7 +376,9 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/core-scripting.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="16" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.33277592" vertical-offset="430" max-vertical-offset="5865" />
+        <state line="37" column="16" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.33277592" vertical-offset="430" max-vertical-offset="5865">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/drive.js">
@@ -542,12 +418,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/demos/toolbox/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="35" selection-start="5578" selection-end="5578" vertical-scroll-proportion="0.10286678" vertical-offset="2812" max-vertical-offset="6018" />
+        <state line="169" column="35" selection-start="5578" selection-end="5578" vertical-scroll-proportion="0.10286678" vertical-offset="2812" max-vertical-offset="6018">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/demos/fixed/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="64" selection-start="564" selection-end="564" vertical-scroll-proportion="0.082630694" vertical-offset="291" max-vertical-offset="884" />
+        <state line="20" column="64" selection-start="564" selection-end="564" vertical-scroll-proportion="0.082630694" vertical-offset="291" max-vertical-offset="884">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -589,32 +469,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style/code-old.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="18" selection-start="814" selection-end="993" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1241" />
+        <state line="45" column="18" selection-start="814" selection-end="993" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1241">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style/code.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/values.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="21" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="799" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/customBlocks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="2" selection-start="6745" selection-end="6745" vertical-scroll-proportion="-18.32" vertical-offset="3061" max-vertical-offset="3961" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/code.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="36" selection-start="388" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="79" selection-start="641" selection-end="641" vertical-scroll-proportion="-4.576923" vertical-offset="102" max-vertical-offset="4624" />
+        <state line="16" column="23" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/core/tooltip.js">
@@ -622,44 +486,24 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8296" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockly/core/toolbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5882" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/core/css.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="593" column="56" selection-start="14048" selection-end="14052" vertical-scroll-proportion="0.0" vertical-offset="9883" max-vertical-offset="11169">
-          <folding />
-        </state>
+        <state line="593" column="56" selection-start="14048" selection-end="14052" vertical-scroll-proportion="0.0" vertical-offset="9883" max-vertical-offset="11169" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/core/workspace.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="323" column="37" selection-start="8603" selection-end="8603" vertical-scroll-proportion="0.0" vertical-offset="5009" max-vertical-offset="6783">
-          <folding />
-        </state>
+        <state line="323" column="37" selection-start="8603" selection-end="8603" vertical-scroll-proportion="0.0" vertical-offset="5009" max-vertical-offset="6783" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/core/procedures.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4947">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4947" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/build.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7276">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockly/generators/python/variables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="51" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="884">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7276" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/blockly_compressed.js">
@@ -671,9 +515,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/blockly_uncompressed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="604" max-vertical-offset="16762">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="604" max-vertical-offset="16762" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/blocks_compressed.js">
@@ -685,14 +527,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/python_compressed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockly/tests/blockly_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="8" selection-start="31" selection-end="31" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockly/tests/playground.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="22" selection-end="22" vertical-scroll-proportion="9.153846" vertical-offset="255" max-vertical-offset="6409">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Blockly/core/generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4590" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockly/core/toolbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="0" selection-start="5427" selection-end="5427" vertical-scroll-proportion="0.0" vertical-offset="2353" max-vertical-offset="5899" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Blockly/generators/python.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="293" selection-end="293" vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="3485">
+        <state line="10" column="2" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3485" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockly/generators/python/variables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="51" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="33" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockly/blocks/colour.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2006">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockly/blocks/lists.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0" vertical-offset="1120" max-vertical-offset="8194">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="241" column="0" selection-start="7025" selection-end="7025" vertical-scroll-proportion="-1.2307693" vertical-offset="4065" max-vertical-offset="4658">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/values.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="22" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/customBlocks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="35" selection-start="2104" selection-end="2104" vertical-scroll-proportion="0.631664" vertical-offset="663" max-vertical-offset="3961">
           <folding />
         </state>
       </provider>
