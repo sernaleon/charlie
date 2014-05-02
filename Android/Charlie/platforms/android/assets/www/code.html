@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Charlie script generator</title>
-    <!--<link rel="stylesheet" href="style/code.css"/>-->
+    <link rel="stylesheet" href="style/code.css"/>
 
     <script type="text/javascript" src="js/globalFunctions.js"></script>
     <script type="text/javascript" src="js/values.js"></script>
@@ -14,13 +14,15 @@
     <script type="text/javascript" src="Blockly/python_compressed.js"></script>
     <script type="text/javascript" src="js/customBlocks.js"></script>
 </head>
-<body onload="onDeviceReady()">
+<body onload="onLoad()">
 
 <div id="btContainer">
     <div id="test" class="button">Show code</div>
     <div id="btSend" class="button">Execute</div>
-    <div id="btSave" class="button left">Save</div>
-    <div id="btLoad" class="button left">Load</div>
+    <div id="btClear" class="button">Clear</div>
+
+    <div id="btSave" class="button right">Save</div>
+    <div id="btLoad" class="button right">Load</div>
 </div>
 <div id="blocklyContainer"></div>
 
@@ -106,7 +108,7 @@
     </block>
     <block type="math_random_float"></block>
 </category>
-<!--
+
 <category name="Text">
 <block type="text"></block>
 <block type="text_join"></block>
@@ -144,7 +146,7 @@
 <block type="text_prompt"></block>
 </category>
 
--->
+
 <category name="Lists">
     <block type="lists_create_empty"></block>
     <block type="lists_create_with"></block>
@@ -232,14 +234,14 @@
     </block>
 </category>
 
-<category name="Functions">
-
-
-    <block type="read_sonar"></block>
-
+<category name="Ground sensors">
 
     <block type="read_ground"></block>
-    <block type="read_infrared"></block>
+</category>
+
+
+<category name="Functions">
+
 
     <block type="wait">
 
@@ -249,7 +251,21 @@
             </block>
         </value>
     </block>
+
+    <block type="led">
+
+        <value name="ledN">
+            <block type="math_number">
+                <field name="NUM">0</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="read_sonar"></block>
+
     <block type="take_pic"></block>
+
+    <block type="horn"></block>
 </category>
 
 </xml>
@@ -258,7 +274,10 @@
 
     Blockly.inject(document.getElementById('blocklyContainer'),
             {path: 'Blockly/', toolbox: document.getElementById('toolbox')});
+
+
 </script>
 
+<script type="text/javascript" src="phonegap.js"></script>
 </body>
 </html>

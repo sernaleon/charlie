@@ -1,0 +1,67 @@
+
+html, body, div, iframe {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+iframe, #blocklyContainer {
+    height: 90%;
+    width: 100%;
+}
+
+#btContainer {
+    height: 10%;
+    width: 100%;
+
+    background-color: #ddd;
+
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button {
+    /*height: 100%;*/
+    /*padding: 10px;*/
+    /*font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;*/
+    /*text-transform: uppercase;*/
+    /*color: #000;*/
+    /*font-size: 16px;*/
+    /*margin: auto 30px;*/
+    /*text-align: center;*/
+    /*vertical-align: middle;*/
+    /*float: left;*/
+    /*border-left: 1px solid #ccc;*/
+    /*border-right: 1px solid #ccc;*/
+
+
+    height: 20px;
+    padding: 10px;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    margin: auto 30px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    background-color: #ccc;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.left {
+    float: right;
+}
+
+
+

@@ -6,16 +6,16 @@ SERVER_TCP_PORT = 4999;
 SERVER_UDP_PORT = 5000;
 WEBSERVER_PORT = 8000;
 SERVER_CAM_PORT = 8080;
-SERVER_IP = window.location.hostname //"192.168.0.123"; //"192.168.173.1" // "10.0.2.2"
+SERVER_IP = "192.168.0.123"; //"192.168.173.1" // "10.0.2.2" // window.location.hostname //
 
 WEBHOST = "ws://" + SERVER_IP + ":" + WEBSERVER_PORT;
 
 ACCELEROMETER_FREQUENCY = 40;
 
 
-SLOW_SPEED = "250"
-MEDIUM_SPEED = "170"
-FAST_SPEED = "250"
+SLOW_SPEED = 130
+MEDIUM_SPEED = 190
+FAST_SPEED = 255
 
 //COMMANDS
 
@@ -31,11 +31,11 @@ CMD_LED = 4;
 CMD_LEFT_MOTOR = 5;
 CMD_RIGHT_MOTOR = 6;
 CMD_BOTH_MOTORS = 7;
-CMD_INFRA = 8;
+CMD_SENSORS = 8;
 CMD_SONAR = 9;
-CMD_SENSORS = 10;
 CMD_PIC = 11;
 
-PYT_SEND = "self.sendToArduino"
-PYT_RECEIVE = "self.receiveFromArduino"
-PYT_CAM= "self.takePic"
+PYT_SEND = "sendToArduino"
+PYT_RECEIVE = "receiveFromArduino"
+PYT_CAM= "takePic"
+PYT_SONAR = "readSonar"

@@ -1030,6 +1030,7 @@ C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\asse
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\org.apache.cordova.device-motion\www \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\org.apache.cordova.device-motion\www\Acceleration.js \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins\org.apache.cordova.device-motion\www\accelerometer.js \
+C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\style\code-old.css \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\style\code.css \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\style\drive.css \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\style\fonts \

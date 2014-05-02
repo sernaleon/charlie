@@ -41,16 +41,18 @@ void setMotors(int left, int right)
 }
 
 
-void setLeftSpeed(byte speed)
+void turnLeft(byte speed)
 {
     int speedMapped = map(speed,0,255,0,KSPEED);
+	setForwardSpeedRight(0);
     setForwardSpeedLeft(speedMapped);
 }
 
-void setRightSpeed(byte speed)
+void turnRight(byte speed)
 {
     int speedMapped = map(speed,0,255,0,KSPEED);
     setForwardSpeedRight(speedMapped);
+    setForwardSpeedLeft(0);
 }
 
 void moveBalanced(byte speed, byte balance)

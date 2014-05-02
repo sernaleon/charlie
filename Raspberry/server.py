@@ -1,5 +1,5 @@
-#!/usr/bin/python
-import  time,sys, struct, serial, signal, ssl, logging
+	
+import  time,sys, struct, serial, signal, ssl, logging, os
 import RPi.GPIO as GPIO
 from math import sqrt
 from SimpleWebSocketServer import WebSocket, SimpleWebSocketServer, SimpleSSLWebSocketServer
@@ -8,14 +8,14 @@ from optparse import OptionParser
 logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
 
 ArduinoConnected = True
-PrintDebugMessages = False
+PrintDebugMessages = True
 
 ECHOPIN = 27
 TRIGPIN = 17
 SONARTIMEOUT = 500
 
 if (ArduinoConnected):
-	DUE_PORT = 'COM7' #'/dev/ttyACM0'
+	DUE_PORT =  '/dev/ttyACM0' # 'COM7' #
 	DUE_BAUDS = 9600
 	serialPortArduinoCom = serial.Serial(DUE_PORT,DUE_BAUDS) 
 	
@@ -48,7 +48,12 @@ def readSonar():
 	if maxTime == 0:
 		return -2	
 
-	return (signalon - signaloff) * 17953.27521508037
+	distance = (signalon - signaloff) * 17953.27521508037
+	
+	if (PrintDebugMessages):
+		print distance
+		
+	return distance
 		
 def destructSonar():	
 	GPIO.cleanup()		
@@ -79,11 +84,14 @@ def receiveFromArduino(cmd,p1,p2):
 	return recMsg.strip()
 	
 def takePic():
+	os.system("wget http://localhost:8080/?action=snapshot -O img/"+time.time()+".jpg")
 	if (PrintDebugMessages):
 		print "PICTURE TAKEN!"
 
 	
 def executeScript(receivedCommand):
+	if (PrintDebugMessages):
+		print receivedCommand
 	initSonar()
 	exec(receivedCommand)
 	destructSonar()

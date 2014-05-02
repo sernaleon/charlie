@@ -1,4 +1,8 @@
-document.addEventListener("deviceready", onDeviceReady, false);
+
+function onLoad(){
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+}
 
 function onDeviceReady() {
     document.getElementById('ip').value = SERVER_IP;
@@ -11,6 +15,8 @@ function onDeviceReady() {
     document.addEventListener("backbutton", onBackKeyDown, false);
 }
 
+// Handle the back button
+//
 function onBackKeyDown() {
     window.location.href = "index.html";
 }

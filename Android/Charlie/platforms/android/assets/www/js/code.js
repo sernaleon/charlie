@@ -1,19 +1,32 @@
 function blocklyLoaded(blockly) {
     // Called once Blockly is fully loaded.
     window.Blockly = blockly;
+
+
+    document.getElementsByClassName("blocklyToolboxDiv")[0].innerHTML += "<div id='btS'>Send</div>"
 }
 
-function onDeviceReady() {
+function onLoad() {
     document.getElementById('test').onclick = test;
     document.getElementById('btSend').onclick = sendToRaspi;
     document.getElementById('btSave').onclick = save;
     document.getElementById('btLoad').onclick = load;
+    document.getElementById('btClear').onclick = clearWorkspace
 
-//    document.addEventListener("backbutton", onBackKeyDown, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-//    document.body.onunload = onBackKeyDown; //NO VA!
+
 }
 
+// Cordova is loaded and it is now safe to call Cordova methods
+//
+function onDeviceReady() {
+    // Register the event listener
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+
+// Handle the back button
+//
 function onBackKeyDown() {
     window.location.href = "index.html";
 }
@@ -69,4 +82,8 @@ function sendToRaspi() {
     websocket.onerror = function (evt) {
         websocket.close();
     };
+}
+
+function clearWorkspace() {
+    Blockly.mainWorkspace.clear()
 }

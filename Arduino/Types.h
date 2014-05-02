@@ -74,8 +74,7 @@
 
 //LEDs
 
-#define  NUMLEDS        12
-#define  NUMBLUELEDS    2
+#define  NUMLEDS        14
 
 #define  O_LED4		52
 #define  O_LED5		50

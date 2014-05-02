@@ -179,7 +179,8 @@ Blockly.Toolbox.populate_ = function() {
 
   if (rootOut.blocks.length) {
     throw 'Toolbox cannot have both blocks and categories in the root level.';
-  }
+}
+
 
   // Fire a resize event since the toolbox may have changed width and height.
   Blockly.fireUiEvent(window, 'resize');

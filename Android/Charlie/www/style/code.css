@@ -7,7 +7,7 @@ html,body {
 }
 
 #btContainer{
-    height: 50px;
+    height: 40px;
     width: 100%;
     background-color: #ddd;
 }
@@ -24,6 +24,6 @@ html,body {
 }
 
 #blocklyContainer {
-    height: calc(100% - 50px);
+    height: calc(100% - 40px);
     width: 100%;
 }

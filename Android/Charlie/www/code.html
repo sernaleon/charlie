@@ -14,7 +14,7 @@
     <script type="text/javascript" src="Blockly/python_compressed.js"></script>
     <script type="text/javascript" src="js/customBlocks.js"></script>
 </head>
-<body onload="onDeviceReady()">
+<body onload="onLoad()">
 
 <div id="btContainer">
     <div id="test" class="button">Show code</div>
@@ -234,14 +234,14 @@
     </block>
 </category>
 
-<category name="Functions">
-
-
-    <block type="read_sonar"></block>
-
+<category name="Ground sensors">
 
     <block type="read_ground"></block>
-    <block type="read_infrared"></block>
+</category>
+
+
+<category name="Functions">
+
 
     <block type="wait">
 
@@ -251,7 +251,21 @@
             </block>
         </value>
     </block>
+
+    <block type="led">
+
+        <value name="ledN">
+            <block type="math_number">
+                <field name="NUM">0</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="read_sonar"></block>
+
     <block type="take_pic"></block>
+
+    <block type="horn"></block>
 </category>
 
 </xml>
@@ -264,5 +278,6 @@
 
 </script>
 
+<script type="text/javascript" src="phonegap.js"></script>
 </body>
 </html>

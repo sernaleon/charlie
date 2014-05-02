@@ -24,14 +24,12 @@ extern "C" void __cxa_pure_virtual() {;}
 
 //
 //
-void WriteValues();
 void getAndRunCommandFromUSB();
 void led(byte num,bool state);
-void beep(byte status);
+void beep(bool status);
 void sendSensorValues();
 void read_middle();
 void read_front();
-void read_line();
 
 #include "C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x\pins_arduino.h" 
 #include "C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x\variant.h" 
