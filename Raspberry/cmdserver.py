@@ -1,5 +1,5 @@
-	
-import  time,sys, struct, serial, signal, ssl, logging, os
+#!/usr/bin/python
+import  time,sys, struct, serial, signal, ssl, logging
 import RPi.GPIO as GPIO
 from math import sqrt
 from SimpleWebSocketServer import WebSocket, SimpleWebSocketServer, SimpleSSLWebSocketServer
@@ -11,8 +11,9 @@ ArduinoConnected = True
 PrintDebugMessages = True
 
 LEDPIN = 4
+SERVOPIN = 17
 ECHOPIN = 27
-TRIGPIN = 17
+TRIGPIN = 22
 SONARTIMEOUT = 500
 
 if (ArduinoConnected):
@@ -60,7 +61,7 @@ def readSonar():
 		
 def destructSonar():	
 	GPIO.output(LEDPIN, GPIO.LOW)
-	GPIO.cleanup()		
+	GPIO.cleanup()			
 		
 		
 def sendToArduino(cmd,p1,p2):
@@ -88,7 +89,6 @@ def receiveFromArduino(cmd,p1,p2):
 	return recMsg.strip()
 	
 def takePic():
-	os.system("wget http://localhost:8080/?action=snapshot -O img/"+time.time()+".jpg")
 	if (PrintDebugMessages):
 		print "PICTURE TAKEN!"
 

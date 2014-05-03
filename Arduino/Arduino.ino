@@ -93,12 +93,12 @@ void getAndRunCommandFromUSB()
 			
 			//Command 5 -> Set left motor at <SPPED>
 			case 5:
-			setLeftSpeed(p1);
+			turnLeft(p1);
 			break;
 			
 			//Command 6 -> Set right motor at <SPPED>
 			case 6:
-			setRightSpeed(p1);
+			turnRight(p1);
 			break;
 			
 			//Command 7 -> Move forward

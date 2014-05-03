@@ -12,7 +12,8 @@ Blockly.Blocks['move_motor'] = {
             .appendField("motor speed at");
         this.appendValueInput("speed")
             .setCheck("Number");
-        this.appendDummyInput();
+        this.appendDummyInput()
+            .appendField("(0-255)");
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
@@ -94,7 +95,7 @@ Blockly.Blocks['move_fwd'] = {
     init: function() {
         this.setHelpUrl('http://www.example.com/');
         this.appendDummyInput()
-            .appendField("Move forward")
+            .appendField("Move straight")
             .appendField(new Blockly.FieldDropdown([
                 ["slow", SLOW_SPEED.toString()],
                 ["medium", MEDIUM_SPEED.toString()],
@@ -214,7 +215,7 @@ Blockly.Blocks['led'] = {
         this.appendValueInput("ledN")
             .setCheck("Number");
         this.appendDummyInput()
-            .appendField(" ")
+            .appendField("(0-13)")
             .appendField(new Blockly.FieldDropdown([
                 ["on", "1"],
                 ["off", "0"]
@@ -257,4 +258,77 @@ Blockly.Blocks['horn'] = {
 Blockly.Python['horn'] = function (block) {
     var state = block.getFieldValue('state');
     return PYT_SEND + '(' + CMD_BEEP + ',' + state + ',' + CMD_NOPARAM + ')\n';
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+Blockly.Blocks['move_balanced'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set speed");
+        this.appendValueInput("speed")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("and balance");
+
+        this.appendValueInput("balance")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("(0-255)");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+    }
+};
+
+Blockly.Python['move_balanced'] = function (block) {
+    var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    var balance = Blockly.Python.valueToCode(block, 'balance', Blockly.Python.ORDER_ATOMIC);
+
+    return PYT_SEND + '(' + CMD_MOVE_FORWARD + ',' + speed + ',' + balance + ')\n';
+};
+
+
+Blockly.Blocks['black'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("BLACK");
+        this.setInputsInline(true);
+        this.setOutput(true, "Number");
+        this.setTooltip('');
+        this.setColour(45);
+    }
+};
+
+Blockly.Python['black'] = function (block) {
+    return "1";
+};
+
+Blockly.Blocks['white'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("WHITE");
+        this.setInputsInline(true);
+        this.setOutput(true, "Number");
+        this.setTooltip('');
+        this.setColour(45);
+    }
+};
+
+Blockly.Python['white'] = function (block) {
+    return "1";
 };

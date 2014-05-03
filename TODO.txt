@@ -1,46 +1,24 @@
-Current date 		5 de marzo
-Release date 		25 de marzo
-Remaining days	 	20 días
-Remaining working days  4
-Remaining working hours 32
-
 TODO:
 
 Due
 
-- Receptor I2C Arduino Due	- 1h
-- Frenado emergencia		- 1h
-- Lectura CNY70			- 1h
-- Envío a Raspi			- 5h
-	- Valor de los sensores
-	- Velocidad motores	
-	- Estado LEDs	
-- Recepción Raspi		- 3h
-	- Comando Leer Sonar
-	- Comando Set Motor
-	- Comando set motors
-- Marcha atrás			- 2h
+- Activar beep
+- Comando independiente para mover un motor (set left/right motor...)
+- Marchas atrás
 
 Raspi
 
-- Enviar a Arduino 		- 2h
-	- Stop Motors
-	- Move motor
-	- Move motors
-	- Read CNY70
-	- Read sonar
-- (bonus) migrar todo el proyecto a websocket - 5h
+- Servo (al menos el vertical)
+- Hacer foto
 
 Android
 
-- Portar web a android		- 1h DONE!
-- (bonus) migrar todo el proyecto - 15h
-- Blockly
-	Delay/slee/wait		- 10m DONE!
-	
+- Settings
+- Hacer los bloques backwards y servo
+- ¿?¿? Boton 'drive' en code !??!
 
-Para la siguiente (última) iteración
+Ejemplos
 
-- Apartado estético. Hacer interfaz chula chula
-- Pan-tilt cámara
-- Juego?
+Siguelineas
+Juego
+Leds

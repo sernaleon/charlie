@@ -4,7 +4,7 @@ from math import sqrt
 import RPi.GPIO as GPIO
 
 ECHOPIN = 27
-TRIGPIN = 17
+TRIGPIN = 22
 SONARTIMEOUT = 500
 
 def mean(elem):

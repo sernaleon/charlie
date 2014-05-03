@@ -231,12 +231,30 @@
             <block type="math_number">
                 <field name="NUM">50</field>
             </block>
+        </value>
+    </block>
+
+    <block type="move_balanced">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+
+        <value name="balance">
+            <block type="math_number">
+                <field name="NUM">123</field>
+            </block>
+        </value>
     </block>
 </category>
 
 <category name="Ground sensors">
 
     <block type="read_ground"></block>
+    <block type="black"></block>
+    <block type="white"></block>
 </category>
 
 
@@ -252,6 +270,8 @@
         </value>
     </block>
 
+    <block type="read_sonar"></block>
+
     <block type="led">
 
         <value name="ledN">
@@ -261,7 +281,6 @@
         </value>
     </block>
 
-    <block type="read_sonar"></block>
 
     <block type="take_pic"></block>
 
