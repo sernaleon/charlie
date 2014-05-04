@@ -333,37 +333,37 @@ Blockly.Python['move_balanced'] = function (block) {
 };
 
 
-Blockly.Blocks['black'] = {
-    init: function () {
-        this.setHelpUrl('http://www.example.com/');
-        this.appendDummyInput()
-            .appendField("BLACK");
-        this.setInputsInline(true);
-        this.setOutput(true, "String");
-        this.setTooltip('');
-        this.setColour(45);
-    }
-};
-
-Blockly.Python['black'] = function (block) {
-    return "1";
-};
-
-Blockly.Blocks['white'] = {
-    init: function () {
-        this.setHelpUrl('http://www.example.com/');
-        this.appendDummyInput()
-            .appendField("WHITE");
-        this.setInputsInline(true);
-        this.setOutput(true, "String");
-        this.setTooltip('');
-        this.setColour(45);
-    }
-};
-
-Blockly.Python['white'] = function (block) {
-    return "1";
-};
+//Blockly.Blocks['black'] = {
+//    init: function () {
+//        this.setHelpUrl('http://www.example.com/');
+//        this.appendDummyInput()
+//            .appendField("BLACK");
+//        this.setInputsInline(true);
+//        this.setOutput(true, "String");
+//        this.setTooltip('');
+//        this.setColour(45);
+//    }
+//};
+//
+//Blockly.Python['black'] = function (block) {
+//    return "1";
+//};
+//
+//Blockly.Blocks['white'] = {
+//    init: function () {
+//        this.setHelpUrl('http://www.example.com/');
+//        this.appendDummyInput()
+//            .appendField("WHITE");
+//        this.setInputsInline(true);
+//        this.setOutput(true, "String");
+//        this.setTooltip('');
+//        this.setColour(45);
+//    }
+//};
+//
+//Blockly.Python['white'] = function (block) {
+//    return "1";
+//};
 
 
 
@@ -408,8 +408,7 @@ Blockly.Blocks['first_black_left'] = {
         this.appendDummyInput()
             .appendField("get first black from left");
         this.setInputsInline(true);
-        this.setPreviousStatement(true);
-        this.setNextStatement(true);
+        this.setOutput(true,Number);
         this.setTooltip('');
     }
 };
@@ -419,36 +418,72 @@ Blockly.Python['first_black_left'] = function (block) {
         var sonarV = Blockly.Python.valueToCode(block, 'sonarV', Blockly.Python.ORDER_ATOMIC);
 
 
-        return PYT_FIRSTBLACKLEFT + "(" + sonarV  + ")\n";
+        return [PYT_FIRSTBLACKLEFT + "(" + sonarV  + ")\n", Blockly.Python.ORDER_FUNCTION_CALL];
     }
     catch (e) {
         alert("Error:" + e);
     }
 };
 
-//
-//Blockly.Blocks['first_black_left'] = {
-//    init: function () {
-//        this.setHelpUrl('http://www.example.com/');
-//        this.appendDummyInput()
-//            .appendField("From")
-//        this.appendValueInput("sonar");
-////            .setCheck("List");
-//        this.appendDummyInput()
-//            .appendField("get first black from left");
-//        this.setInputsInline(true);
-//        this.setPreviousStatement(true);
-//        this.setNextStatement(true);
-//        this.setTooltip('');
-//    }
-//};
-//
-//Blockly.Python['first_black_left'] = function (block) {
-//    try {
-//        var sonar = Blockly.Python.valueToCode(block, 'sonar', Blockly.Python.ORDER_ATOMIC);
-//        return PYT_FIRSTBLACKLEFT + "(" + sonar ")\n";
-//    }
-//    catch (e) {
-//        alert("Error:" + e);
-//    }
-//};
+
+Blockly.Blocks['send_back'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Receive")
+        this.appendValueInput("msg");
+        this.appendDummyInput()
+            .appendField("in console");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['send_back'] = function (block) {
+    try {
+        var sonarV = Blockly.Python.valueToCode(block, 'msg', Blockly.Python.ORDER_ATOMIC);
+        return PYT_SENDBACK + "(" + sonarV  + ")\n";
+    }
+    catch (e) {
+        alert("Error:" + e);
+    }
+};
+
+
+Blockly.Blocks['map'] = {
+    init: function() {
+        this.setHelpUrl('http://www.example.com/');
+        this.setColour(230);
+        this.appendValueInput("x")
+            .appendField("map");
+        this.appendValueInput("in_min")
+            .setCheck("Number")
+            .appendField("in_min");
+        this.appendValueInput("in_max")
+            .setCheck("Number")
+            .appendField("in_max");
+        this.appendValueInput("out_min")
+            .setCheck("Number")
+            .appendField("out_min");
+        this.appendValueInput("out_max")
+            .setCheck("Number")
+            .appendField("out_max");
+        this.setInputsInline(true);
+        this.setOutput(true,Number);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['map'] = function (block) {
+    Blockly.Python['map'] = function(block) {
+        var value_x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+        var value_in_min = Blockly.Python.valueToCode(block, 'in_min', Blockly.Python.ORDER_ATOMIC);
+        var value_in_max = Blockly.Python.valueToCode(block, 'in_max', Blockly.Python.ORDER_ATOMIC);
+        var value_out_min = Blockly.Python.valueToCode(block, 'out_min', Blockly.Python.ORDER_ATOMIC);
+        var value_out_max = Blockly.Python.valueToCode(block, 'out_max', Blockly.Python.ORDER_ATOMIC);
+        var res = PYT_MAP + "("+value_x+","+value_in_min+","+value_in_max+","+value_out_min+","+value_out_max+")\n";
+        return [res, Blockly.Python.ORDER_FUNCTION_CALL];
+    };
+};

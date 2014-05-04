@@ -21,6 +21,10 @@ function onDeviceReady() {
         toast("Connected. Tap to start")
     };
 
+    websocket.onmessage = function (msg) {
+        console.log(msg)
+    };
+
     websocket.onerror = function (evt) {
         websocket.close();
         onDeviceReady();

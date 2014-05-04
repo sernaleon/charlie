@@ -234,6 +234,25 @@ location.sketchbook=C:\Users\monkey\Documents\Arduino
 vm.boardsource.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam
 vm.platformname.name=sam
 build.arch=SAM
+vm.runtime.compiler.showwarnings=false
+build.architecture=g++_arm_none_eabi
+vmresolved.compiler.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\tools\g++_arm_none_eabi\bin\
+vmresolved.tools.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\tools\g++_arm_none_eabi
+includes= -I"C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\cores\arduino"  -I"C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x"  -I"C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\libraries"  -I"C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\libraries"  -I"C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers"  -I"C:\Users\monkey\Documents\Arduino\libraries" 
+build.path=C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg
+build.project_name=Arduino
+build.variant.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x
+archive_file=core.a
+object_file=C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+source_file=C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp
+object_files="C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o" "C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o" 
+upload.verbose=
+path={runtime.ide.path}/hardware/tools
+cmd=bossac.exe
+cmd.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\tools\avr\bin/avrdude
+config.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware/tools/avr/etc/avrdude.conf
+serial.port.file=COM7
+serial.port=COM7
 </arduino.board.property_bag>
         <arduino.build.mcu>cortex-m3</arduino.build.mcu>
         <arduino.build.f_cpu>84000000L</arduino.build.f_cpu>
@@ -442,6 +461,25 @@ location.sketchbook=C:\Users\monkey\Documents\Arduino
 vm.boardsource.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam
 vm.platformname.name=sam
 build.arch=SAM
+vm.runtime.compiler.showwarnings=false
+build.architecture=g++_arm_none_eabi
+vmresolved.compiler.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\tools\g++_arm_none_eabi\bin\
+vmresolved.tools.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\tools\g++_arm_none_eabi
+includes= -I"C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\cores\arduino"  -I"C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x"  -I"C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\libraries"  -I"C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\libraries"  -I"C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers"  -I"C:\Users\monkey\Documents\Arduino\libraries" 
+build.path=C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg
+build.project_name=Arduino
+build.variant.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x
+archive_file=core.a
+object_file=C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+source_file=C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp
+object_files="C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o" "C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o" 
+upload.verbose=
+path={runtime.ide.path}/hardware/tools
+cmd=bossac.exe
+cmd.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\tools\avr\bin/avrdude
+config.path=C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware/tools/avr/etc/avrdude.conf
+serial.port.file=COM7
+serial.port=COM7
 </arduino.board.property_bag>
         <arduino.build.mcu>cortex-m3</arduino.build.mcu>
         <arduino.build.f_cpu>84000000L</arduino.build.f_cpu>

@@ -70,7 +70,9 @@ def moveServo(pos):
 def destructSonar():	
 	GPIO.output(LEDPIN, GPIO.LOW)
 	GPIO.cleanup()			
-	
+
+def sendToAndroid(msg):
+	cls.sendBack(msg)
 
 def firstBlackLeft(sonar):
 	res = sonar.find("1");
@@ -101,6 +103,7 @@ def receiveFromArduino(cmd,p1,p2):
 	
 	if (PrintDebugMessages):
 		print "Receive:",recMsg
+		
 	
 	return recMsg.strip()
 	
@@ -115,6 +118,15 @@ def executeScript(receivedCommand):
 	initSonar()
 	exec(receivedCommand)
 	destructSonar()
+	
+
+def map(x, in_min, in_max, out_min, out_max):
+	res = (int(x) - int(in_min)) * (int(out_max) - int(out_min)) / (int(in_max) - int(in_min)) + int(out_min)
+		
+	if (PrintDebugMessages):
+		print "MAP:",res
+	
+	return int(res)
 
 	
 class WebServer(WebSocket):
@@ -146,6 +158,9 @@ class WebServer(WebSocket):
 			print "Err: ", 
 			print "Err: ", n
 			
+	def sendBack(self,data):
+		self.sendMessage(str(data))
+			
 	def handleConnected(self):
 		print self.address, 'connected'
 
@@ -156,8 +171,7 @@ class WebServer(WebSocket):
 
 		
 		
-
-def main():
+if __name__ == "__main__":
 	SERVER_IP = ''
 	WS_PORT = 8000
 	#DUE_PORT = 'COM7' #'/dev/ttyACM0'
@@ -189,8 +203,4 @@ def main():
 	
 	signal.signal(signal.SIGINT, close_sig_handler)
 	server.serveforever()
-
-
-if __name__ == "__main__":
-	main()
 	
