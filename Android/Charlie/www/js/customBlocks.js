@@ -159,7 +159,7 @@ Blockly.Blocks['read_ground'] = {
     init: function () {
         this.setHelpUrl('http://www.example.com/');
         this.appendDummyInput()
-            .appendField("Read ground");
+            .appendField("Read front and middle");
         this.setInputsInline(true);
         this.setOutput(true);
         this.setTooltip('');
@@ -168,6 +168,38 @@ Blockly.Blocks['read_ground'] = {
 
 Blockly.Python['read_ground'] = function (block) {
     return [PYT_RECEIVE + '(' + CMD_SENSORS + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')', Blockly.Python.ORDER_FUNCTION_CALL];
+};
+
+
+Blockly.Blocks['read_front'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Read front sensors");
+        this.setInputsInline(true);
+        this.setOutput(true);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['read_front'] = function (block) {
+    return [PYT_RECEIVE + '(' + CMD_FRONT + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')', Blockly.Python.ORDER_FUNCTION_CALL];
+};
+
+
+Blockly.Blocks['read_middle'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Read middle sensors");
+        this.setInputsInline(true);
+        this.setOutput(true);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['read_middle'] = function (block) {
+    return [PYT_RECEIVE + '(' + CMD_MIDDLE + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')', Blockly.Python.ORDER_FUNCTION_CALL];
 };
 
 Blockly.Blocks['take_pic'] = {
@@ -364,3 +396,59 @@ Blockly.Python['servo'] = function (block) {
         alert("Error:" + e);
     }
 };
+
+
+Blockly.Blocks['first_black_left'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("From")
+        this.appendValueInput("sonarV")
+            .setCheck("Array");
+        this.appendDummyInput()
+            .appendField("get first black from left");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['first_black_left'] = function (block) {
+    try {
+        var sonarV = Blockly.Python.valueToCode(block, 'sonarV', Blockly.Python.ORDER_ATOMIC);
+
+
+        return PYT_FIRSTBLACKLEFT + "(" + sonarV  + ")\n";
+    }
+    catch (e) {
+        alert("Error:" + e);
+    }
+};
+
+//
+//Blockly.Blocks['first_black_left'] = {
+//    init: function () {
+//        this.setHelpUrl('http://www.example.com/');
+//        this.appendDummyInput()
+//            .appendField("From")
+//        this.appendValueInput("sonar");
+////            .setCheck("List");
+//        this.appendDummyInput()
+//            .appendField("get first black from left");
+//        this.setInputsInline(true);
+//        this.setPreviousStatement(true);
+//        this.setNextStatement(true);
+//        this.setTooltip('');
+//    }
+//};
+//
+//Blockly.Python['first_black_left'] = function (block) {
+//    try {
+//        var sonar = Blockly.Python.valueToCode(block, 'sonar', Blockly.Python.ORDER_ATOMIC);
+//        return PYT_FIRSTBLACKLEFT + "(" + sonar ")\n";
+//    }
+//    catch (e) {
+//        alert("Error:" + e);
+//    }
+//};

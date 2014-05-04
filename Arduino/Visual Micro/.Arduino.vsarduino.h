@@ -28,6 +28,8 @@ void getAndRunCommandFromUSB();
 void led(byte num,bool state);
 void beep(bool status);
 void sendSensorValues();
+void sendFront();
+void sendMiddle();
 void read_middle();
 void read_front();
 

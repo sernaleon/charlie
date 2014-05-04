@@ -71,7 +71,15 @@ def destructSonar():
 	GPIO.output(LEDPIN, GPIO.LOW)
 	GPIO.cleanup()			
 	
-		
+
+def firstBlackLeft(sonar):
+	res = sonar.find("1");
+	
+	if (PrintDebugMessages):
+		print res
+	
+	return res
+	
 def sendToArduino(cmd,p1,p2):
 	msg = bytearray(3)
 	msg[0] = struct.pack('B', int(cmd))

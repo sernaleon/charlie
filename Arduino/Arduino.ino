@@ -109,6 +109,15 @@ void getAndRunCommandFromUSB()
 			case 8:
 			sendSensorValues();
 			break;
+			
+			case 9:
+			sendFront();
+			break;
+			
+			case 10:
+			sendMiddle();
+			break;
+			
 		}
 	}
 }
@@ -153,6 +162,29 @@ void sendSensorValues()
 	Serial.println();
 }
 
+void sendFront()
+{	
+	read_front();
+
+	for(int i = 0; i < 12; i++)
+	{
+		Serial.print(frontSensorBool[i]);
+	}
+	Serial.println();
+	
+}
+
+void sendMiddle()
+{
+	read_middle();
+	
+	for (int i = 0; i< 9; i++)
+	{
+		Serial.print(middleSensorValue[i]);
+	}
+	Serial.println();
+	
+}
 
 void read_middle()
 {
