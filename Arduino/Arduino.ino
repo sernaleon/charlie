@@ -82,8 +82,7 @@ void getAndRunCommandFromUSB()
 			
 			//Command 3 -> Beep
 			case 3:
-			#warning Lo apago pa q no maree
-			//beep(p1);
+			beep(p1);
 			break;
 			
 			//Command 4 -> LED <1..14> <ON|OFF>
@@ -142,13 +141,14 @@ void sendSensorValues()
 	read_front();
 	read_middle();
 
-	for (int i = 0; i< 9; i++)
-	{
-		Serial.print(middleSensorValue[i]);
-	}
 	for(int i = 0; i < 12; i++)
 	{
 		Serial.print(frontSensorBool[i]);
+	}
+	
+	for (int i = 0; i< 9; i++)
+	{
+		Serial.print(middleSensorValue[i]);
 	}
 	Serial.println();
 }

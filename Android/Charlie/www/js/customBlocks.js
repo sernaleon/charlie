@@ -307,7 +307,7 @@ Blockly.Blocks['black'] = {
         this.appendDummyInput()
             .appendField("BLACK");
         this.setInputsInline(true);
-        this.setOutput(true, "Number");
+        this.setOutput(true, "String");
         this.setTooltip('');
         this.setColour(45);
     }
@@ -323,7 +323,7 @@ Blockly.Blocks['white'] = {
         this.appendDummyInput()
             .appendField("WHITE");
         this.setInputsInline(true);
-        this.setOutput(true, "Number");
+        this.setOutput(true, "String");
         this.setTooltip('');
         this.setColour(45);
     }
@@ -331,4 +331,36 @@ Blockly.Blocks['white'] = {
 
 Blockly.Python['white'] = function (block) {
     return "1";
+};
+
+
+
+Blockly.Blocks['servo'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set servo position")
+        this.appendValueInput("pos")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("[-35,150]");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['servo'] = function (block) {
+    try {
+        var pos = Blockly.Python.valueToCode(block, 'pos', Blockly.Python.ORDER_ATOMIC);
+
+        p2 = Math.round(map(Math.round(pos), 0, 90, 215, 115))
+
+
+        return PYT_SERVO + "(" + p2  + "0)\n";
+    }
+    catch (e) {
+        alert("Error:" + e);
+    }
 };

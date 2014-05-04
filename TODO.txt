@@ -2,23 +2,24 @@ TODO:
 
 Due
 
-- Activar beep
 - Comando independiente para mover un motor (set left/right motor...)
-- Marchas atrás
 
 Raspi
 
-- Servo (al menos el vertical)
 - Hacer foto
 
 Android
 
-- Settings
-- Hacer los bloques backwards y servo
-- ¿?¿? Boton 'drive' en code !??!
+- Servo en modo drive
+- Settings (solo IP's)
 
 Ejemplos
 
 Siguelineas
 Juego
 Leds
+
+
+Bonus:
+
+- Marcha atras

@@ -4,6 +4,8 @@ import RPi.GPIO as GPIO
 from math import sqrt
 from SimpleWebSocketServer import WebSocket, SimpleWebSocketServer, SimpleSSLWebSocketServer
 from optparse import OptionParser
+from RPIO import PWM
+
 
 logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
 
@@ -16,6 +18,9 @@ ECHOPIN = 27
 TRIGPIN = 22
 SONARTIMEOUT = 500
 
+
+servo = PWM.Servo()
+
 if (ArduinoConnected):
 	DUE_PORT =  '/dev/ttyACM0' # 'COM7' #
 	DUE_BAUDS = 9600
@@ -24,8 +29,8 @@ if (ArduinoConnected):
 		
 def initSonar():
 	GPIO.setwarnings(False)
-	GPIO.setmode(GPIO.BCM)
-	GPIO.setup(LEDPIN,GPIO.OUT)
+	GPIO.setmode(GPIO.BCM)	
+	GPIO.setup(LEDPIN,GPIO.OUT)	
 	GPIO.setup(TRIGPIN,GPIO.OUT)
 	GPIO.setup(ECHOPIN,GPIO.IN)
 	GPIO.output(LEDPIN, GPIO.HIGH)
@@ -58,11 +63,14 @@ def readSonar():
 		print distance
 		
 	return distance
+	
+def moveServo(pos):
+	servo.set_servo(SERVOPIN,pos)
 		
 def destructSonar():	
 	GPIO.output(LEDPIN, GPIO.LOW)
 	GPIO.cleanup()			
-		
+	
 		
 def sendToArduino(cmd,p1,p2):
 	msg = bytearray(3)
@@ -127,6 +135,8 @@ class WebServer(WebSocket):
 		print self.address, 'connected'
 
 	def handleClose(self):
+		time.sleep(2)
+		servo.stop_servo(SERVOPIN)
 		print self.address, 'closed'
 
 		
