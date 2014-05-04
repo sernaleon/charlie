@@ -5,8 +5,8 @@
 
 
 function map(x, in_min, in_max, out_min, out_max) {
-    if (x < in_min) x = in_min;
-    else if (x > in_max) x = in_max;
+    //if (x < in_min) x = in_min;
+    //else if (x > in_max) x = in_max;
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 

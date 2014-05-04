@@ -6,8 +6,16 @@
     <link href="style/drive.css" rel="stylesheet" />
 </head>
 <body>
+<!--<input id="btMove" type="button" onclick="onTap()" value="Start" />-->
+<div id="sliderContainer">
+    <input type="range" id="slider" min="100" max="250" value="215" step="1"  onchange="moveServo()" />
+</div>
+
+<div id="play"></div>
+
+
 <div id="container">
-    <iframe id="camframe" src="driveCam.html"></iframe>
+    <iframe id="camFrame"></iframe>
     <div id="overlay"></div>
 </div>
 <script type="text/javascript" src="phonegap.js"></script>

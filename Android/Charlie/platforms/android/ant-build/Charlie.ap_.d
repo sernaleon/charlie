@@ -26,6 +26,7 @@ C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\asse
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\phonegap.js \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\plugins \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\settings.html \
+C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\slider.html \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\style \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\Blockly\appengine \
 C:\Users\monkey\Dropbox\Asignaturas\0. SI\Android\Charlie\platforms\android\assets\www\Blockly\apps \

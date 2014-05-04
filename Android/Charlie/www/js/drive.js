@@ -14,6 +14,7 @@ function onDeviceReady() {
     websocket = new WebSocket(WEBHOST);
 
 
+    document.getElementById("camFrame").src = "http://" + SERVER_IP + ":" + SERVER_CAM_PORT;
     document.addEventListener("backbutton", onBackKeyDown, false);
 
     websocket.onopen = function (evt) {
@@ -28,6 +29,8 @@ function onDeviceReady() {
 
 
 function onBackKeyDown() {
+
+    websocket.close();
     window.location.href = "index.html";
 }
 
@@ -45,6 +48,7 @@ function startCharlie() {
     watchID = navigator.accelerometer.watchAcceleration(onAccelerometerChanged, onAccelerometerError, options);
 
     isSending = true;
+    document.getElementById("play").style.display = 'block';
     toast("STARTED. Tap to stop.");
 }
 
@@ -61,6 +65,8 @@ function stopCharlie() {
     }
 
     isSending = false;
+
+    document.getElementById("play").style.display = 'none';
     toast("STOPPED. Tap to start.");
 }
 
@@ -77,3 +83,12 @@ function onAccelerometerError(a) {
     console.log('onAccelerometerError!' + a);
 }
 
+
+function moveServo(){
+    var msg = new Uint8Array(2)
+    msg[0] = CMD_SERVO;
+    msg[1] = document.getElementById("slider").value;
+
+//    alert(document.getElementById("slider").value +"-"+msg[1])
+    websocket.send(msg)
+}

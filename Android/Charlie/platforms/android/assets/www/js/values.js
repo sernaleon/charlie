@@ -33,9 +33,12 @@ CMD_RIGHT_MOTOR = 6;
 CMD_BOTH_MOTORS = 7;
 CMD_SENSORS = 8;
 CMD_SONAR = 9;
+CMD_SERVO = 10;
 CMD_PIC = 11;
+
 
 PYT_SEND = "sendToArduino"
 PYT_RECEIVE = "receiveFromArduino"
 PYT_CAM= "takePic"
 PYT_SONAR = "readSonar"
+PYT_SERVO = "moveServo"

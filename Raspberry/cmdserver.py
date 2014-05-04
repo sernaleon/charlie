@@ -125,10 +125,17 @@ class WebServer(WebSocket):
 
 				if (ArduinoConnected):
 					serialPortArduinoCom.write(msg)
+			elif len(msg) == 2:
+				p1 = struct.unpack('B', msg[1])[0] * 10
+				
+				if (PrintDebugMessages):
+					print p1
+				moveServo(p1)
 			else:
 				executeScript(msg)
 				self.sendClose()
 		except Exception as n:
+			print "Err: ", 
 			print "Err: ", n
 			
 	def handleConnected(self):
