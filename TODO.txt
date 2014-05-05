@@ -2,24 +2,16 @@ TODO:
 
 Due
 
-- Comando independiente para mover un motor (set left/right motor...)
-
 Raspi
 
-- Hacer foto
+- Hacer foto NO
 
 Android
 
-- Servo en modo drive
-- Settings (solo IP's)
+- Marcha atras en drive? NO
 
 Ejemplos
 
 Siguelineas
 Juego
 Leds
-
-
-Bonus:
-
-- Marcha atras

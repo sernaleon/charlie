@@ -92,7 +92,5 @@ function moveServo(){
     var msg = new Uint8Array(2)
     msg[0] = CMD_SERVO;
     msg[1] = document.getElementById("slider").value;
-
-//    alert(document.getElementById("slider").value +"-"+msg[1])
     websocket.send(msg)
 }

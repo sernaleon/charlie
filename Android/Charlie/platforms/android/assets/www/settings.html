@@ -8,8 +8,9 @@
     <meta name="mobile-web-app-capable" content="yes">
     <title>Charlie</title>
     <link rel="stylesheet" href="fries/themes/holo-dark/holo-dark.min.css"/>
+
 </head>
-<body onload="onLoad">
+<body onload="onLoad()">
 <div class="page">
     <header class="action-bar">
         <a href="index.html" class="app-icon action up" data-transition="pop">
@@ -22,52 +23,23 @@
         <form class="inset">
 
             <label class="block-label">Server IP</label>
-            <input id="ip" name="IP" class="input-text">
+            <input id="ip" name="IP" class="input-text" onchange="changeIP()" />
             <br/>
 
             <label class="block-label">Server CAM port</label>
-            <input id="cam" name="CAM" class="input-text">
+            <input id="cam" name="CAM" class="input-text" onchange="changeCam()" />
             <br/>
 
             <label class="block-label">Server CMD port</label>
-            <input id="cmd" name="CMD" class="input-text">
-            <br/>
-
-            <label class="block-label">Forward speed</label>
-            <input id="fwd" name="FWD" class="input-text">
-            <br/>
-
-            <label class="block-label">Turn speed</label>
-            <input id="trn" name="TRN" class="input-text">
-            <br/>
-
-            <label class="block-label">Backward speed</label>
-            <input id="bck" name="BCK" class="input-text">
-            <br/>
-
-            <label class="block-label">Backward turn speed</label>
-            <input id="btrn" name="BTRN" class="input-text">
-            <br/>
-
-            <label class="block-label">Mobile position sending rate</label>
-            <input id="acc" name="ACC" class="input-text">
-            <br/>
-
-            <label class="block-label">Sensor read rate</label>
-            <input id="sns" name="SNS" class="input-text">
-            <br/>
-
-            <label class="block-label">Backward resolution</label>
-            <input id="res" name="RES" class="input-text">
+            <input id="cmd" name="CMD" class="input-text" onchange="changeCmd)" />
             <br/>
         </form>
 
     </div>
 
 </div>
-<script type="text/javascript" src="phonegap.js"></script>
-<script type="text/javascript" src="js/values.js"></script>
-<script type="text/javascript" src="js/settings.js"></script>
-<script type="text/javascript" src="fries/fries.min.js"></script>
+    <script type="text/javascript" src="js/values.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="phonegap.js"></script>
 </body>
 </html>

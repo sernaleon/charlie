@@ -107,6 +107,34 @@
         </value>
     </block>
     <block type="math_random_float"></block>
+
+    <block type="map">
+
+        <value name="x">
+            <block type="variables_get">
+            </block>
+        </value>
+
+        <value name="in_min">
+            <block type="math_number">
+            </block>
+        </value>
+
+        <value name="in_max">
+            <block type="math_number">
+            </block>
+        </value>
+
+        <value name="out_min">
+            <block type="math_number">
+            </block>
+        </value>
+
+        <value name="out_max">
+            <block type="math_number">
+            </block>
+        </value>
+    </block>
 </category>
 
 <category name="Text">
@@ -220,7 +248,7 @@
     <!--</block>-->
 <!--</category>-->
 
-<category name="Motor">
+<category name="Motor forwards">
     <block type="move_fwd"></block>
     <block type="move_l"></block>
     <block type="move_r"></block>
@@ -250,11 +278,63 @@
     </block>
 </category>
 
+<category name="Motor backwards">
+
+    <block type="move_back">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="move_b_right">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="move_b_left">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="move_back_balanced">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+
+        <value name="balance">
+            <block type="math_number">
+                <field name="NUM">123</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="stop_motors"></block>
+
+</category>
+
 <category name="Ground sensors">
 
+    <block type="read_front"></block>
+    <block type="read_middle"></block>
     <block type="read_ground"></block>
-    <block type="black"></block>
-    <block type="white"></block>
+    <block type="first_black_left"></block>
+
+    <!--<block type="black"></block>-->
+    <!--<block type="white"></block>-->
 </category>
 
 
@@ -291,9 +371,11 @@
         </value>
     </block>
 
-    <block type="take_pic"></block>
+    <!--<block type="take_pic"></block>-->
 
     <block type="horn"></block>
+
+    <!--<block type="send_back"></block>-->
 </category>
 
 </xml>

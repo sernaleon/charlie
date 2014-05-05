@@ -4,8 +4,8 @@ Blockly.Blocks['move_motor'] = {
         this.appendDummyInput()
             .appendField("Set")
             .appendField(new Blockly.FieldDropdown([
-                ["left", CMD_LEFT_MOTOR.toString()],
-                ["right", CMD_RIGHT_MOTOR.toString()],
+                ["left", CMD_SET_LEFT.toString()],
+                ["right", CMD_SET_RIGHT.toString()],
                 ["both", CMD_BOTH_MOTORS.toString() ]
             ]),
                 "motor")
@@ -159,7 +159,7 @@ Blockly.Blocks['read_ground'] = {
     init: function () {
         this.setHelpUrl('http://www.example.com/');
         this.appendDummyInput()
-            .appendField("Read ground");
+            .appendField("Read front and middle");
         this.setInputsInline(true);
         this.setOutput(true);
         this.setTooltip('');
@@ -168,6 +168,38 @@ Blockly.Blocks['read_ground'] = {
 
 Blockly.Python['read_ground'] = function (block) {
     return [PYT_RECEIVE + '(' + CMD_SENSORS + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')', Blockly.Python.ORDER_FUNCTION_CALL];
+};
+
+
+Blockly.Blocks['read_front'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Read front sensors");
+        this.setInputsInline(true);
+        this.setOutput(true);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['read_front'] = function (block) {
+    return [PYT_RECEIVE + '(' + CMD_FRONT + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')', Blockly.Python.ORDER_FUNCTION_CALL];
+};
+
+
+Blockly.Blocks['read_middle'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Read middle sensors");
+        this.setInputsInline(true);
+        this.setOutput(true);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['read_middle'] = function (block) {
+    return [PYT_RECEIVE + '(' + CMD_MIDDLE + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ')', Blockly.Python.ORDER_FUNCTION_CALL];
 };
 
 Blockly.Blocks['take_pic'] = {
@@ -301,37 +333,37 @@ Blockly.Python['move_balanced'] = function (block) {
 };
 
 
-Blockly.Blocks['black'] = {
-    init: function () {
-        this.setHelpUrl('http://www.example.com/');
-        this.appendDummyInput()
-            .appendField("BLACK");
-        this.setInputsInline(true);
-        this.setOutput(true, "String");
-        this.setTooltip('');
-        this.setColour(45);
-    }
-};
-
-Blockly.Python['black'] = function (block) {
-    return "1";
-};
-
-Blockly.Blocks['white'] = {
-    init: function () {
-        this.setHelpUrl('http://www.example.com/');
-        this.appendDummyInput()
-            .appendField("WHITE");
-        this.setInputsInline(true);
-        this.setOutput(true, "String");
-        this.setTooltip('');
-        this.setColour(45);
-    }
-};
-
-Blockly.Python['white'] = function (block) {
-    return "1";
-};
+//Blockly.Blocks['black'] = {
+//    init: function () {
+//        this.setHelpUrl('http://www.example.com/');
+//        this.appendDummyInput()
+//            .appendField("BLACK");
+//        this.setInputsInline(true);
+//        this.setOutput(true, "String");
+//        this.setTooltip('');
+//        this.setColour(45);
+//    }
+//};
+//
+//Blockly.Python['black'] = function (block) {
+//    return "1";
+//};
+//
+//Blockly.Blocks['white'] = {
+//    init: function () {
+//        this.setHelpUrl('http://www.example.com/');
+//        this.appendDummyInput()
+//            .appendField("WHITE");
+//        this.setInputsInline(true);
+//        this.setOutput(true, "String");
+//        this.setTooltip('');
+//        this.setColour(45);
+//    }
+//};
+//
+//Blockly.Python['white'] = function (block) {
+//    return "1";
+//};
 
 
 
@@ -363,4 +395,193 @@ Blockly.Python['servo'] = function (block) {
     catch (e) {
         alert("Error:" + e);
     }
+};
+
+
+Blockly.Blocks['first_black_left'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("From")
+        this.appendValueInput("sonarV")
+            .setCheck("Array");
+        this.appendDummyInput()
+            .appendField("get first black from left");
+        this.setInputsInline(true);
+        this.setOutput(true,Number);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['first_black_left'] = function (block) {
+    try {
+        var sonarV = Blockly.Python.valueToCode(block, 'sonarV', Blockly.Python.ORDER_ATOMIC);
+
+
+        return [PYT_FIRSTBLACKLEFT + "(" + sonarV  + ")\n", Blockly.Python.ORDER_FUNCTION_CALL];
+    }
+    catch (e) {
+        alert("Error:" + e);
+    }
+};
+
+
+Blockly.Blocks['send_back'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Receive")
+        this.appendValueInput("msg");
+        this.appendDummyInput()
+            .appendField("in console");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['send_back'] = function (block) {
+    try {
+        var sonarV = Blockly.Python.valueToCode(block, 'msg', Blockly.Python.ORDER_ATOMIC);
+        return PYT_SENDBACK + "(" + sonarV  + ")\n";
+    }
+    catch (e) {
+        alert("Error:" + e);
+    }
+};
+
+
+Blockly.Blocks['map'] = {
+    init: function() {
+        this.setHelpUrl('http://www.example.com/');
+        this.setColour(230);
+        this.appendValueInput("x")
+            .appendField("map");
+        this.appendValueInput("in_min")
+            .setCheck("Number")
+            .appendField("in_min");
+        this.appendValueInput("in_max")
+            .setCheck("Number")
+            .appendField("in_max");
+        this.appendValueInput("out_min")
+            .setCheck("Number")
+            .appendField("out_min");
+        this.appendValueInput("out_max")
+            .setCheck("Number")
+            .appendField("out_max");
+        this.setInputsInline(true);
+        this.setOutput(true,Number);
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['map'] = function (block) {
+    Blockly.Python['map'] = function(block) {
+        var value_x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
+        var value_in_min = Blockly.Python.valueToCode(block, 'in_min', Blockly.Python.ORDER_ATOMIC);
+        var value_in_max = Blockly.Python.valueToCode(block, 'in_max', Blockly.Python.ORDER_ATOMIC);
+        var value_out_min = Blockly.Python.valueToCode(block, 'out_min', Blockly.Python.ORDER_ATOMIC);
+        var value_out_max = Blockly.Python.valueToCode(block, 'out_max', Blockly.Python.ORDER_ATOMIC);
+        var res = PYT_MAP + "("+value_x+","+value_in_min+","+value_in_max+","+value_out_min+","+value_out_max+")\n";
+        return [res, Blockly.Python.ORDER_FUNCTION_CALL];
+    };
+};
+
+
+
+
+
+Blockly.Blocks['move_back'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set both motors at back speed");
+        this.appendValueInput("speed")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("(0-255)");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+    }
+};
+
+Blockly.Python['move_back'] = function (block) {
+    var p1 = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    return PYT_SEND + '(' + CMD_BACK_BOTH + ',' + p1 + ',' + CMD_NOPARAM + ')\n';
+};
+
+
+Blockly.Blocks['move_b_left'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set left motor at back speed");
+        this.appendValueInput("speed")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("(0-255)");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+    }
+};
+
+Blockly.Python['move_b_left'] = function (block) {
+    var p1 = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    return PYT_SEND + '(' + CMD_BACK_LEFT + ',' + p1 + ',' + CMD_NOPARAM + ')\n';
+};
+
+
+
+Blockly.Blocks['move_b_right'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set right motor at back speed");
+        this.appendValueInput("speed")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("(0-255)");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+    }
+};
+
+Blockly.Python['move_b_right'] = function (block) {
+    var p1 = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    return PYT_SEND + '(' + CMD_BACK_RIGHT + ',' + p1 + ',' + CMD_NOPARAM + ')\n';
+};
+
+Blockly.Blocks['move_back_balanced'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set backward speed");
+        this.appendValueInput("speed")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("and balance");
+
+        this.appendValueInput("balance")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("(0-255)");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+    }
+};
+
+Blockly.Python['move_back_balanced'] = function (block) {
+    var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    var balance = Blockly.Python.valueToCode(block, 'balance', Blockly.Python.ORDER_ATOMIC);
+
+    return PYT_SEND + '(' + CMD_MOVE_BACKWARD + ',' + speed + ',' + balance + ')\n';
 };

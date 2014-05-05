@@ -2,11 +2,14 @@
  * Created by monkey on 10/03/14.
  */
 
-SERVER_TCP_PORT = 4999;
-SERVER_UDP_PORT = 5000;
-WEBSERVER_PORT = 8000;
-SERVER_CAM_PORT = 8080;
-SERVER_IP = "192.168.0.123"; //"192.168.173.1" // "10.0.2.2" // window.location.hostname //
+
+DEFAULT_IP = "192.168.0.123";
+DEFAULT_CAM = 8080;
+DEFAULT_CMD = 8000;
+
+SERVER_IP= "192.168.0.123" //(getCookie("IP") ? getCookie("IP") : DEFAULT_IP);
+SERVER_CAM_PORT = 8080; // (getCookie("CAM") ? parseInt(getCookie("CAM")) : DEFAULT_CAM);
+WEBSERVER_PORT  = 8000; // (getCookie("CMD") ? parseInt(getCookie("CMD")) : DEFAULT_CMD);
 
 WEBHOST = "ws://" + SERVER_IP + ":" + WEBSERVER_PORT;
 
@@ -39,6 +42,7 @@ CMD_LED = 12;
 CMD_SENSORS = 13;
 CMD_FRONT = 14;
 CMD_MIDDLE = 15;
+CMD_SERVO = 16;
 
 PYT_SEND = "sendToArduino"
 PYT_RECEIVE = "receiveFromArduino"
@@ -48,3 +52,25 @@ PYT_SERVO = "moveServo"
 PYT_SENDBACK = "sendToAndroid"
 PYT_FIRSTBLACKLEFT = "firstBlackLeft"
 PYT_MAP = "map"
+
+
+
+//function setCookie(cname,cvalue)
+//{
+//    var d = new Date();
+//    d.setTime(d.getTime()+(31536000000));
+//    var expires = "expires="+d.toGMTString();
+//    document.cookie = cname + "=" + cvalue + "; " + expires;
+//}
+//
+//function getCookie(cname)
+//{
+//    var name = cname + "=";
+//    var ca = document.cookie.split(';');
+//    for(var i=0; i<ca.length; i++)
+//    {
+//        var c = ca[i].trim();
+//        if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+//    }
+//    return null;
+//}
