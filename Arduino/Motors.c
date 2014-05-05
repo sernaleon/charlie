@@ -55,6 +55,18 @@ void turnRight(byte speed)
     setForwardSpeedLeft(0);
 }
 
+void setLeftSpeed(byte speed)
+{
+	int speedMapped = map(speed,0,255,0,KSPEED);
+	setForwardSpeedLeft(speedMapped);
+}
+
+void setRightSpeed(byte speed)
+{
+	int speedMapped = map(speed,0,255,0,KSPEED);
+	setForwardSpeedRight(speedMapped);
+}
+
 void moveBalanced(byte speed, byte balance)
 {
   //Sets speed between 0 and KMAXSPEED
@@ -122,4 +134,22 @@ void moveBackward(byte speed, byte balance)
   setBackwardSpeedRight(right);
 }
 
+void moveBackBoth(byte speed)
+{
+	//Sets speed between 0 and KMAXSPEED
+	int kspeed = map(speed,0,255,0,KSPEED);
+	setBackwardSpeedLeft(kspeed);
+	setBackwardSpeedRight(kspeed);
+}
 
+void moveBackLeft(byte speed)
+{
+	//Sets speed between 0 and KMAXSPEED
+	setBackwardSpeedLeft(map(speed,0,255,0,KSPEED));
+}
+
+void moveBackRight(byte speed)
+{
+	//Sets speed between 0 and KMAXSPEED
+	setBackwardSpeedRight(map(speed,0,255,0,KSPEED));
+}

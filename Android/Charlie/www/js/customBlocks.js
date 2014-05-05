@@ -4,8 +4,8 @@ Blockly.Blocks['move_motor'] = {
         this.appendDummyInput()
             .appendField("Set")
             .appendField(new Blockly.FieldDropdown([
-                ["left", CMD_LEFT_MOTOR.toString()],
-                ["right", CMD_RIGHT_MOTOR.toString()],
+                ["left", CMD_SET_LEFT.toString()],
+                ["right", CMD_SET_RIGHT.toString()],
                 ["both", CMD_BOTH_MOTORS.toString() ]
             ]),
                 "motor")
@@ -486,4 +486,102 @@ Blockly.Python['map'] = function (block) {
         var res = PYT_MAP + "("+value_x+","+value_in_min+","+value_in_max+","+value_out_min+","+value_out_max+")\n";
         return [res, Blockly.Python.ORDER_FUNCTION_CALL];
     };
+};
+
+
+
+
+
+Blockly.Blocks['move_back'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set both motors at back speed");
+        this.appendValueInput("speed")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("(0-255)");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+    }
+};
+
+Blockly.Python['move_back'] = function (block) {
+    var p1 = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    return PYT_SEND + '(' + CMD_BACK_BOTH + ',' + p1 + ',' + CMD_NOPARAM + ')\n';
+};
+
+
+Blockly.Blocks['move_b_left'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set left motor at back speed");
+        this.appendValueInput("speed")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("(0-255)");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+    }
+};
+
+Blockly.Python['move_b_left'] = function (block) {
+    var p1 = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    return PYT_SEND + '(' + CMD_BACK_LEFT + ',' + p1 + ',' + CMD_NOPARAM + ')\n';
+};
+
+
+
+Blockly.Blocks['move_b_right'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set right motor at back speed");
+        this.appendValueInput("speed")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("(0-255)");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+    }
+};
+
+Blockly.Python['move_b_right'] = function (block) {
+    var p1 = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    return PYT_SEND + '(' + CMD_BACK_RIGHT + ',' + p1 + ',' + CMD_NOPARAM + ')\n';
+};
+
+Blockly.Blocks['move_back_balanced'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Set backward speed");
+        this.appendValueInput("speed")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("and balance");
+
+        this.appendValueInput("balance")
+            .setCheck("Number");
+        this.appendDummyInput()
+            .appendField("(0-255)");
+        this.setInputsInline(true);
+        this.setPreviousStatement(true);
+        this.setNextStatement(true);
+        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+    }
+};
+
+Blockly.Python['move_back_balanced'] = function (block) {
+    var speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    var balance = Blockly.Python.valueToCode(block, 'balance', Blockly.Python.ORDER_ATOMIC);
+
+    return PYT_SEND + '(' + CMD_MOVE_BACKWARD + ',' + speed + ',' + balance + ')\n';
 };

@@ -103,5 +103,5 @@
 #define  O_Bin1	10
 #define  O_Bin2	 8
 
-#define RESOLUTION 700
+#define RESOLUTION 1023  //700
 #endif

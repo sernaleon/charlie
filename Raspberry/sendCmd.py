@@ -1,6 +1,5 @@
 import sys, struct, serial, signal, ssl, logging 
-from SimpleWebSocketServer import WebSocket, SimpleWebSocketServer, SimpleSSLWebSocketServer
-from optparse import OptionParser
+
 
 
 DUE_PORT = 'COM7' #'/dev/ttyACM0'

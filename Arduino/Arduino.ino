@@ -75,46 +75,73 @@ void getAndRunCommandFromUSB()
 			moveBalanced(p1,p2);
 			break;
 			
-			//Command 2 -> Move backwards
+			//Set left motor to <SPEED>
 			case 2:
-			moveBackward(p1,p2);
+			setLeftSpeed(p1);
 			break;
 			
-			//Command 3 -> Beep
+			//Set right motor to <SPEED>
 			case 3:
-			beep(p1);
+			setRightSpeed(p1);
 			break;
 			
-			//Command 4 -> LED <1..14> <ON|OFF>
+			//Move forward to <SPEED>
 			case 4:
-			led(p1,p2);
+			moveForward(p1);
 			break;
 			
-			//Command 5 -> Set left motor at <SPPED>
+			//Set left motor to <SPEED> and right motor to 0
 			case 5:
 			turnLeft(p1);
 			break;
 			
-			//Command 6 -> Set right motor at <SPPED>
+			//Set right motor to <SPEED> and left motor to 0
 			case 6:
 			turnRight(p1);
 			break;
 			
-			//Command 7 -> Move forward
+			//Move backwards with speed and balance
 			case 7:
-			moveForward(p1);
+			moveBackward(p1,p2);
 			break;
 			
-			//Command 8 -> Send all CNY70 values
+			//Set both motors to back speed
 			case 8:
+			moveBackBoth(p1);
+			break;
+			
+			//Set left motor to back speed
+			case 9:
+			moveBackLeft(p1);
+			break;
+			
+			//Set right motor to back speed
+			case 10:
+			moveBackRight(p1);
+			break;
+			
+			//Beep
+			case 11:
+			beep(p1);
+			break;
+			
+			//LED <0..13> <ON|OFF>
+			case 12:
+			led(p1,p2);
+			break;
+			
+			//Send all CNY70 values. First front and then middle
+			case 13:
 			sendSensorValues();
 			break;
 			
-			case 9:
+			//Send front sensor values
+			case 14:
 			sendFront();
 			break;
 			
-			case 10:
+			//Send middle sensor values
+			case 15:
 			sendMiddle();
 			break;
 			
@@ -131,8 +158,6 @@ void led(byte num,bool state)
 	
 	digitalWrite(leds[num],state);
 }
-
-
 
 
 void beep(bool status)

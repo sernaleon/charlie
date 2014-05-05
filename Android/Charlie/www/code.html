@@ -248,7 +248,7 @@
     <!--</block>-->
 <!--</category>-->
 
-<category name="Motor">
+<category name="Motor forwards">
     <block type="move_fwd"></block>
     <block type="move_l"></block>
     <block type="move_r"></block>
@@ -276,6 +276,54 @@
             </block>
         </value>
     </block>
+</category>
+
+<category name="Motor backwards">
+
+    <block type="move_back">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="move_b_right">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="move_b_left">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="move_back_balanced">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+
+        <value name="balance">
+            <block type="math_number">
+                <field name="NUM">123</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="stop_motors"></block>
+
 </category>
 
 <category name="Ground sensors">
