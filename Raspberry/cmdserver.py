@@ -6,11 +6,13 @@ from SimpleWebSocketServer import WebSocket, SimpleWebSocketServer, SimpleSSLWeb
 from optparse import OptionParser
 from RPIO import PWM
 
-
 logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
 
 ArduinoConnected = True
 PrintDebugMessages = True
+
+SERVER_IP = ''
+WS_PORT = 8000
 
 LEDPIN = 4
 SERVOPIN = 17
@@ -60,7 +62,7 @@ def readSonar():
 	distance = (signalon - signaloff) * 17953.27521508037
 	
 	if (PrintDebugMessages):
-		print distance
+		print "SONAR:",distance
 		
 	return distance
 	
@@ -79,7 +81,7 @@ def firstBlackLeft(sonar):
 	
 	if (PrintDebugMessages):
 		print res
-	
+		
 	return res
 	
 def sendToArduino(cmd,p1,p2):
@@ -172,10 +174,6 @@ class WebServer(WebSocket):
 		
 		
 if __name__ == "__main__":
-	SERVER_IP = ''
-	WS_PORT = 8000
-	#DUE_PORT = 'COM7' #'/dev/ttyACM0'
-	#DUE_BAUDS = 9600
 
 	parser = OptionParser(usage="usage: %prog [options]", version="%prog 1.0")
 	parser.add_option("--host", default=SERVER_IP, type='string', action="store", dest="host", help="hostname (localhost)")
@@ -188,9 +186,6 @@ if __name__ == "__main__":
 	(options, args) = parser.parse_args()
 
 	cls = WebServer
-	
-	#if (ArduinoConnected):
-	#	serialPortArduinoCom = serial.Serial(DUE_PORT,DUE_BAUDS) 	
 	
 	if options.ssl == 1:
 		server = SimpleSSLWebSocketServer(options.host, options.port, cls, options.cert, options.cert, version=options.ver)

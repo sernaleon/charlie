@@ -42,7 +42,8 @@ CMD_LED = 12;
 CMD_SENSORS = 13;
 CMD_FRONT = 14;
 CMD_MIDDLE = 15;
-CMD_SERVO = 16;
+CMD_FRONT_ANALOG= 16;
+CMD_SERVO = 17;
 
 PYT_SEND = "sendToArduino"
 PYT_RECEIVE = "receiveFromArduino"

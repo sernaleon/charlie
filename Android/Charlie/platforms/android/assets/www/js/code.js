@@ -69,6 +69,7 @@ function sendToRaspi() {
     websocket.onopen = function (evt) {
         websocket.send(code);
         console.log("sent:\n" + code + '\n');
+        toast("Sent")
     };
 
     websocket.onclose = function (evt) {

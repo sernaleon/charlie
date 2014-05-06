@@ -145,6 +145,8 @@ void getAndRunCommandFromUSB()
 			sendMiddle();
 			break;
 			
+			case 16:
+			sendAnalogFront();
 		}
 	}
 }
@@ -280,4 +282,16 @@ void read_front()
 	
 	//Switch off IR matrix
 	digitalWrite(O_IRON_AN,LOW);
+}
+
+void sendAnalogFront()
+{
+	read_front();
+	
+	for(int i = 0; i < 11; i++)
+	{
+		Serial.print(frontSensorValue[i]);
+		Serial.print(",");
+	}
+	Serial.println(frontSensorValue[11]);
 }

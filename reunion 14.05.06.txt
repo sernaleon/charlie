@@ -1,0 +1,39 @@
+Versión preliminar terminada.
+
+- Interfaz mejorada
+
+- Modo drive
+	- Slider de control del servo (camara)
+	- Indicador de emisión (triángulo verde)
+
+- Modo code
+	- Realizados bloques
+		- Movimiento hacia adelante
+		- Movimiento haca atras
+		- Sensores de suelo
+		- Movimiento del servo
+		- Led
+		- Claxon
+
+		- Sleep
+		- Map
+	- Circuito indicador de ejecución de código (led azul)
+
+
+TODO:
+	- Memoria
+		Contenidos
+			- Introducción
+			- Estado del arte: proyectos similares
+			- Funcionamiento
+				- Modo drive
+				- Modo code
+			- Implementación
+				- Arduino
+				- Raspberry
+				- Android - Phonegap - Web
+			- Conclusiones
+
+	Extensión ~15p?
+	Trabajo descartado? Aplicación nativa.. Attiny85v	
+			

@@ -32,6 +32,7 @@ void sendFront();
 void sendMiddle();
 void read_middle();
 void read_front();
+void sendAnalogFront();
 
 #include "C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x\pins_arduino.h" 
 #include "C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x\variant.h" 

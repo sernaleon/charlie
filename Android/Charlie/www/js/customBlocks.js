@@ -187,6 +187,25 @@ Blockly.Python['read_front'] = function (block) {
 };
 
 
+Blockly.Blocks['read_front_analog'] = {
+    init: function () {
+        this.setHelpUrl('http://www.example.com/');
+        this.appendDummyInput()
+            .appendField("Analog read front sensors");
+        this.setInputsInline(true);
+        this.setOutput(true, "Array");
+        this.setTooltip('');
+    }
+};
+
+Blockly.Python['read_front_analog'] = function (block) {
+
+    var code = PYT_RECEIVE + '(' + CMD_FRONT_ANALOG + ',' + CMD_NOPARAM + ',' + CMD_NOPARAM + ").split(',')";
+    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+};
+
+
+
 Blockly.Blocks['read_middle'] = {
     init: function () {
         this.setHelpUrl('http://www.example.com/');

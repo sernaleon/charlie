@@ -18,3 +18,7 @@ while True:
 	msg[2] = struct.pack('B', int(raw_input("p2:")))
 	print msg
 	ser.write(msg)
+	
+	recMsg = ser.readline().strip()
+	
+	
