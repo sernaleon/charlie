@@ -1,0 +1,1 @@
+killall cmdserver.py

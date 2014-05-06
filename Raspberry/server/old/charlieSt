@@ -1,0 +1,53 @@
+#! /bin/sh
+# /etc/init.d/charlie
+ 
+### BEGIN INIT INFO
+# Provides:          charlie
+# Required-Start:    $all hostapd networking 
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Starts the robot servers
+# Description:       Starts the robot servers
+### END INIT INFO
+ 
+# If you want a command to always run, put it here
+ 
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+
+echo "Charlie v0.03"
+
+#echo "Starting dependencies"
+#service networking start
+#sleep 2
+#service hostapd start
+#sleep 2
+#service isc-dhcp-server start
+#sleep 2
+service uv4l_raspicam.sh start
+
+
+echo "Starting servers"
+
+python2.7 /home/pi/server/websocket.py &
+
+LD_PRELOAD=/usr/lib/uv4l/uv4lext/armv6l/libuv4lext.so ./home/pi/server/mjpg-streamer/mjpg_streamer -i "/home/pi/server/mjpg-streamer/input_uvc.so -d /dev/video0 -r 320x240 -f 15" -o "/home/pi/server/mjpg-streamer/output_http.so -w ./home/pi/server/mjpg-streamer/www" &
+
+echo "Done"
+;;
+  stop)
+    echo "Stopping robotManager"
+    # kill application you want to stop
+    service uv4l_raspicam.sh stop
+    killall python2.7
+    killall charlie
+    ;;
+  *)
+    echo "Usage: charlie {start|stop}"
+    exit 1
+    ;;
+esac
+ 
+exit 0

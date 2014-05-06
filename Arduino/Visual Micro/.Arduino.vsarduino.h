@@ -24,19 +24,33 @@ extern "C" void __cxa_pure_virtual() {;}
 
 //
 //
-void getAndRunCommandFromUSB();
 void led(byte num,bool state);
 void beep(bool status);
-void sendSensorValues();
+void sendFrontAndMiddle();
 void sendFront();
 void sendMiddle();
-void read_middle();
-void read_front();
 void sendAnalogFront();
+void readMiddle();
+void read_front();
+void stopMotors();
+void setForwardSpeedRight(int speed);
+void setForwardSpeedLeft(int speed);
+void setMotors(int left, int right);
+void turnLeft(byte speed);
+void turnRight(byte speed);
+void setLeftSpeed(byte speed);
+void setRightSpeed(byte speed);
+void moveBalanced(byte speed, byte balance);
+void moveForward(byte speed);
+void setBackwardSpeedLeft(int speed);
+void setBackwardSpeedRight(int speed);
+void moveBackward(byte speed, byte balance);
+void moveBackBoth(byte speed);
+void moveBackLeft(byte speed);
+void moveBackRight(byte speed);
 
 #include "C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x\pins_arduino.h" 
 #include "C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x\variant.h" 
 #include "C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\cores\arduino\arduino.h"
 #include "C:\Users\monkey\Dropbox\Asignaturas\0. SI\Arduino\Arduino.ino"
-#include "C:\Users\monkey\Dropbox\Asignaturas\0. SI\Arduino\Motors.c"
 #include "C:\Users\monkey\Dropbox\Asignaturas\0. SI\Arduino\Types.h"

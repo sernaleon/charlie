@@ -174,41 +174,6 @@ Discarded input sections
  .data          0x00000000        0x0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
  .bss           0x00000000        0x0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
  .text.link     0x00000000        0x6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
- .text          0x00000000        0x0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .data          0x00000000        0x0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .bss           0x00000000        0x0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.setBackwardSpeedRight
-                0x00000000       0x2a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.moveBackRight
-                0x00000000       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.setBackwardSpeedLeft
-                0x00000000       0x2a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.moveBackLeft
-                0x00000000       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.moveBackBoth
-                0x00000000       0x24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.moveBackward
-                0x00000000       0x3c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.setForwardSpeedLeft
-                0x00000000       0x24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.setLeftSpeed
-                0x00000000       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.setForwardSpeedRight
-                0x00000000       0x24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.setRightSpeed
-                0x00000000       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.turnRight
-                0x00000000       0x22 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.turnLeft
-                0x00000000       0x26 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.setMotors
-                0x00000000       0x12 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.moveForward
-                0x00000000       0x1e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.moveBalanced
-                0x00000000       0x38 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .text.stopMotors
-                0x00000000       0x2a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
  .text          0x00000000        0x0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
  .data          0x00000000        0x0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
  .bss           0x00000000        0x0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
@@ -264,13 +229,7 @@ Discarded input sections
                 0x00000000       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
  .text._ZN5Print7printlnERK9Printable
                 0x00000000       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .text._ZN5Print5printEmi
-                0x00000000       0x1a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
  .text._ZN5Print7printlnEmi
-                0x00000000       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .text._ZN5Print5printEji
-                0x00000000        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .text._ZN5Print7printlnEji
                 0x00000000       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
  .text._ZN5Print5printEhi
                 0x00000000        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
@@ -280,8 +239,6 @@ Discarded input sections
                 0x00000000       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
  .text._ZN5Print7printlnEii
                 0x00000000       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .text._ZN5Print5printEPKc
-                0x00000000        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
  .text._ZN5Print10printFloatEdh
                 0x00000000      0x13c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
  .text._ZN5Print5printEdi
@@ -846,7 +803,6 @@ LOAD c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g
 LOAD c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
 START GROUP
 LOAD C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
-LOAD C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 LOAD C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 LOAD C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a
 LOAD C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a
@@ -888,194 +844,207 @@ LOAD c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g
                 0x00080182                _getpid
  .text._exit    0x00080188       0x10 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
                 0x00080188                _exit
- .text._Z4beepb
-                0x00080198        0x8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080198                beep(bool)
- .text._Z3ledhb
-                0x000801a0       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x000801a0                led(unsigned char, bool)
- .text._Z10read_frontv
-                0x000801b4       0xd0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x000801b4                read_front()
- .text._Z11read_middlev
-                0x00080284       0x40 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080284                read_middle()
- .text._Z10sendMiddlev
-                0x000802c4       0x2c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x000802c4                sendMiddle()
- .text._Z9sendFrontv
-                0x000802f0       0x2c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x000802f0                sendFront()
- .text._Z16sendSensorValuesv
-                0x0008031c       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x0008031c                sendSensorValues()
- .text.setup    0x00080364       0xc8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080364                setup
  .text._Z21setBackwardSpeedRighti
-                0x0008042c       0x2a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x0008042c                setBackwardSpeedRight(int)
+                0x00080198       0x2a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00080198                setBackwardSpeedRight(int)
  .text._Z13moveBackRighth
-                0x00080456       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080456                moveBackRight(unsigned char)
+                0x000801c2       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000801c2                moveBackRight(unsigned char)
  .text._Z20setBackwardSpeedLefti
-                0x00080472       0x2a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080472                setBackwardSpeedLeft(int)
+                0x000801de       0x2a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000801de                setBackwardSpeedLeft(int)
  .text._Z12moveBackLefth
-                0x0008049c       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x0008049c                moveBackLeft(unsigned char)
+                0x00080208       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00080208                moveBackLeft(unsigned char)
  .text._Z12moveBackBothh
-                0x000804b8       0x24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x000804b8                moveBackBoth(unsigned char)
+                0x00080224       0x24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00080224                moveBackBoth(unsigned char)
  .text._Z12moveBackwardhh
-                0x000804dc       0x3c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x000804dc                moveBackward(unsigned char, unsigned char)
+                0x00080248       0x3c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00080248                moveBackward(unsigned char, unsigned char)
  .text._Z19setForwardSpeedLefti
-                0x00080518       0x24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080518                setForwardSpeedLeft(int)
+                0x00080284       0x24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00080284                setForwardSpeedLeft(int)
  .text._Z12setLeftSpeedh
-                0x0008053c       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x0008053c                setLeftSpeed(unsigned char)
+                0x000802a8       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000802a8                setLeftSpeed(unsigned char)
  .text._Z20setForwardSpeedRighti
-                0x00080558       0x24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080558                setForwardSpeedRight(int)
+                0x000802c4       0x24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000802c4                setForwardSpeedRight(int)
  .text._Z13setRightSpeedh
-                0x0008057c       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x0008057c                setRightSpeed(unsigned char)
+                0x000802e8       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000802e8                setRightSpeed(unsigned char)
  .text._Z9turnRighth
-                0x00080598       0x22 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080598                turnRight(unsigned char)
+                0x00080304       0x22 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00080304                turnRight(unsigned char)
  .text._Z8turnLefth
-                0x000805ba       0x26 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x000805ba                turnLeft(unsigned char)
+                0x00080326       0x26 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00080326                turnLeft(unsigned char)
  .text._Z9setMotorsii
-                0x000805e0       0x12 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x000805e0                setMotors(int, int)
+                0x0008034c       0x12 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x0008034c                setMotors(int, int)
  .text._Z11moveForwardh
-                0x000805f2       0x1e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x000805f2                moveForward(unsigned char)
+                0x0008035e       0x1e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x0008035e                moveForward(unsigned char)
  .text._Z12moveBalancedhh
-                0x00080610       0x38 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080610                moveBalanced(unsigned char, unsigned char)
+                0x0008037c       0x38 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x0008037c                moveBalanced(unsigned char, unsigned char)
  .text._Z10stopMotorsv
-                0x00080648       0x2a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080648                stopMotors()
- *fill*         0x00080672        0x2 00
- .text._Z23getAndRunCommandFromUSBv
-                0x00080674       0xf8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x00080674                getAndRunCommandFromUSB()
- .text.loop     0x0008076c        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x0008076c                loop
+                0x000803b4       0x2a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000803b4                stopMotors()
+ .text._Z4beepb
+                0x000803de        0x8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000803de                beep(bool)
+ *fill*         0x000803e6        0x2 00
+ .text._Z3ledhb
+                0x000803e8       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000803e8                led(unsigned char, bool)
+ .text._Z10read_frontv
+                0x000803fc       0xd4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000803fc                read_front()
+ .text._Z10readMiddlev
+                0x000804d0       0x40 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000804d0                readMiddle()
+ .text._Z15sendAnalogFrontv
+                0x00080510       0x3c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00080510                sendAnalogFront()
+ .text._Z10sendMiddlev
+                0x0008054c       0x2c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x0008054c                sendMiddle()
+ .text._Z9sendFrontv
+                0x00080578       0x2c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00080578                sendFront()
+ .text._Z18sendFrontAndMiddlev
+                0x000805a4       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000805a4                sendFrontAndMiddle()
+ .text.loop     0x000805ec      0x104 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000805ec                loop
+ .text.setup    0x000806f0       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000806f0                setup
  .text.Reset_Handler
-                0x00080770       0x70 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
-                0x00080770                Reset_Handler
+                0x00080738       0x70 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
+                0x00080738                Reset_Handler
  .text.UOTGHS_Handler
-                0x000807e0       0x10 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
-                0x000807e0                UOTGHS_Handler
- .text.__halt   0x000807f0        0x2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
-                0x000807f0                DACC_Handler
-                0x000807f0                DebugMon_Handler
-                0x000807f0                DMAC_Handler
-                0x000807f0                TRNG_Handler
-                0x000807f0                HardFault_Handler
-                0x000807f0                TC2_Handler
-                0x000807f0                TWI1_Handler
-                0x000807f0                NMI_Handler
-                0x000807f0                TC7_Handler
-                0x000807f0                ADC_Handler
-                0x000807f0                SMC_Handler
-                0x000807f0                RTT_Handler
-                0x000807f0                EFC1_Handler
-                0x000807f0                PIOB_Handler
-                0x000807f0                RTC_Handler
-                0x000807f0                UsageFault_Handler
-                0x000807f0                TC6_Handler
-                0x000807f0                WDT_Handler
-                0x000807f0                CAN0_Handler
-                0x000807f0                TC4_Handler
-                0x000807f0                TC1_Handler
-                0x000807f0                HSMCI_Handler
-                0x000807f0                TC3_Handler
-                0x000807f0                TWI0_Handler
-                0x000807f0                PIOA_Handler
-                0x000807f0                SSC_Handler
-                0x000807f0                EFC0_Handler
-                0x000807f0                PMC_Handler
-                0x000807f0                PWM_Handler
-                0x000807f0                CAN1_Handler
-                0x000807f0                MemManage_Handler
-                0x000807f0                SUPC_Handler
-                0x000807f0                TC8_Handler
-                0x000807f0                USART2_Handler
-                0x000807f0                PIOD_Handler
-                0x000807f0                EMAC_Handler
-                0x000807f0                PIOC_Handler
-                0x000807f0                BusFault_Handler
-                0x000807f0                RSTC_Handler
-                0x000807f0                TC0_Handler
-                0x000807f0                TC5_Handler
-                0x000807f0                SPI0_Handler
+                0x000807a8       0x10 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
+                0x000807a8                UOTGHS_Handler
+ .text.__halt   0x000807b8        0x2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+                0x000807b8                DACC_Handler
+                0x000807b8                DebugMon_Handler
+                0x000807b8                DMAC_Handler
+                0x000807b8                TRNG_Handler
+                0x000807b8                HardFault_Handler
+                0x000807b8                TC2_Handler
+                0x000807b8                TWI1_Handler
+                0x000807b8                NMI_Handler
+                0x000807b8                TC7_Handler
+                0x000807b8                ADC_Handler
+                0x000807b8                SMC_Handler
+                0x000807b8                RTT_Handler
+                0x000807b8                EFC1_Handler
+                0x000807b8                PIOB_Handler
+                0x000807b8                RTC_Handler
+                0x000807b8                UsageFault_Handler
+                0x000807b8                TC6_Handler
+                0x000807b8                WDT_Handler
+                0x000807b8                CAN0_Handler
+                0x000807b8                TC4_Handler
+                0x000807b8                TC1_Handler
+                0x000807b8                HSMCI_Handler
+                0x000807b8                TC3_Handler
+                0x000807b8                TWI0_Handler
+                0x000807b8                PIOA_Handler
+                0x000807b8                SSC_Handler
+                0x000807b8                EFC0_Handler
+                0x000807b8                PMC_Handler
+                0x000807b8                PWM_Handler
+                0x000807b8                CAN1_Handler
+                0x000807b8                MemManage_Handler
+                0x000807b8                SUPC_Handler
+                0x000807b8                TC8_Handler
+                0x000807b8                USART2_Handler
+                0x000807b8                PIOD_Handler
+                0x000807b8                EMAC_Handler
+                0x000807b8                PIOC_Handler
+                0x000807b8                BusFault_Handler
+                0x000807b8                RSTC_Handler
+                0x000807b8                TC0_Handler
+                0x000807b8                TC5_Handler
+                0x000807b8                SPI0_Handler
  .text.SysTick_Handler
-                0x000807f2       0x16 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
-                0x000807f2                SysTick_Handler
+                0x000807ba       0x16 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+                0x000807ba                SysTick_Handler
  .text.PendSV_Handler
-                0x00080808        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
-                0x00080808                PendSV_Handler
+                0x000807d0        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+                0x000807d0                PendSV_Handler
  .text.SVC_Handler
-                0x0008080c        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
-                0x0008080c                SVC_Handler
- .text.__empty  0x00080810        0x2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
-                0x00080810                yield
- .text.__false  0x00080812        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
-                0x00080812                sysTickHook
- .text.__halt   0x00080816        0x2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
-                0x00080816                svcHook
-                0x00080816                pendSVHook
- .text.delay    0x00080818       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
-                0x00080818                delay
+                0x000807d4        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+                0x000807d4                SVC_Handler
+ .text.__empty  0x000807d8        0x2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+                0x000807d8                yield
+ .text.__false  0x000807da        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+                0x000807da                sysTickHook
+ .text.__halt   0x000807de        0x2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+                0x000807de                svcHook
+                0x000807de                pendSVHook
+ .text.delay    0x000807e0       0x1c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+                0x000807e0                delay
  .text.analogWriteResolution
-                0x00080834        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
-                0x00080834                analogWriteResolution
+                0x000807fc        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x000807fc                analogWriteResolution
  .text.TC_SetCMR_ChannelA
-                0x00080840       0x12 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x00080808       0x12 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .text.TC_SetCMR_ChannelB
-                0x00080852       0x12 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x0008081a       0x12 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .text.analogOutputInit
-                0x00080864       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
-                0x00080864                analogOutputInit
+                0x0008082c       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x0008082c                analogOutputInit
  .text.analogWrite
-                0x00080878      0x2bc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
-                0x00080878                analogWrite
+                0x00080840      0x2bc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x00080840                analogWrite
  .text.digitalRead
-                0x00080b34       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
-                0x00080b34                digitalRead
+                0x00080afc       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+                0x00080afc                digitalRead
  .text.digitalWrite
-                0x00080b5c       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
-                0x00080b5c                digitalWrite
- .text.pinMode  0x00080ba4       0x68 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
-                0x00080ba4                pinMode
- .text.main     0x00080c0c       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
-                0x00080c0c                main
+                0x00080b24       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+                0x00080b24                digitalWrite
+ .text.pinMode  0x00080b6c       0x68 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+                0x00080b6c                pinMode
+ .text.main     0x00080bd4       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+                0x00080bd4                main
  .text._ZN5Print5writeEPKhj
-                0x00080c3c       0x2e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
-                0x00080c3c                Print::write(unsigned char const*, unsigned int)
+                0x00080c04       0x2e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080c04                Print::write(unsigned char const*, unsigned int)
  .text._ZN5Print5printEc
-                0x00080c6a        0xa C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
-                0x00080c6a                Print::print(char)
+                0x00080c32        0xa C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080c32                Print::print(char)
  .text._ZN5Print7printlnEv
-                0x00080c74       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
-                0x00080c74                Print::println()
+                0x00080c3c       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080c3c                Print::println()
  .text._ZN5Print5writeEPKc
-                0x00080c8c       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
-                0x00080c8c                Print::write(char const*)
+                0x00080c54       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080c54                Print::write(char const*)
  .text._ZN5Print11printNumberEmh
-                0x00080cac       0x3e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
-                0x00080cac                Print::printNumber(unsigned long, unsigned char)
+                0x00080c74       0x3e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080c74                Print::printNumber(unsigned long, unsigned char)
+ .text._ZN5Print5printEmi
+                0x00080cb2       0x1a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080cb2                Print::print(unsigned long, int)
+ .text._ZN5Print5printEji
+                0x00080ccc        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080ccc                Print::print(unsigned int, int)
+ .text._ZN5Print7printlnEji
+                0x00080cd0       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080cd0                Print::println(unsigned int, int)
  .text._ZN5Print5printEli
-                0x00080cea       0x42 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
-                0x00080cea                Print::print(long, int)
+                0x00080ce4       0x42 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080ce4                Print::print(long, int)
  .text._ZN5Print5printEii
-                0x00080d2c        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
-                0x00080d2c                Print::print(int, int)
+                0x00080d26        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080d26                Print::print(int, int)
+ .text._ZN5Print5printEPKc
+                0x00080d2a        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00080d2a                Print::print(char const*)
+ *fill*         0x00080d2e        0x2 00
  .text.initiateReset
                 0x00080d30        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
                 0x00080d30                initiateReset
@@ -1617,25 +1586,27 @@ LOAD c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g
  .rodata.str1.1
                 0x00085c28       0x19 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
  *fill*         0x00085c41        0x3 00
- .rodata._ZZ5setupE4C.41
-                0x00085c44       0x10 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .rodata._ZZ5setupE4C.42
-                0x00085c54        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .rodata._ZZ5setupE4C.43
-                0x00085c60        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .rodata._ZZ5setupE4C.44
-                0x00085c6c       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .rodata._ZZ5setupE4C.46
-                0x00085c84       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .rodata._ZL7OUTPUTS
+                0x00085c44       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .rodata._ZL4LEDS
+                0x00085c5c       0x10 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .rodata.str1.1
+                0x00085c6c        0x2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ *fill*         0x00085c6e        0x2 00
+ .rodata._ZL12FRONTSENSORS
+                0x00085c70        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .rodata._ZL6INPUTS
+                0x00085c7c       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .rodata._ZL13MIDDLESENSORS
+                0x00085c94        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
  .rodata.channelToChNo.6905
-                0x00085c9c       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x00085ca0       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .rodata.channelToId.6908
-                0x00085ce4       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x00085ce8       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .rodata.channelToTC.6907
-                0x00085d2c       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x00085d30       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .rodata.channelToAB.6906
-                0x00085d74       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
- *fill*         0x00085dbc        0x4 00
+                0x00085d78       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .rodata._ZTV9UARTClass
                 0x00085dc0       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
                 0x00085dc0                vtable for UARTClass
@@ -1820,7 +1791,7 @@ LOAD c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g
                 0x20070554                . = ALIGN (0x4)
                 0x20070554                _erelocate = .
 
-.bss            0x20070554      0x56c load address 0x00087440
+.bss            0x20070554      0x544 load address 0x00087440
                 0x20070554                . = ALIGN (0x4)
                 0x20070554                _sbss = .
                 0x20070554                _szero = .
@@ -1829,113 +1800,105 @@ LOAD c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g
  *fill*         0x20070555        0x3 00
  .bss.heap.3798
                 0x20070558        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
- .bss.middleSensor
-                0x2007055c        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x2007055c                middleSensor
- .bss.leds      0x20070568       0x10 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x20070568                leds
  .bss.frontSensorValue
-                0x20070578       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x20070578                frontSensorValue
- .bss.sensorLeido
-                0x200705a8        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x200705a8                sensorLeido
+                0x2007055c       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x2007055c                frontSensorValue
  .bss.frontSensorBool
-                0x200705b4        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x200705b4                frontSensorBool
- .bss.frontSensor
-                0x200705c0        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x200705c0                frontSensor
+                0x2007058c        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x2007058c                frontSensorBool
+ .bss.isSensorRead
+                0x20070598        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x20070598                isSensorRead
  .bss.middleSensorValue
-                0x200705cc        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                0x200705cc                middleSensorValue
- .bss.gpf_isr   0x200705d8        0x4 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
-                0x200705d8                gpf_isr
+                0x200705a4        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x200705a4                middleSensorValue
+ .bss.gpf_isr   0x200705b0        0x4 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
+                0x200705b0                gpf_isr
  .bss.PWMEnabled
-                0x200705dc        0x1 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
- *fill*         0x200705dd        0x3 00
+                0x200705b4        0x1 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+ *fill*         0x200705b5        0x3 00
  .bss.pinEnabled
-                0x200705e0       0x50 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x200705b8       0x50 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .bss.TCChanEnabled
-                0x20070630        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x20070608        0xc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .bss._ZL14isEndpointHalt
-                0x2007063c        0x1 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
- *fill*         0x2007063d        0x3 00
- .bss._cmark    0x20070640        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
-                0x20070640                _cmark
- .bss._cend     0x20070644        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
-                0x20070644                _cend
+                0x20070614        0x1 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ *fill*         0x20070615        0x3 00
+ .bss._cmark    0x20070618        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x20070618                _cmark
+ .bss._cend     0x2007061c        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x2007061c                _cend
  .bss._cdcComposite
-                0x20070648        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
-                0x20070648                _cdcComposite
+                0x20070620        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x20070620                _cdcComposite
  .bss._usbInitialized
-                0x2007064c        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
-                0x2007064c                _usbInitialized
+                0x20070624        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x20070624                _usbInitialized
  .bss.USBDevice
-                0x20070650        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
-                0x20070650                USBDevice
+                0x20070628        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x20070628                USBDevice
  .bss._usbSetInterface
-                0x20070654        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
-                0x20070654                _usbSetInterface
+                0x2007062c        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x2007062c                _usbSetInterface
  .bss._ZL21isRemoteWakeUpEnabled
-                0x20070658        0x1 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
- *fill*         0x20070659        0x3 00
+                0x20070630        0x1 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ *fill*         0x20070631        0x3 00
  .bss._usbConfiguration
-                0x2007065c        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
-                0x2007065c                _usbConfiguration
- .bss.Serial    0x20070660       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
-                0x20070660                Serial
+                0x20070634        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x20070634                _usbConfiguration
+ .bss.Serial    0x20070638       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x20070638                Serial
  .bss.rx_buffer1
-                0x20070680       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
-                0x20070680                rx_buffer1
- .bss.Serial1   0x200706c8       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
-                0x200706c8                Serial1
- .bss.Serial2   0x200706e8       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
-                0x200706e8                Serial2
- .bss.Serial3   0x20070708       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
-                0x20070708                Serial3
+                0x20070658       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x20070658                rx_buffer1
+ .bss.Serial1   0x200706a0       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x200706a0                Serial1
+ .bss.Serial2   0x200706c0       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x200706c0                Serial2
+ .bss.Serial3   0x200706e0       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x200706e0                Serial3
  .bss.rx_buffer2
-                0x20070728       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
-                0x20070728                rx_buffer2
+                0x20070700       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x20070700                rx_buffer2
  .bss.rx_buffer3
-                0x20070770       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
-                0x20070770                rx_buffer3
+                0x20070748       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x20070748                rx_buffer3
  .bss.rx_buffer4
-                0x200707b8       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
-                0x200707b8                rx_buffer4
+                0x20070790       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x20070790                rx_buffer4
  .bss.cdc_rx_buffer
-                0x20070800      0x208 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
-                0x20070800                cdc_rx_buffer
+                0x200707d8      0x208 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+                0x200707d8                cdc_rx_buffer
  .bss._ZZN7Serial_6acceptEvE5guard
-                0x20070a08        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+                0x200709e0        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
  .bss.SerialUSB
-                0x20070a0c       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
-                0x20070a0c                SerialUSB
- .bss.Mouse     0x20070a20        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
-                0x20070a20                Mouse
- .bss.Keyboard  0x20070a24       0x10 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
-                0x20070a24                Keyboard
+                0x200709e4       0x14 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+                0x200709e4                SerialUSB
+ .bss.Mouse     0x200709f8        0x4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+                0x200709f8                Mouse
+ .bss.Keyboard  0x200709fc       0x10 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+                0x200709fc                Keyboard
  .bss._dwTickCount
-                0x20070a34        0x4 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
+                0x20070a0c        0x4 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
  .bss.ul_recv_fifo_ptr
-                0x20070a38       0x28 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x20070a10       0x28 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
  .bss.ul_send_fifo_ptr
-                0x20070a60       0x28 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
- .bss           0x20070a88       0x34 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
-                0x20070a88                __malloc_top_pad
-                0x20070a8c                __malloc_current_mallinfo
-                0x20070ab4                __malloc_max_sbrked_mem
-                0x20070ab8                __malloc_max_total_mem
+                0x20070a38       0x28 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+ .bss           0x20070a60       0x34 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
+                0x20070a60                __malloc_top_pad
+                0x20070a64                __malloc_current_mallinfo
+                0x20070a8c                __malloc_max_sbrked_mem
+                0x20070a90                __malloc_max_total_mem
  *(COMMON)
- COMMON         0x20070abc        0x4 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
-                0x20070abc                errno
-                0x20070ac0                . = ALIGN (0x4)
-                0x20070ac0                _ebss = .
-                0x20070ac0                _ezero = .
-                0x20070ac0                . = ALIGN (0x4)
-                0x20070ac0                _end = .
+ COMMON         0x20070a94        0x4 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
+                0x20070a94                errno
+                0x20070a98                . = ALIGN (0x4)
+                0x20070a98                _ebss = .
+                0x20070a98                _ezero = .
+                0x20070a98                . = ALIGN (0x4)
+                0x20070a98                _end = .
 
-.stack_dummy    0x20070ac0        0x0
+.stack_dummy    0x20070a98        0x0
  *(.stack*)
                 0x20088000                __StackTop = 0x20088000
                 0x20088000                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
@@ -1952,196 +1915,193 @@ OUTPUT(C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x
  .ARM.attributes
                 0x00000042       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
  .ARM.attributes
-                0x00000073       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
+                0x00000073       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
  .ARM.attributes
-                0x000000a4       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x000000a4       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
  .ARM.attributes
-                0x000000d5       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
+                0x000000d5       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
  .ARM.attributes
-                0x00000106       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
+                0x00000106       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
  .ARM.attributes
-                0x00000137       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+                0x00000137       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
  .ARM.attributes
-                0x00000168       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+                0x00000168       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
  .ARM.attributes
-                0x00000199       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+                0x00000199       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .ARM.attributes
-                0x000001ca       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x000001ca       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
  .ARM.attributes
-                0x000001fb       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+                0x000001fb       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
  .ARM.attributes
-                0x0000022c       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+                0x0000022c       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
  .ARM.attributes
-                0x0000025d       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x0000025d       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
  .ARM.attributes
-                0x0000028e       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+                0x0000028e       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
  .ARM.attributes
-                0x000002bf       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+                0x000002bf       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
  .ARM.attributes
-                0x000002f0       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+                0x000002f0       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
  .ARM.attributes
-                0x00000321       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x00000321       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
  .ARM.attributes
-                0x00000352       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x00000352       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
  .ARM.attributes
-                0x00000383       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+                0x00000383       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
  .ARM.attributes
-                0x000003b4       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+                0x000003b4       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
  .ARM.attributes
-                0x000003e5       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+                0x000003e5       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
  .ARM.attributes
-                0x00000416       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+                0x00000416       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
  .ARM.attributes
-                0x00000447       0x31 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+                0x00000447       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
  .ARM.attributes
-                0x00000478       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
+                0x00000478       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
  .ARM.attributes
-                0x000004a9       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
+                0x000004a9       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
  .ARM.attributes
-                0x000004da       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x000004da       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
  .ARM.attributes
-                0x0000050b       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x0000050b       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
  .ARM.attributes
-                0x0000053c       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
+                0x0000053c       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(wdt.o)
  .ARM.attributes
-                0x0000056d       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(wdt.o)
+                0x0000056d       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(system_sam3xa.o)
  .ARM.attributes
-                0x0000059e       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(system_sam3xa.o)
+                0x0000059e       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
  .ARM.attributes
-                0x000005cf       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
+                0x000005cf       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(interrupt_sam_nvic.o)
  .ARM.attributes
-                0x00000600       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(interrupt_sam_nvic.o)
+                0x00000600       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
  .ARM.attributes
-                0x00000631       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00000631       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
  .ARM.attributes
-                0x00000662       0x31 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x00000662       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_isinfd.o)
  .ARM.attributes
-                0x00000693       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_isinfd.o)
+                0x0000068b       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_isnand.o)
  .ARM.attributes
-                0x000006bc       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_isnand.o)
+                0x000006b4       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x000006e5       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+                0x000006cf       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x00000700       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivdf3.o)
+                0x000006ea       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x0000071b       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+                0x00000705       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixdfsi.o)
  .ARM.attributes
-                0x00000736       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixdfsi.o)
+                0x00000720       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixunsdfsi.o)
  .ARM.attributes
-                0x00000751       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+                0x0000073b       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-assert.o)
  .ARM.attributes
-                0x0000076c       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-assert.o)
+                0x00000764       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fiprintf.o)
  .ARM.attributes
-                0x00000795       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fiprintf.o)
+                0x0000078d       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
  .ARM.attributes
-                0x000007be       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                0x000007b6       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
  .ARM.attributes
-                0x000007e7       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                0x000007df       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-iprintf.o)
  .ARM.attributes
-                0x00000810       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-iprintf.o)
+                0x00000808       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000839       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                0x00000831       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-rand.o)
  .ARM.attributes
-                0x00000862       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-rand.o)
+                0x0000085a       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
  .ARM.attributes
-                0x0000088b       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+                0x00000883       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfiprintf.o)
  .ARM.attributes
-                0x000008b4       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfiprintf.o)
+                0x000008ac       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-wsetup.o)
  .ARM.attributes
-                0x000008dd       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-wsetup.o)
+                0x000008d5       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-abort.o)
  .ARM.attributes
-                0x00000906       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-abort.o)
+                0x000008fe       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fflush.o)
  .ARM.attributes
-                0x0000092f       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fflush.o)
+                0x00000927       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
  .ARM.attributes
-                0x00000958       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
+                0x00000950       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-freer.o)
  .ARM.attributes
-                0x00000981       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-freer.o)
+                0x00000979       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fvwrite.o)
  .ARM.attributes
-                0x000009aa       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fvwrite.o)
+                0x000009a2       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fwalk.o)
  .ARM.attributes
-                0x000009d3       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fwalk.o)
+                0x000009cb       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-makebuf.o)
  .ARM.attributes
-                0x000009fc       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-makebuf.o)
+                0x000009f4       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
  .ARM.attributes
-                0x00000a25       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
+                0x00000a1d       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
  .ARM.attributes
-                0x00000a4e       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
+                0x00000a46       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
  .ARM.attributes
-                0x00000a77       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+                0x00000a6f       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
  .ARM.attributes
-                0x00000aa0       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                0x00000a98       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memmove.o)
  .ARM.attributes
-                0x00000ac9       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memmove.o)
+                0x00000ac1       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mlock.o)
  .ARM.attributes
-                0x00000af2       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mlock.o)
+                0x00000aea       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reallocr.o)
  .ARM.attributes
-                0x00000b1b       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reallocr.o)
+                0x00000b13       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x00000b44       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-sbrkr.o)
+                0x00000b3c       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-signal.o)
  .ARM.attributes
-                0x00000b6d       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-signal.o)
+                0x00000b65       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-signalr.o)
  .ARM.attributes
-                0x00000b96       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-signalr.o)
+                0x00000b8e       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-stdio.o)
  .ARM.attributes
-                0x00000bbf       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-stdio.o)
+                0x00000bb7       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-writer.o)
  .ARM.attributes
-                0x00000be8       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-writer.o)
+                0x00000be0       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-closer.o)
  .ARM.attributes
-                0x00000c11       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-closer.o)
+                0x00000c09       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fclose.o)
  .ARM.attributes
-                0x00000c3a       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fclose.o)
+                0x00000c32       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fstatr.o)
  .ARM.attributes
-                0x00000c63       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fstatr.o)
+                0x00000c5b       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-isattyr.o)
  .ARM.attributes
-                0x00000c8c       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-isattyr.o)
+                0x00000c84       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-lseekr.o)
  .ARM.attributes
-                0x00000cb5       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-lseekr.o)
+                0x00000cad       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-readr.o)
  .ARM.attributes
-                0x00000cde       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-readr.o)
+                0x00000cd6       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
  .ARM.attributes
-                0x00000d07       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
+                0x00000cff       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x00000d30       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_aeabi_uldivmod.o)
+                0x00000d1a       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(bpabi.o)
  .ARM.attributes
-                0x00000d4b       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(bpabi.o)
+                0x00000d43       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000d74       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_dvmd_tls.o)
+                0x00000d5e       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
  .ARM.attributes
-                0x00000d8f       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
+                0x00000d87       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
  .ARM.attributes
-                0x00000db8       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
+                0x00000db0       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x00000de1       0x1b c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivsi3.o)
+                0x00000dcb       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
  .ARM.attributes
-                0x00000dfc       0x29 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
- .ARM.attributes
-                0x00000e25       0x19 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x00000df4       0x19 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
 
-.comment        0x00000000      0x386
+.comment        0x00000000      0x35b
  .comment       0x00000000       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
- .comment       0x0000002b       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .comment       0x00000056       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .comment       0x00000081       0x2a C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
+ .comment       0x0000002b       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .comment       0x00000056       0x2a C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
                                  0x2b (size before relaxing)
  .comment       0x00000000       0x2b C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
- .comment       0x000000ab       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
- .comment       0x000000d6       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
- .comment       0x00000101       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
- .comment       0x0000012c       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
- .comment       0x00000157       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
- .comment       0x00000182       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
- .comment       0x000001ad       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .comment       0x000001d8       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
- .comment       0x00000203       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
- .comment       0x0000022e       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
- .comment       0x00000259       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
- .comment       0x00000284       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
- .comment       0x000002af       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
- .comment       0x000002da       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
- .comment       0x00000305       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
- .comment       0x00000330       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
- .comment       0x0000035b       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+ .comment       0x00000080       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+ .comment       0x000000ab       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+ .comment       0x000000d6       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+ .comment       0x00000101       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+ .comment       0x0000012c       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+ .comment       0x00000157       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+ .comment       0x00000182       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+ .comment       0x000001ad       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+ .comment       0x000001d8       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+ .comment       0x00000203       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+ .comment       0x0000022e       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ .comment       0x00000259       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+ .comment       0x00000284       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+ .comment       0x000002af       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+ .comment       0x000002da       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+ .comment       0x00000305       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+ .comment       0x00000330       0x2b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
  .comment       0x00000000       0x2b C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
  .comment       0x00000000       0x2b C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
  .comment       0x00000000       0x2b C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
@@ -2154,301 +2114,289 @@ OUTPUT(C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x
  .comment       0x00000000       0x2b C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
  .comment       0x00000000       0x2b C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
 
-.debug_abbrev   0x00000000     0x2bad
+.debug_abbrev   0x00000000     0x2abe
  .debug_abbrev  0x00000000      0x169 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
- .debug_abbrev  0x00000169       0xf2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .debug_abbrev  0x0000025b      0x26b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .debug_abbrev  0x000004c6       0xc9 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
- .debug_abbrev  0x0000058f       0x43 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
- .debug_abbrev  0x000005d2      0x14c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
- .debug_abbrev  0x0000071e      0x28f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
- .debug_abbrev  0x000009ad      0x146 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
- .debug_abbrev  0x00000af3       0xff C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
- .debug_abbrev  0x00000bf2      0x33e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .debug_abbrev  0x00000f30      0x146 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
- .debug_abbrev  0x00001076      0x3dd C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
- .debug_abbrev  0x00001453       0xf4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
- .debug_abbrev  0x00001547      0x507 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
- .debug_abbrev  0x00001a4e      0x2a6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
- .debug_abbrev  0x00001cf4       0x27 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
- .debug_abbrev  0x00001d1b      0x139 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
- .debug_abbrev  0x00001e54      0x3dd C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
- .debug_abbrev  0x00002231      0x4d6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
- .debug_abbrev  0x00002707      0x4a6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+ .debug_abbrev  0x00000169      0x26e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .debug_abbrev  0x000003d7       0xc9 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+ .debug_abbrev  0x000004a0       0x43 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+ .debug_abbrev  0x000004e3      0x14c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+ .debug_abbrev  0x0000062f      0x28f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+ .debug_abbrev  0x000008be      0x146 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+ .debug_abbrev  0x00000a04       0xff C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+ .debug_abbrev  0x00000b03      0x33e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+ .debug_abbrev  0x00000e41      0x146 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+ .debug_abbrev  0x00000f87      0x3dd C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+ .debug_abbrev  0x00001364       0xf4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+ .debug_abbrev  0x00001458      0x507 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ .debug_abbrev  0x0000195f      0x2a6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+ .debug_abbrev  0x00001c05       0x27 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+ .debug_abbrev  0x00001c2c      0x139 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+ .debug_abbrev  0x00001d65      0x3dd C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+ .debug_abbrev  0x00002142      0x4d6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+ .debug_abbrev  0x00002618      0x4a6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
 
-.debug_info     0x00000000     0xf4e4
+.debug_info     0x00000000     0xf000
  .debug_info    0x00000000      0x5fb C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
- .debug_info    0x000005fb      0x542 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .debug_info    0x00000b3d      0xa59 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .debug_info    0x00001596      0x233 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
- .debug_info    0x000017c9       0x64 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
- .debug_info    0x0000182d      0x4a8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
- .debug_info    0x00001cd5     0x16aa C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
- .debug_info    0x0000337f      0x8bc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
- .debug_info    0x00003c3b      0x2a6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
- .debug_info    0x00003ee1     0x1bc4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .debug_info    0x00005aa5      0x355 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
- .debug_info    0x00005dfa     0x1b3c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
- .debug_info    0x00007936      0x205 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
- .debug_info    0x00007b3b     0x1602 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
- .debug_info    0x0000913d     0x1288 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
- .debug_info    0x0000a3c5       0x38 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
- .debug_info    0x0000a3fd      0x195 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
- .debug_info    0x0000a592     0x1c24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
- .debug_info    0x0000c1b6     0x24e8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
- .debug_info    0x0000e69e      0xe46 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+ .debug_info    0x000005fb      0xab7 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .debug_info    0x000010b2      0x233 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+ .debug_info    0x000012e5       0x64 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+ .debug_info    0x00001349      0x4a8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+ .debug_info    0x000017f1     0x16aa C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+ .debug_info    0x00002e9b      0x8bc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+ .debug_info    0x00003757      0x2a6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+ .debug_info    0x000039fd     0x1bc4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+ .debug_info    0x000055c1      0x355 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+ .debug_info    0x00005916     0x1b3c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+ .debug_info    0x00007452      0x205 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+ .debug_info    0x00007657     0x1602 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ .debug_info    0x00008c59     0x1288 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+ .debug_info    0x00009ee1       0x38 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+ .debug_info    0x00009f19      0x195 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+ .debug_info    0x0000a0ae     0x1c24 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+ .debug_info    0x0000bcd2     0x24e8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+ .debug_info    0x0000e1ba      0xe46 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
 
-.debug_line     0x00000000     0x57b8
+.debug_line     0x00000000     0x534c
  .debug_line    0x00000000      0x3df C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
- .debug_line    0x000003df      0x44f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .debug_line    0x0000082e      0x6a2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .debug_line    0x00000ed0      0x2eb C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
- .debug_line    0x000011bb       0xb5 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
- .debug_line    0x00001270      0x2de C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
- .debug_line    0x0000154e      0x54a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
- .debug_line    0x00001a98      0x405 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
- .debug_line    0x00001e9d      0x323 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
- .debug_line    0x000021c0      0x697 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .debug_line    0x00002857      0x438 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
- .debug_line    0x00002c8f      0x5e4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
- .debug_line    0x00003273      0x1a0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
- .debug_line    0x00003413      0x780 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
- .debug_line    0x00003b93      0x5cd C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
- .debug_line    0x00004160       0x9f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
- .debug_line    0x000041ff      0x1ec C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
- .debug_line    0x000043eb      0x5e7 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
- .debug_line    0x000049d2      0x752 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
- .debug_line    0x00005124      0x694 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+ .debug_line    0x000003df      0x685 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .debug_line    0x00000a64      0x2eb C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+ .debug_line    0x00000d4f       0xb5 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+ .debug_line    0x00000e04      0x2de C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+ .debug_line    0x000010e2      0x54a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+ .debug_line    0x0000162c      0x405 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+ .debug_line    0x00001a31      0x323 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+ .debug_line    0x00001d54      0x697 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+ .debug_line    0x000023eb      0x438 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+ .debug_line    0x00002823      0x5e4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+ .debug_line    0x00002e07      0x1a0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+ .debug_line    0x00002fa7      0x780 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ .debug_line    0x00003727      0x5cd C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+ .debug_line    0x00003cf4       0x9f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+ .debug_line    0x00003d93      0x1ec C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+ .debug_line    0x00003f7f      0x5e7 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+ .debug_line    0x00004566      0x752 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+ .debug_line    0x00004cb8      0x694 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
 
-.debug_loc      0x00000000     0x2e6a
+.debug_loc      0x00000000     0x2ac0
  .debug_loc     0x00000000       0xf4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
- .debug_loc     0x000000f4      0x3c7 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .debug_loc     0x000004bb      0x683 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .debug_loc     0x00000b3e       0x1f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
- .debug_loc     0x00000b5d       0xc1 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
- .debug_loc     0x00000c1e      0x23a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
- .debug_loc     0x00000e58      0x114 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
- .debug_loc     0x00000f6c       0x1f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
- .debug_loc     0x00000f8b      0xa0d C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .debug_loc     0x00001998       0x1f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
- .debug_loc     0x000019b7      0x1cc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
- .debug_loc     0x00001b83      0x121 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
- .debug_loc     0x00001ca4      0x6e4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
- .debug_loc     0x00002388       0x70 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
- .debug_loc     0x000023f8       0x99 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
- .debug_loc     0x00002491      0x1cc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
- .debug_loc     0x0000265d      0x329 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
- .debug_loc     0x00002986      0x4e4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+ .debug_loc     0x000000f4      0x6a0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .debug_loc     0x00000794       0x1f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+ .debug_loc     0x000007b3       0xc1 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+ .debug_loc     0x00000874      0x23a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+ .debug_loc     0x00000aae      0x114 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+ .debug_loc     0x00000bc2       0x1f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+ .debug_loc     0x00000be1      0xa0d C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+ .debug_loc     0x000015ee       0x1f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+ .debug_loc     0x0000160d      0x1cc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+ .debug_loc     0x000017d9      0x121 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+ .debug_loc     0x000018fa      0x6e4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ .debug_loc     0x00001fde       0x70 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+ .debug_loc     0x0000204e       0x99 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+ .debug_loc     0x000020e7      0x1cc C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+ .debug_loc     0x000022b3      0x329 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+ .debug_loc     0x000025dc      0x4e4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
 
 .debug_pubnames
-                0x00000000     0x125a
+                0x00000000     0x10f3
  .debug_pubnames
                 0x00000000       0x87 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
  .debug_pubnames
-                0x00000087      0x137 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
+                0x00000087      0x211 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
  .debug_pubnames
-                0x000001be      0x241 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00000298       0x49 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
  .debug_pubnames
-                0x000003ff       0x49 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+                0x000002e1       0x32 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
  .debug_pubnames
-                0x00000448       0x32 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+                0x00000313       0xa2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .debug_pubnames
-                0x0000047a       0xa2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x000003b5       0x3f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
  .debug_pubnames
-                0x0000051c       0x3f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+                0x000003f4       0x1b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
  .debug_pubnames
-                0x0000055b       0x1b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+                0x0000040f      0x200 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
  .debug_pubnames
-                0x00000576      0x200 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x0000060f       0x4d C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
  .debug_pubnames
-                0x00000776       0x4d C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+                0x0000065c      0x10e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
  .debug_pubnames
-                0x000007c3      0x10e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+                0x0000076a       0x59 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
  .debug_pubnames
-                0x000008d1       0x59 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+                0x000007c3      0x29c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
  .debug_pubnames
-                0x0000092a      0x29c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x00000a5f      0x13c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
  .debug_pubnames
-                0x00000bc6      0x13c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x00000b9b       0x29 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
  .debug_pubnames
-                0x00000d02       0x29 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+                0x00000bc4       0x63 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
  .debug_pubnames
-                0x00000d2b       0x63 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+                0x00000c27      0x11b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
  .debug_pubnames
-                0x00000d8e      0x11b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+                0x00000d42      0x159 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
  .debug_pubnames
-                0x00000ea9      0x159 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
- .debug_pubnames
-                0x00001002      0x258 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+                0x00000e9b      0x258 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
 
-.debug_aranges  0x00000000      0x870
+.debug_aranges  0x00000000      0x7d8
  .debug_aranges
                 0x00000000       0x70 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
  .debug_aranges
-                0x00000070       0x98 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
+                0x00000070       0xe8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
  .debug_aranges
-                0x00000108       0xe8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                0x00000158       0x38 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
  .debug_aranges
-                0x000001f0       0x38 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+                0x00000190       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
  .debug_aranges
-                0x00000228       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+                0x000001c0       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
  .debug_aranges
-                0x00000258       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+                0x000001f0       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
  .debug_aranges
-                0x00000288       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+                0x00000248       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
  .debug_aranges
-                0x000002e0       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+                0x00000278       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
  .debug_aranges
-                0x00000310       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+                0x00000298       0xf0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
  .debug_aranges
-                0x00000330       0xf0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                0x00000388       0x38 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
  .debug_aranges
-                0x00000420       0x38 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+                0x000003c0       0x70 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
  .debug_aranges
-                0x00000458       0x70 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+                0x00000430       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
  .debug_aranges
-                0x000004c8       0x48 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+                0x00000478       0xc8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
  .debug_aranges
-                0x00000510       0xc8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+                0x00000540       0x70 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
  .debug_aranges
-                0x000005d8       0x70 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+                0x000005b0       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
  .debug_aranges
-                0x00000648       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+                0x000005d0       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
  .debug_aranges
-                0x00000668       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+                0x00000600       0x70 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
  .debug_aranges
-                0x00000698       0x70 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+                0x00000670       0x90 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
  .debug_aranges
-                0x00000708       0x90 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
- .debug_aranges
-                0x00000798       0xd8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+                0x00000700       0xd8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
 
-.debug_ranges   0x00000000      0xcf0
+.debug_ranges   0x00000000      0xc68
  .debug_ranges  0x00000000       0x68 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
- .debug_ranges  0x00000068       0x90 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .debug_ranges  0x000000f8      0x258 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .debug_ranges  0x00000350       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
- .debug_ranges  0x00000380       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
- .debug_ranges  0x000003a8       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
- .debug_ranges  0x000003d0       0x68 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
- .debug_ranges  0x00000438       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
- .debug_ranges  0x00000460       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
- .debug_ranges  0x00000478      0x178 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .debug_ranges  0x000005f0       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
- .debug_ranges  0x00000620       0x98 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
- .debug_ranges  0x000006b8       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
- .debug_ranges  0x00000710      0x240 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
- .debug_ranges  0x00000950       0xa0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
- .debug_ranges  0x000009f0       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
- .debug_ranges  0x00000a08       0x40 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
- .debug_ranges  0x00000a48       0x98 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
- .debug_ranges  0x00000ae0       0xc0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
- .debug_ranges  0x00000ba0      0x150 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+ .debug_ranges  0x00000068      0x260 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .debug_ranges  0x000002c8       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+ .debug_ranges  0x000002f8       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+ .debug_ranges  0x00000320       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+ .debug_ranges  0x00000348       0x68 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+ .debug_ranges  0x000003b0       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+ .debug_ranges  0x000003d8       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+ .debug_ranges  0x000003f0      0x178 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+ .debug_ranges  0x00000568       0x30 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+ .debug_ranges  0x00000598       0x98 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+ .debug_ranges  0x00000630       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+ .debug_ranges  0x00000688      0x240 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ .debug_ranges  0x000008c8       0xa0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+ .debug_ranges  0x00000968       0x18 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+ .debug_ranges  0x00000980       0x40 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+ .debug_ranges  0x000009c0       0x98 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+ .debug_ranges  0x00000a58       0xc0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+ .debug_ranges  0x00000b18      0x150 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
 
-.debug_str      0x00000000     0x43c3
+.debug_str      0x00000000     0x4361
  .debug_str     0x00000000      0x2d6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
                                 0x345 (size before relaxing)
- .debug_str     0x000002d6      0x1d1 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
-                                0x288 (size before relaxing)
- .debug_str     0x000004a7      0x34f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                                0x587 (size before relaxing)
- .debug_str     0x000007f6       0xa2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+ .debug_str     0x000002d6      0x4be C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+                                0x57c (size before relaxing)
+ .debug_str     0x00000794       0xa2 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
                                 0x1af (size before relaxing)
- .debug_str     0x00000898       0x76 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+ .debug_str     0x00000836       0x76 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
                                  0x89 (size before relaxing)
- .debug_str     0x0000090e       0xfa C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+ .debug_str     0x000008ac       0xfa C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
                                 0x221 (size before relaxing)
- .debug_str     0x00000a08      0xa7b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+ .debug_str     0x000009a6      0xa7b C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
                                 0xc02 (size before relaxing)
- .debug_str     0x00001483       0x96 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+ .debug_str     0x00001421       0x96 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
                                 0x663 (size before relaxing)
- .debug_str     0x00001519      0x106 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+ .debug_str     0x000014b7      0x106 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
                                 0x21a (size before relaxing)
- .debug_str     0x0000161f      0xc6a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+ .debug_str     0x000015bd      0xc6a C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
                                 0xdc2 (size before relaxing)
- .debug_str     0x00002289      0x10e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+ .debug_str     0x00002227      0x10e C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
                                 0x23f (size before relaxing)
- .debug_str     0x00002397      0x7c3 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+ .debug_str     0x00002335      0x7c3 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
                                0x1260 (size before relaxing)
- .debug_str     0x00002b5a      0x114 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+ .debug_str     0x00002af8      0x114 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
                                 0x1bc (size before relaxing)
- .debug_str     0x00002c6e      0x9b6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ .debug_str     0x00002c0c      0x9b6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
                                 0xc6c (size before relaxing)
- .debug_str     0x00003624      0x2f6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+ .debug_str     0x000035c2      0x2f6 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
                                 0xd72 (size before relaxing)
- .debug_str     0x0000391a       0x83 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+ .debug_str     0x000038b8       0x83 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
                                  0x91 (size before relaxing)
- .debug_str     0x0000399d       0x6d C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+ .debug_str     0x0000393b       0x6d C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
                                 0x15e (size before relaxing)
- .debug_str     0x00003a0a      0x228 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+ .debug_str     0x000039a8      0x228 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
                                0x12be (size before relaxing)
- .debug_str     0x00003c32      0x412 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+ .debug_str     0x00003bd0      0x412 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
                                0x170a (size before relaxing)
- .debug_str     0x00004044      0x37f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+ .debug_str     0x00003fe2      0x37f C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
                                 0x660 (size before relaxing)
 
-.debug_frame    0x00000000     0x1e58
+.debug_frame    0x00000000     0x1c9c
  .debug_frame   0x00000000       0xd0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
- .debug_frame   0x000000d0      0x1c0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
- .debug_frame   0x00000290      0x2a8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
- .debug_frame   0x00000538       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
- .debug_frame   0x00000590       0x40 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
- .debug_frame   0x000005d0       0x5c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
- .debug_frame   0x0000062c       0xb4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
- .debug_frame   0x000006e0       0x64 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
- .debug_frame   0x00000744       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
- .debug_frame   0x0000076c      0x2c0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
- .debug_frame   0x00000a2c       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
- .debug_frame   0x00000a84       0xf8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
- .debug_frame   0x00000b7c       0x88 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
- .debug_frame   0x00000c04      0x234 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
- .debug_frame   0x00000e38       0xe8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
- .debug_frame   0x00000f20       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
- .debug_frame   0x00000f40       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
- .debug_frame   0x00000f98       0xf8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
- .debug_frame   0x00001090      0x13c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
- .debug_frame   0x000011cc      0x1d8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
- .debug_frame   0x000013a4       0x20 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_isinfd.o)
- .debug_frame   0x000013c4       0x20 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_isnand.o)
- .debug_frame   0x000013e4       0x44 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-assert.o)
- .debug_frame   0x00001428       0x5c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fiprintf.o)
- .debug_frame   0x00001484       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
- .debug_frame   0x000014b0       0x5c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-iprintf.o)
- .debug_frame   0x0000150c       0x28 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
- .debug_frame   0x00001534       0x48 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-rand.o)
- .debug_frame   0x0000157c       0x20 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
- .debug_frame   0x0000159c       0x70 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfiprintf.o)
- .debug_frame   0x0000160c       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-wsetup.o)
- .debug_frame   0x00001638       0x28 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-abort.o)
- .debug_frame   0x00001660       0x40 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fflush.o)
- .debug_frame   0x000016a0      0x11c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
- .debug_frame   0x000017bc       0x50 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-freer.o)
- .debug_frame   0x0000180c       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fvwrite.o)
- .debug_frame   0x00001848       0x54 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fwalk.o)
- .debug_frame   0x0000189c       0x34 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-makebuf.o)
- .debug_frame   0x000018d0       0x30 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
- .debug_frame   0x00001900       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
- .debug_frame   0x0000193c       0x28 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
- .debug_frame   0x00001964       0x34 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
- .debug_frame   0x00001998       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memmove.o)
- .debug_frame   0x000019c4       0x30 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mlock.o)
- .debug_frame   0x000019f4       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reallocr.o)
- .debug_frame   0x00001a30       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-sbrkr.o)
- .debug_frame   0x00001a5c       0xc0 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-signal.o)
- .debug_frame   0x00001b1c       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-signalr.o)
- .debug_frame   0x00001b58       0x70 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-stdio.o)
- .debug_frame   0x00001bc8       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-writer.o)
- .debug_frame   0x00001bf4       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-closer.o)
- .debug_frame   0x00001c20       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fclose.o)
- .debug_frame   0x00001c5c       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fstatr.o)
- .debug_frame   0x00001c88       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-isattyr.o)
- .debug_frame   0x00001cb4       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-lseekr.o)
- .debug_frame   0x00001ce0       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-readr.o)
- .debug_frame   0x00001d0c       0x64 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
- .debug_frame   0x00001d70       0x50 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(bpabi.o)
- .debug_frame   0x00001dc0       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
- .debug_frame   0x00001dfc       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
- .debug_frame   0x00001e38       0x20 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivsi3.o)
+ .debug_frame   0x000000d0      0x2ac C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+ .debug_frame   0x0000037c       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
+ .debug_frame   0x000003d4       0x40 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
+ .debug_frame   0x00000414       0x5c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
+ .debug_frame   0x00000470       0xb4 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
+ .debug_frame   0x00000524       0x64 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_digital.c.o)
+ .debug_frame   0x00000588       0x28 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
+ .debug_frame   0x000005b0      0x2c0 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+ .debug_frame   0x00000870       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
+ .debug_frame   0x000008c8       0xf8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+ .debug_frame   0x000009c0       0x88 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+ .debug_frame   0x00000a48      0x234 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
+ .debug_frame   0x00000c7c       0xe8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+ .debug_frame   0x00000d64       0x20 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cxxabi-compat.cpp.o)
+ .debug_frame   0x00000d84       0x58 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+ .debug_frame   0x00000ddc       0xf8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+ .debug_frame   0x00000ed4      0x13c C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
+ .debug_frame   0x00001010      0x1d8 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)
+ .debug_frame   0x000011e8       0x20 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_isinfd.o)
+ .debug_frame   0x00001208       0x20 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_isnand.o)
+ .debug_frame   0x00001228       0x44 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-assert.o)
+ .debug_frame   0x0000126c       0x5c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fiprintf.o)
+ .debug_frame   0x000012c8       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .debug_frame   0x000012f4       0x5c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-iprintf.o)
+ .debug_frame   0x00001350       0x28 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .debug_frame   0x00001378       0x48 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-rand.o)
+ .debug_frame   0x000013c0       0x20 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .debug_frame   0x000013e0       0x70 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfiprintf.o)
+ .debug_frame   0x00001450       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-wsetup.o)
+ .debug_frame   0x0000147c       0x28 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-abort.o)
+ .debug_frame   0x000014a4       0x40 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fflush.o)
+ .debug_frame   0x000014e4      0x11c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
+ .debug_frame   0x00001600       0x50 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-freer.o)
+ .debug_frame   0x00001650       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fvwrite.o)
+ .debug_frame   0x0000168c       0x54 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fwalk.o)
+ .debug_frame   0x000016e0       0x34 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-makebuf.o)
+ .debug_frame   0x00001714       0x30 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
+ .debug_frame   0x00001744       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
+ .debug_frame   0x00001780       0x28 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+ .debug_frame   0x000017a8       0x34 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x000017dc       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memmove.o)
+ .debug_frame   0x00001808       0x30 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mlock.o)
+ .debug_frame   0x00001838       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reallocr.o)
+ .debug_frame   0x00001874       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x000018a0       0xc0 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-signal.o)
+ .debug_frame   0x00001960       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-signalr.o)
+ .debug_frame   0x0000199c       0x70 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-stdio.o)
+ .debug_frame   0x00001a0c       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-writer.o)
+ .debug_frame   0x00001a38       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-closer.o)
+ .debug_frame   0x00001a64       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fclose.o)
+ .debug_frame   0x00001aa0       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fstatr.o)
+ .debug_frame   0x00001acc       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-isattyr.o)
+ .debug_frame   0x00001af8       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-lseekr.o)
+ .debug_frame   0x00001b24       0x2c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-readr.o)
+ .debug_frame   0x00001b50       0x64 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
+ .debug_frame   0x00001bb4       0x50 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(bpabi.o)
+ .debug_frame   0x00001c04       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
+ .debug_frame   0x00001c40       0x3c c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
+ .debug_frame   0x00001c7c       0x20 c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivsi3.o)
 
 Cross Reference Table
 
@@ -2583,6 +2531,7 @@ Print::print(Printable const&)                    C:\Users\monkey\AppData\Local\
 Print::print(String const&)                       C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::print(__FlashStringHelper const*)          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::print(char const*)                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 Print::print(char)                                C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::print(double, int)                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::print(int, int)                            C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
@@ -2590,6 +2539,7 @@ Print::print(int, int)                            C:\Users\monkey\AppData\Local\
 Print::print(long, int)                           C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::print(unsigned char, int)                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::print(unsigned int, int)                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 Print::print(unsigned long, int)                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::printFloat(double, unsigned char)          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::printNumber(unsigned long, unsigned char)  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
@@ -2605,6 +2555,7 @@ Print::println(int, int)                          C:\Users\monkey\AppData\Local\
 Print::println(long, int)                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::println(unsigned char, int)                C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::println(unsigned int, int)                 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
+                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 Print::println(unsigned long, int)                C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::write(char const*)                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
 Print::write(unsigned char const*, unsigned int)  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Print.cpp.o)
@@ -2620,8 +2571,8 @@ RTT_Handler                                       C:\Users\monkey\AppData\Local\
                                                   C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
 Reset_Handler                                     C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
 RingBuffer::RingBuffer()                          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
-                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 RingBuffer::RingBuffer()                          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
+                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 RingBuffer::store_char(unsigned char)             C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
@@ -2713,8 +2664,8 @@ TxLEDPulse                                        C:\Users\monkey\AppData\Local\
 UARTClass::IrqHandler()                           C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*) C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
-                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*) C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
+                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 UARTClass::available()                            C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(UARTClass.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
@@ -2792,8 +2743,8 @@ USART3_Handler                                    C:\Users\monkey\AppData\Local\
 USARTClass::IrqHandler()                          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*) C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
-                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*) C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
+                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 USARTClass::available()                           C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 USARTClass::begin(unsigned long)                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USARTClass.cpp.o)
@@ -3191,7 +3142,6 @@ analogReadResolution                              C:\Users\monkey\AppData\Local\
 analogReference                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
 analogWrite                                       C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 analogWriteResolution                             C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 analog_reference                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
@@ -3243,7 +3193,6 @@ digitalWrite                                      C:\Users\monkey\AppData\Local\
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring_analog.c.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-                                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 errno                                             c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
                                                   c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-readr.o)
                                                   c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-lseekr.o)
@@ -3260,7 +3209,6 @@ fflush                                            c:/users/monkey/documents/arch
 fiprintf                                          c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fiprintf.o)
                                                   c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-assert.o)
 free                                              c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
-frontSensor                                       C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 frontSensorBool                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 frontSensorValue                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 g_APinDescription                                 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
@@ -3269,7 +3217,6 @@ g_APinDescription                                 C:\Users\monkey\AppData\Local\
 g_interrupt_enabled                               C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(interrupt_sam_nvic.o)
                                                   C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
-getAndRunCommandFromUSB()                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 gpf_isr                                           C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
                                                   C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
 init                                              C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
@@ -3278,8 +3225,8 @@ initiateReset                                     C:\Users\monkey\AppData\Local\
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
 iprintf                                           c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-iprintf.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
+isSensorRead                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 led(unsigned char, bool)                          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-leds                                              C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 link                                              C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/syscalls_sam3.c.o
 loop                                              C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
@@ -3289,7 +3236,6 @@ makeWord(unsigned char, unsigned char)            C:\Users\monkey\AppData\Local\
 makeWord(unsigned short)                          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
 malloc                                            c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
                                                   c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-rand.o)
-map                                               C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 map(long, long, long, long, long)                 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 memchr                                            c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
@@ -3305,21 +3251,14 @@ memset                                            c:/users/monkey/documents/arch
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(RingBuffer.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(USBCore.cpp.o)
 micros                                            C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
-middleSensor                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 middleSensorValue                                 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 millis                                            C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(wiring.c.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(CDC.cpp.o)
-moveBackBoth                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 moveBackBoth(unsigned char)                       C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-moveBackLeft                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 moveBackLeft(unsigned char)                       C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-moveBackRight                                     C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 moveBackRight(unsigned char)                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-moveBackward                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 moveBackward(unsigned char, unsigned char)        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-moveBalanced                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 moveBalanced(unsigned char, unsigned char)        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-moveForward                                       C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 moveForward(unsigned char)                        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 pendSVHook                                        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(hooks.c.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
@@ -3396,42 +3335,34 @@ rand                                              c:/users/monkey/documents/arch
 random(long)                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
 random(long, long)                                C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
 randomSeed(unsigned long)                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
+readMiddle()                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 read_front()                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-read_middle()                                     C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 rx_buffer1                                        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 rx_buffer2                                        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 rx_buffer3                                        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 rx_buffer4                                        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
+sendAnalogFront()                                 C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 sendFront()                                       C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
+sendFrontAndMiddle()                              C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 sendMiddle()                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-sendSensorValues()                                C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-sensorLeido                                       C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 serialEvent()                                     C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 serialEvent1()                                    C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 serialEvent2()                                    C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 serialEvent3()                                    C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
 serialEventRun()                                  C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(variant.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
-setBackwardSpeedLeft                              C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 setBackwardSpeedLeft(int)                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-setBackwardSpeedRight                             C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 setBackwardSpeedRight(int)                        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-setForwardSpeedLeft                               C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 setForwardSpeedLeft(int)                          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-setForwardSpeedRight                              C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 setForwardSpeedRight(int)                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-setLeftSpeed                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 setLeftSpeed(unsigned char)                       C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-setMotors                                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 setMotors(int, int)                               C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-setRightSpeed                                     C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 setRightSpeed(unsigned char)                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 setup                                             C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(main.cpp.o)
 signal                                            c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-signal.o)
 srand                                             c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-rand.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(WMath.cpp.o)
-stopMotors                                        C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 stopMotors()                                      C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 strlen                                            c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
                                                   c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfiprintf.o)
@@ -3443,9 +3374,7 @@ sysTickHook                                       C:\Users\monkey\AppData\Local\
 system_init_flash                                 C:\Users\monkey\Documents\Archivos\Programas\arduino-1.5.6\hardware\arduino\sam\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(system_sam3xa.o)
 tickReset                                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(Reset.cpp.o)
                                                   C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(cortex_handlers.c.o)
-turnLeft                                          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 turnLeft(unsigned char)                           C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
-turnRight                                         C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Motors.c.o
 turnRight(unsigned char)                          C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg\Arduino.cpp.o
 vfiprintf                                         c:/users/monkey/documents/archivos/programas/arduino-1.5.6/hardware/tools/g++_arm_none_eabi/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfiprintf.o)
 vtable for Keyboard_                              C:\Users\monkey\AppData\Local\VMicro\Arduino\Builds\Arduino\arduino_due_x_dbg/core.a(HID.cpp.o)

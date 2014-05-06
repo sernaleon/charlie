@@ -502,9 +502,6 @@ serial.port=COM7
     <Folder Include="Visual Micro\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Motors.c">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="Types.h">
       <SubType>compile</SubType>
     </Compile>

@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+picamera/__init__.py
+picamera/bcm_host.py
+picamera/camera.py
+picamera/encoders.py
+picamera/exc.py
+picamera/mmal.py
+picamera/streams.py
+picamera.egg-info/PKG-INFO
+picamera.egg-info/SOURCES.txt
+picamera.egg-info/dependency_links.txt
+picamera.egg-info/requires.txt
+picamera.egg-info/top_level.txt
+picamera.egg-info/zip-safe

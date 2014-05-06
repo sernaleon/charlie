@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Charlie script generator</title>
+    <link rel="stylesheet" href="style/code.css"/>
+
+    <script type="text/javascript" src="js/globalFunctions.js"></script>
+    <script type="text/javascript" src="js/values.js"></script>
+    <script src="js/code.js"></script>
+    <script type="text/javascript" src="Blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="Blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="Blockly/msg/js/en.js"></script>
+    <script type="text/javascript" src="Blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="js/customBlocks.js"></script>
+</head>
+<body onload="onLoad()">
+
+<div id="btContainer">
+    <div id="test" class="button">Show code</div>
+    <div id="btSend" class="button">Execute</div>
+    <div id="btClear" class="button">Clear</div>
+
+    <div id="btSave" class="button right">Save</div>
+    <div id="btLoad" class="button right">Load</div>
+</div>
+<div id="blocklyContainer"></div>
+
+<xml id="toolbox" style="display: none">
+<category name="Logic">
+    <block type="controls_if"></block>
+    <block type="logic_compare"></block>
+    <block type="logic_operation"></block>
+    <block type="logic_negate"></block>
+    <block type="logic_boolean"></block>
+    <block type="logic_null"></block>
+    <block type="logic_ternary"></block>
+</category>
+<category name="Loops">
+    <block type="controls_repeat_ext">
+        <value name="TIMES">
+            <block type="math_number">
+                <field name="NUM">10</field>
+            </block>
+        </value>
+    </block>
+    <block type="controls_whileUntil"></block>
+    <block type="controls_for">
+        <value name="FROM">
+            <block type="math_number">
+                <field name="NUM">1</field>
+            </block>
+        </value>
+        <value name="TO">
+            <block type="math_number">
+                <field name="NUM">10</field>
+            </block>
+        </value>
+        <value name="BY">
+            <block type="math_number">
+                <field name="NUM">1</field>
+            </block>
+        </value>
+    </block>
+    <block type="controls_forEach"></block>
+    <block type="controls_flow_statements"></block>
+</category>
+<category name="Math">
+    <block type="math_number"></block>
+    <block type="math_arithmetic"></block>
+    <block type="math_single"></block>
+    <block type="math_trig"></block>
+    <block type="math_constant"></block>
+    <block type="math_number_property"></block>
+    <block type="math_change">
+        <value name="DELTA">
+            <block type="math_number">
+                <field name="NUM">1</field>
+            </block>
+        </value>
+    </block>
+    <block type="math_round"></block>
+    <block type="math_on_list"></block>
+    <block type="math_modulo"></block>
+    <block type="math_constrain">
+        <value name="LOW">
+            <block type="math_number">
+                <field name="NUM">1</field>
+            </block>
+        </value>
+        <value name="HIGH">
+            <block type="math_number">
+                <field name="NUM">100</field>
+            </block>
+        </value>
+    </block>
+    <block type="math_random_int">
+        <value name="FROM">
+            <block type="math_number">
+                <field name="NUM">1</field>
+            </block>
+        </value>
+        <value name="TO">
+            <block type="math_number">
+                <field name="NUM">100</field>
+            </block>
+        </value>
+    </block>
+    <block type="math_random_float"></block>
+
+    <block type="toInt"></block>
+    <block type="map">
+
+        <value name="x">
+            <block type="variables_get">
+            </block>
+        </value>
+
+        <value name="in_min">
+            <block type="math_number">
+            </block>
+        </value>
+
+        <value name="in_max">
+            <block type="math_number">
+            </block>
+        </value>
+
+        <value name="out_min">
+            <block type="math_number">
+            </block>
+        </value>
+
+        <value name="out_max">
+            <block type="math_number">
+            </block>
+        </value>
+    </block>
+</category>
+
+<category name="Text">
+<block type="text"></block>
+<block type="text_join"></block>
+<block type="text_append">
+  <value name="TEXT">
+    <block type="text"></block>
+  </value>
+</block>
+<block type="text_length"></block>
+<block type="text_isEmpty"></block>
+<block type="text_indexOf">
+  <value name="VALUE">
+    <block type="variables_get">
+      <field name="VAR">text</field>
+    </block>
+  </value>
+</block>
+<block type="text_charAt">
+  <value name="VALUE">
+    <block type="variables_get">
+      <field name="VAR">text</field>
+    </block>
+  </value>
+</block>
+<block type="text_getSubstring">
+  <value name="STRING">
+    <block type="variables_get">
+      <field name="VAR">text</field>
+    </block>
+  </value>
+</block>
+<block type="text_changeCase"></block>
+<block type="text_trim"></block>
+<block type="text_print"></block>
+<block type="text_prompt"></block>
+</category>
+
+
+<category name="Lists">
+    <block type="lists_create_empty"></block>
+    <block type="lists_create_with"></block>
+    <block type="lists_repeat">
+        <value name="NUM">
+            <block type="math_number">
+                <field name="NUM">5</field>
+            </block>
+        </value>
+    </block>
+    <block type="lists_length"></block>
+    <block type="lists_isEmpty"></block>
+    <block type="lists_indexOf">
+        <value name="VALUE">
+            <block type="variables_get">
+                <field name="VAR">list</field>
+            </block>
+        </value>
+    </block>
+    <block type="lists_getIndex">
+        <value name="VALUE">
+            <block type="variables_get">
+                <field name="VAR">list</field>
+            </block>
+        </value>
+    </block>
+    <block type="lists_setIndex">
+        <value name="LIST">
+            <block type="variables_get">
+                <field name="VAR">list</field>
+            </block>
+        </value>
+    </block>
+    <block type="lists_getSublist">
+        <value name="LIST">
+            <block type="variables_get">
+                <field name="VAR">list</field>
+            </block>
+        </value>
+    </block>
+</category>
+
+<category name="Variables" custom="VARIABLE"></category>
+<category name="Procedures" custom="PROCEDURE"></category>
+
+
+
+<category></category>
+
+
+
+<category name="Motor forwards">
+    <block type="move_fwd"></block>
+    <block type="move_l"></block>
+    <block type="move_r"></block>
+    <block type="stop_motors"></block>
+    <block type="move_motor">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="move_balanced">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+
+        <value name="balance">
+            <block type="math_number">
+                <field name="NUM">123</field>
+            </block>
+        </value>
+    </block>
+</category>
+
+<category name="Motor backwards">
+
+    <block type="move_back">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="move_b_left">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="move_b_right">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+    </block>
+
+
+    <block type="move_back_balanced">
+
+        <value name="speed">
+            <block type="math_number">
+                <field name="NUM">50</field>
+            </block>
+        </value>
+
+        <value name="balance">
+            <block type="math_number">
+                <field name="NUM">123</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="stop_motors"></block>
+
+</category>
+
+
+<category name="Ground sensors">
+
+    <block type="read_front"></block>
+    <block type="read_middle"></block>
+    <block type="read_ground"></block>
+    <block type="first_black_left"></block>
+    <block type="read_front_analog"></block>
+
+</category>
+
+
+<category name="Other functions">
+
+
+    <block type="wait">
+
+        <value name="timeD">
+            <block type="math_number">
+                <field name="NUM">1000</field>
+            </block>
+        </value>
+    </block>
+
+    <block type="read_sonar"></block>
+
+    <block type="led">
+
+        <value name="ledN">
+            <block type="math_number">
+                <field name="NUM">0</field>
+            </block>
+        </value>
+    </block>
+
+
+    <block type="servo">
+
+        <value name="pos">
+            <block type="math_number">
+                <field name="NUM">0</field>
+            </block>
+        </value>
+    </block>
+
+    <!--<block type="take_pic"></block>-->
+
+    <block type="horn"></block>
+
+    <!--<block type="send_back"></block>-->
+</category>
+
+</xml>
+
+<script>
+
+    Blockly.inject(document.getElementById('blocklyContainer'),
+            {path: 'Blockly/', toolbox: document.getElementById('toolbox')});
+
+
+</script>
+
+<script type="text/javascript" src="phonegap.js"></script>
+</body>
+</html>
