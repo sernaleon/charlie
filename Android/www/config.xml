@@ -25,10 +25,6 @@
     <preference name="android-minSdkVersion" value="7"/>
     <preference name="android-installLocation" value="auto"/>
     <icon src="img/icon.png"/>
-    <icon gap:density="ldpi" gap:platform="android" src="img/icon-36-ldpi.png"/>
-    <icon gap:density="mdpi" gap:platform="android" src="img/icon-48-mdpi.png"/>
-    <icon gap:density="hdpi" gap:platform="android" src="img/icon-72-hdpi.png"/>
-    <icon gap:density="xhdpi" gap:platform="android" src="img/icon-96-xhdpi.png"/>
     <access origin="*"/>
 
     <gap:plugin name="com.boyvanderlaak.cordova.plugin.orientationchanger" version="0.1.1" />

@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'title'; /*a name to be used later*/
+    src: url('fonts/PoiretOne-Regular.ttf'); /*URL to font*/
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color: #111111;
+    padding-bottom: 1px;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.67em;
+    color: white;
+    background-color: #111111;
+}
+
+a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    height: 48px;
+    color: white;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 52px;
+
+    text-decoration: none;
+
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* TABS:
+    Based in fries js source code: http://getfri.es
+ */
+
+
+.tab-fixed {
+    right: 0;
+    left: 0;
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) ;
+    -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) ;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) ;
+    display: block;
+    z-index: 1;
+    height: 48px;
+    background: #333333;
+    -webkit-backface-visibility: hidden;
+
+    position: fixed;
+    bottom: 0px;
+}
+
+.tab-fixed ul.tab-inner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    width: 100%;
+    list-style: none;
+}
+
+.tab-fixed ul.tab-inner li {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    whitespace: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+
+.tab-fixed ul.tab-inner li a:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 24px;
+    top: 13px;
+    right: 0;
+    background-color: #4d4d4d;
+}
+
+.tab-fixed ul.tab-inner li:active {
+    background-color: rgba(51, 181, 229, 0.6);
+}
+
+/*Wrappers*/
+
+.robotC {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+
+
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.leftCol {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+}
+
+.rightCol {
+    position: absolute;
+    margin-left: 50%;
+    height: 100%;
+    width: 50%;
+}
+
+/*Left column content */
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#logo {
+    vertical-align: middle;
+}
+
+/* Right column content */
+
+.robotC .title {
+    margin-top: 40%;
+    padding-top: 20px;
+    font-size: 80px;
+    height: 90px;
+    color: #000;
+    font-variant: small-caps;
+    font-family: title;
+    text-rendering:optimizeLegibility;
+
+}
+
+.robotC .subtitle {
+    font-size: 35px;
+    padding: 0 0 10px 80px;
+    color: #000;
+    font-family: title;
+    text-rendering:optimizeLegibility;
+}
+
+
+

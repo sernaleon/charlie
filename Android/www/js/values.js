@@ -6,9 +6,9 @@ WEBHOST = "ws://" + SERVER_IP + ":" + SERVER_CMD_PORT;
 ACCELEROMETER_FREQUENCY = 40;
 
 
-SLOW_SPEED = 130
-MEDIUM_SPEED = 190
-FAST_SPEED = 255
+SLOW_SPEED = 130;
+MEDIUM_SPEED = 190;
+FAST_SPEED = 255;
 
 //COMMANDS
 
@@ -18,8 +18,8 @@ CMD_NOPARAM = 0;
 
 CMD_STOP = 0;
 CMD_MOVE_FORWARD = 1;
-CMD_SET_LEFT = 2
-CMD_SET_RIGHT = 3
+CMD_SET_LEFT = 2;
+CMD_SET_RIGHT = 3;
 CMD_BOTH_MOTORS = 4;
 CMD_LEFT_MOTOR = 5;
 CMD_RIGHT_MOTOR = 6;
@@ -35,9 +35,9 @@ CMD_MIDDLE = 15;
 CMD_FRONT_ANALOG= 16;
 CMD_SERVO = 17;
 
-PYT_SEND = "sendToArduino"
-PYT_RECEIVE = "receiveFromArduino"
-PYT_CAM= "takePic"
-PYT_SONAR = "readSonar"
-PYT_SERVO = "moveServo"
-PYT_MAP = "map"
+PYT_SEND = "sendToArduino";
+PYT_RECEIVE = "receiveFromArduino";
+PYT_CAM= "takePic";
+PYT_SONAR = "readSonar";
+PYT_SERVO = "moveServo";
+PYT_MAP = "map";
