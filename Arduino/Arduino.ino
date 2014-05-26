@@ -67,7 +67,7 @@ void loop()
 			
 			//Move forward to <SPEED>
 			case 4:
-			moveForward(p1);
+			moveForwards(p1);
 			break;
 			
 			//Set left motor to <SPEED> and right motor to 0
@@ -82,7 +82,7 @@ void loop()
 			
 			//Move backwards with speed and balance
 			case 7:
-			moveBackward(p1,p2);
+			moveBackBalanced(p1,p2);
 			break;
 			
 			//Set both motors to back speed
@@ -132,12 +132,12 @@ void loop()
 	}
 }
 
-void led(byte num,bool state)
+void led(byte num,bool status)
 {
 	if		(num < 0)			num = 0;
 	else if (num >= NUMLEDS)	num = NUMLEDS-1;
 	
-	digitalWrite(LEDS[num],state);
+	digitalWrite(LEDS[num],status);
 }
 
 
@@ -151,7 +151,7 @@ void beep(bool status)
 
 void sendFrontAndMiddle()
 {
-	read_front();
+	readFront();
 	readMiddle();
 
 	for(int i = 0; i < 12; i++)
@@ -168,7 +168,7 @@ void sendFrontAndMiddle()
 
 void sendFront()
 {	
-	read_front();
+	readFront();
 
 	for(int i = 0; i < 12; i++)
 	{
@@ -192,7 +192,7 @@ void sendMiddle()
 
 void sendAnalogFront()
 {
-	read_front();
+	readFront();
 	
 	for(int i = 0; i < 11; i++)
 	{
@@ -214,7 +214,7 @@ void readMiddle()
 }
 
 
-void read_front()
+void readFront()
 {
 	//Unload capacitors
 	for (int i = 0; i < 12; i++)
@@ -281,10 +281,9 @@ void read_front()
 
 void stopMotors()
 {
-	//setMotors(0,0);
-	analogWrite(O_Bin1,1023);
+	analogWrite(O_Bin1,MAX_ANALOG_RESOLUTION);
 	digitalWrite(O_Bin2,HIGH);
-	analogWrite(O_Ain1,1023);
+	analogWrite(O_Ain1,MAX_ANALOG_RESOLUTION);
 	digitalWrite(O_Ain2,HIGH);
 }
 
@@ -360,7 +359,7 @@ void moveBalanced(byte speed, byte balance)
 }
 
 
-void moveForward(byte speed)
+void moveForwards(byte speed)
 {
 	//Sets speed between 0 and KMAXSPEED
 	int speedMapped = map(speed,0,255,0,KMAXSPEED);
@@ -373,29 +372,29 @@ void moveForward(byte speed)
 
 
 
-void setBackwardSpeedLeft(int speed)
+void setBackSpeedLeft(int speed)
 {
 	//Check if numbers are out of range
 	if      (speed < 0)         speed = 0;
 	else if (speed > KMAXSPEED) speed = KMAXSPEED;
 
 	//Set motor speed
-	analogWrite(O_Bin1,RESOLUTION-speed);
+	analogWrite(O_Bin1,MAX_ANALOG_RESOLUTION-speed);
 	digitalWrite(O_Bin2,HIGH);
 }
 
-void setBackwardSpeedRight(int speed)
+void setBackSpeedRight(int speed)
 {
 	//Check if numbers are out of range
 	if      (speed < 0)         speed = 0;
 	else if (speed > KMAXSPEED) speed = KMAXSPEED;
 
 	//Set motor speed
-	analogWrite(O_Ain1,RESOLUTION-speed);
+	analogWrite(O_Ain1,MAX_ANALOG_RESOLUTION-speed);
 	digitalWrite(O_Ain2,HIGH);
 }
 
-void moveBackward(byte speed, byte balance)
+void moveBackBalanced(byte speed, byte balance)
 {
 	//Sets speed between 0 and KMAXSPEED
 	int speedMapped = map(speed,0,255,0,KSTRAIGHTSPEED);
@@ -407,26 +406,26 @@ void moveBackward(byte speed, byte balance)
 	int left = speedMapped - balanceMapped;
 	int right = speedMapped + balanceMapped;
 
-	setBackwardSpeedLeft(left);
-	setBackwardSpeedRight(right);
+	setBackSpeedLeft(left);
+	setBackSpeedRight(right);
 }
 
 void moveBackBoth(byte speed)
 {
 	//Sets speed between 0 and KMAXSPEED
 	int kspeed = map(speed,0,255,0,KMAXSPEED);
-	setBackwardSpeedLeft(kspeed);
-	setBackwardSpeedRight(kspeed);
+	setBackSpeedLeft(kspeed);
+	setBackSpeedRight(kspeed);
 }
 
 void moveBackLeft(byte speed)
 {
 	//Sets speed between 0 and KMAXSPEED
-	setBackwardSpeedLeft(map(speed,0,255,0,KMAXSPEED));
+	setBackSpeedLeft(map(speed,0,255,0,KMAXSPEED));
 }
 
 void moveBackRight(byte speed)
 {
 	//Sets speed between 0 and KMAXSPEED
-	setBackwardSpeedRight(map(speed,0,255,0,KMAXSPEED));
+	setBackSpeedRight(map(speed,0,255,0,KMAXSPEED));
 }

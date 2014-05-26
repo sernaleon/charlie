@@ -8,7 +8,6 @@ html, body {
 }
 
 #container {
-    /*background-color: purple;*/
     width:  calc(100% - 60px);
     height: 100%;
     position: absolute;
@@ -27,19 +26,12 @@ html, body {
     z-index: 999;
 
 }
+
 input[type=range]#slider {
     height: 100%;
     width: 100%;
     -webkit-appearance: slider-vertical;
     -webkit-transform:rotate(180deg);
-}
-
-#btMove {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 30px;
 }
 
 

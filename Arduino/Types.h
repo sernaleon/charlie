@@ -13,10 +13,11 @@
 #define KTURNSPEED      200
 
 
+#define MAX_ANALOG_RESOLUTION 1023
 
 #define FRONTAL_TIMEOUT 2000
-
 #define CNY70DIVIDER 30
+
 //-------------------------
 //        INPUTS
 //-------------------------
@@ -32,7 +33,7 @@
 #define  O_IRON_AN	29   // Analogical infrared (Pull-Up)
 #define  O_IRON_DG	27   // Digital infrared (Pull-Down)
 
-//Analogical infrared sensors
+//Analog infrared sensors
 
 #define NUMFRONTS  12
 
@@ -104,8 +105,6 @@
 #define  O_Bin1	10
 #define  O_Bin2	 8
 
-#define RESOLUTION 1023
-
 //------------------------
 //          Lists
 //------------------------
@@ -117,8 +116,5 @@ const byte FRONTSENSORS[NUMFRONTS] = { I_IR10, I_IR11, I_IR12, I_IR13, I_IR14, I
 
 const byte INPUTS [NUMINPUTS]= { I_BUTTON, I_IR1, I_IR2, I_IR3, I_IR4, I_IR5, I_IR6, I_IR7, I_IR8, I_IR9, I_IR10, I_IR11, I_IR12, I_IR13, I_IR14, I_IR15, I_IR16, I_IR17, I_IR18, I_IR19, I_IR20, I_IR21  };
 const byte OUTPUTS [NUMOUTPUTS] = { O_IRON_AN, O_IRON_DG , O_BUZZER,  O_LED4, O_LED5,O_LED6,O_LED7,O_LED8,O_LED9,O_LED10,O_LED11,O_LED12,O_LED13,O_LED14,O_LED15,O_LED16,O_LED17,O_Ain1,O_Ain2,O_Bin1,O_Bin2  };
-
-
-
 
 #endif

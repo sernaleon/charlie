@@ -5,7 +5,7 @@ Blockly.Python.addReservedWords("logging,SERVER_IP,WS_PORT,LEDPIN,SERVOPIN,ECHOP
 
 Blockly.Blocks['move_fwd'] = {
     init: function() {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Move straight")
             .appendField(new Blockly.FieldDropdown([
@@ -26,7 +26,7 @@ Blockly.Python['move_fwd'] = function(block) {
 
 Blockly.Blocks['move_l'] = {
     init: function() {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Move left")
             .appendField(new Blockly.FieldDropdown([
@@ -47,7 +47,7 @@ Blockly.Python['move_l'] = function(block) {
 
 Blockly.Blocks['move_r'] = {
     init: function() {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Move right")
             .appendField(new Blockly.FieldDropdown([
@@ -67,7 +67,7 @@ Blockly.Python['move_r'] = function(block) {
 
 Blockly.Blocks['move_motor'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Set")
             .appendField(new Blockly.FieldDropdown([
@@ -84,13 +84,12 @@ Blockly.Blocks['move_motor'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
-        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+        this.setTooltip('');
     }
 };
 Blockly.Python['move_motor'] = function (block) {
     var cmd = block.getFieldValue('motor');
     var p1 = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
-  //var p1 = Math.round(map(Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC), 0, 100, 0, 255));
 
     return PYT_SEND + '(' + cmd + ',' + p1 + ',' + CMD_NOPARAM + ')\n';
 };
@@ -98,7 +97,7 @@ Blockly.Python['move_motor'] = function (block) {
 
 Blockly.Blocks['move_balanced'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Set speed");
         this.appendValueInput("speed")
@@ -113,7 +112,7 @@ Blockly.Blocks['move_balanced'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
-        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+        this.setTooltip('');
     }
 };
 Blockly.Python['move_balanced'] = function (block) {
@@ -125,7 +124,7 @@ Blockly.Python['move_balanced'] = function (block) {
 
 Blockly.Blocks['stop_motors'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Stop motors");
         this.setPreviousStatement(true);
@@ -143,7 +142,7 @@ Blockly.Python['stop_motors'] = function (block) {
 
 Blockly.Blocks['move_back'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Set both motors at back speed");
         this.appendValueInput("speed")
@@ -153,7 +152,7 @@ Blockly.Blocks['move_back'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
-        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+        this.setTooltip('');
     }
 };
 Blockly.Python['move_back'] = function (block) {
@@ -164,7 +163,7 @@ Blockly.Python['move_back'] = function (block) {
 
 Blockly.Blocks['move_b_left'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Set left motor at back speed");
         this.appendValueInput("speed")
@@ -174,7 +173,7 @@ Blockly.Blocks['move_b_left'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
-        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+        this.setTooltip('');
     }
 };
 Blockly.Python['move_b_left'] = function (block) {
@@ -185,7 +184,7 @@ Blockly.Python['move_b_left'] = function (block) {
 
 Blockly.Blocks['move_b_right'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Set right motor at back speed");
         this.appendValueInput("speed")
@@ -195,7 +194,7 @@ Blockly.Blocks['move_b_right'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
-        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+        this.setTooltip('');
     }
 };
 Blockly.Python['move_b_right'] = function (block) {
@@ -206,9 +205,9 @@ Blockly.Python['move_b_right'] = function (block) {
 
 Blockly.Blocks['move_back_balanced'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
-            .appendField("Set backward speed");
+            .appendField("Set backwards speed");
         this.appendValueInput("speed")
             .setCheck("Number");
         this.appendDummyInput()
@@ -221,7 +220,7 @@ Blockly.Blocks['move_back_balanced'] = {
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
-        this.setTooltip('Speed should be between -100% and 100%. Numbers outside [-100,+100] are allowed but dangerous!');
+        this.setTooltip('');
     }
 };
 Blockly.Python['move_back_balanced'] = function (block) {
@@ -236,7 +235,7 @@ Blockly.Python['move_back_balanced'] = function (block) {
 
 Blockly.Blocks['read_front'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Read front sensors");
         this.setInputsInline(true);
@@ -251,7 +250,7 @@ Blockly.Python['read_front'] = function (block) {
 
 Blockly.Blocks['read_middle'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Read middle sensors");
         this.setInputsInline(true);
@@ -266,7 +265,7 @@ Blockly.Python['read_middle'] = function (block) {
 
 Blockly.Blocks['read_ground'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Read front and middle");
         this.setInputsInline(true);
@@ -280,11 +279,10 @@ Blockly.Python['read_ground'] = function (block) {
 
 Blockly.Blocks['first_black_left'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("From")
-        this.appendValueInput("sonarV")
-            .setCheck("Array");
+        this.appendValueInput("sonarV");
         this.appendDummyInput()
             .appendField("get first black from left");
         this.setInputsInline(true);
@@ -308,7 +306,7 @@ Blockly.Python['first_black_left'] = function (block) {
 
 Blockly.Blocks['read_front_analog'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Analog read front sensors");
         this.setInputsInline(true);
@@ -329,7 +327,7 @@ Blockly.Python['read_front_analog'] = function (block) {
 
 Blockly.Blocks['wait'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Wait")
         this.appendValueInput("timeD")
@@ -343,19 +341,14 @@ Blockly.Blocks['wait'] = {
     }
 };
 Blockly.Python['wait'] = function (block) {
-    try {
-        var value_wait = Blockly.Python.valueToCode(block, 'timeD', Blockly.Python.ORDER_ATOMIC) / 1000;
-        return "time.sleep(" + value_wait + ")\n";
-    }
-    catch (e) {
-        alert("Error:" + e);
-    }
+    var value_wait = Blockly.Python.valueToCode(block, 'timeD', Blockly.Python.ORDER_ATOMIC) / 1000;
+    return "time.sleep(" + value_wait + ")\n";
 };
 
 
 Blockly.Blocks['read_sonar'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Read distance (cm)");
         this.setInputsInline(true);
@@ -370,7 +363,7 @@ Blockly.Python['read_sonar'] = function (block) {
 
 Blockly.Blocks['led'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Set led")
         this.appendValueInput("ledN")
@@ -397,7 +390,7 @@ Blockly.Python['led'] = function (block) {
 
 Blockly.Blocks['servo'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Set servo position")
         this.appendValueInput("pos")
@@ -411,23 +404,15 @@ Blockly.Blocks['servo'] = {
     }
 };
 Blockly.Python['servo'] = function (block) {
-    try {
-        var pos = Blockly.Python.valueToCode(block, 'pos', Blockly.Python.ORDER_ATOMIC);
-
-        p2 = Math.round(map(Math.round(pos), 0, 90, 215, 115))
-
-
-        return PYT_SERVO + "(" + p2  + "0)\n";
-    }
-    catch (e) {
-        alert("Error:" + e);
-    }
+    var pos = Blockly.Python.valueToCode(block, 'pos', Blockly.Python.ORDER_ATOMIC);
+    p2 = Math.round(map(Math.round(pos), 0, 90, 215, 115))
+    return PYT_SERVO + "(" + p2  + "0)\n";
 };
 
 
 Blockly.Blocks['horn'] = {
     init: function () {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.appendDummyInput()
             .appendField("Set horn")
             .appendField(new Blockly.FieldDropdown([
@@ -452,7 +437,7 @@ Blockly.Python['horn'] = function (block) {
 
 Blockly.Blocks['map'] = {
     init: function() {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.setColour(230);
         this.appendValueInput("x")
             .appendField("map");
@@ -478,7 +463,7 @@ Blockly.Python['map'] = function(block) {
     var in_max = Blockly.Python.valueToCode(block, 'in_max', Blockly.Python.ORDER_ATOMIC);
     var out_min = Blockly.Python.valueToCode(block, 'out_min', Blockly.Python.ORDER_ATOMIC);
     var out_max = Blockly.Python.valueToCode(block, 'out_max', Blockly.Python.ORDER_ATOMIC);
-    var res = PYT_MAP + "("+x+","+in_min+","+in_max+","+out_min+","+out_max+")\n";
+    var res = PYT_MAP + "("+x+","+in_min+","+in_max+","+out_min+","+out_max+")";
     return [res, Blockly.Python.ORDER_FUNCTION_CALL];
 };
 
@@ -486,17 +471,18 @@ Blockly.Python['map'] = function(block) {
 
 Blockly.Blocks['toInt'] = {
     init: function() {
-        this.setHelpUrl('http://www.example.com/');
+        this.setHelpUrl('https://github.com/monkeyserna/charlie/wiki/');
         this.setColour(230);
         this.appendValueInput("x")
-            .appendField("Round to Integer");
+            .appendField("Round to integer");
         this.setOutput(true,"Number");
         this.setTooltip('');
     }
 };
+
+
 Blockly.Python['toInt'] = function (block) {
     var x = Blockly.Python.valueToCode(block, 'x', Blockly.Python.ORDER_ATOMIC);
-    var res =  "int(round(" +x+"))\n";
 
-    return [res, Blockly.Python.ORDER_FUNCTION_CALL];
+    return ["int(round(" +x+"))", Blockly.Python.ORDER_FUNCTION_CALL];
 };

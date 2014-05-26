@@ -24,14 +24,14 @@ extern "C" void __cxa_pure_virtual() {;}
 
 //
 //
-void led(byte num,bool state);
+void led(byte num,bool status);
 void beep(bool status);
 void sendFrontAndMiddle();
 void sendFront();
 void sendMiddle();
 void sendAnalogFront();
 void readMiddle();
-void read_front();
+void readFront();
 void stopMotors();
 void setForwardSpeedRight(int speed);
 void setForwardSpeedLeft(int speed);
@@ -41,10 +41,10 @@ void turnRight(byte speed);
 void setLeftSpeed(byte speed);
 void setRightSpeed(byte speed);
 void moveBalanced(byte speed, byte balance);
-void moveForward(byte speed);
-void setBackwardSpeedLeft(int speed);
-void setBackwardSpeedRight(int speed);
-void moveBackward(byte speed, byte balance);
+void moveForwards(byte speed);
+void setBackSpeedLeft(int speed);
+void setBackSpeedRight(int speed);
+void moveBackBalanced(byte speed, byte balance);
 void moveBackBoth(byte speed);
 void moveBackLeft(byte speed);
 void moveBackRight(byte speed);

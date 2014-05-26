@@ -1,0 +1,16 @@
+TODO:
+
+Documentar codigo
+Servidor apache que almacene la web
+Takepic?
+Borrar!!
+
+
+CPU usage!! ver qué es lo que chupa recursos en la raspi y en qué niveles.
+
+
+Grabar video MODO DRIVE
+
+
+
+

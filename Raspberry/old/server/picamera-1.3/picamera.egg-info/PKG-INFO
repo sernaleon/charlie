@@ -1,0 +1,45 @@
+Metadata-Version: 1.1
+Name: picamera
+Version: 1.3
+Summary: A pure Python interface for the Raspberry Pi camera module.
+Home-page: https://pypi.python.org/pypi/picamera/
+Author: Dave Hughes
+Author-email: dave@waveform.org.uk
+License: BSD License
+Description: .. -*- rst -*-
+        
+        ========
+        picamera
+        ========
+        
+        This package provides a pure Python interface to the `Raspberry Pi`_ `camera`_
+        module for Python 2.7 (or above) or Python 3.2 (or above).
+        
+        The code is licensed under the `BSD license`_. Packages can be downloaded from
+        the project `homepage`_ on PyPI. The `source code`_ can be obtained from
+        GitHub, which also hosts the `bug tracker`_. The `documentation`_ (which
+        includes installation, quick-start examples, and lots of code recipes) can be
+        read on ReadTheDocs.
+        
+        
+        .. _Raspberry Pi: http://www.raspberrypi.org/
+        .. _camera: http://www.raspberrypi.org/camera
+        .. _homepage: http://pypi.python.org/pypi/picamera/
+        .. _documentation: http://picamera.readthedocs.org/
+        .. _source code: https://github.com/waveform80/picamera
+        .. _bug tracker: https://github.com/waveform80/picamera/issues
+        .. _Python: http://python.org/
+        .. _BSD license: http://opensource.org/licenses/BSD-3-Clause
+        .. _Pull requests: https://github.com/waveform80/picamera.git
+        
+Keywords: raspberrypi camera
+Platform: ALL
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Topic :: Multimedia :: Graphics :: Capture :: Digital Camera

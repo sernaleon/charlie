@@ -1,0 +1,9 @@
+
+
+[test]
+pytest
+mock
+Pillow
+
+[doc]
+sphinx

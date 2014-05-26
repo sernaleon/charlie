@@ -22,7 +22,7 @@ DUE_BAUDS = 9600
 	
 ###########SONAR FUNCTIONS ###########
 		
-def initSonar():
+def initScript():
 	print "INIT SONAR..."
 	GPIO.setwarnings(False)
 	GPIO.setmode(GPIO.BCM)	
@@ -59,7 +59,7 @@ def readSonar():
 	print "  SONAR:",distance		
 	return distance
 		
-def destructSonar():	
+def destructScript():	
 	GPIO.output(LEDPIN, GPIO.LOW)
 	GPIO.cleanup()			
 
@@ -80,14 +80,7 @@ def receiveFromArduino(cmd,p1,p2):
 	recMsg = serialArduino.readline().strip()
 	print "RECEIVE:",recMsg		
 	return recMsg
-	
-def executeScript(receivedCommand):
-	print "SCRIPT RECEIVED:\n",receivedCommand
-	initSonar()
-	print "STARTING BLOCKLY SCRIPT..."
-	exec(receivedCommand)
-	print "...BLOCKLY SCRIPT DONE"
-	destructSonar()
+
 	
 def map(x, in_min, in_max, out_min, out_max):
 	try:
@@ -96,7 +89,15 @@ def map(x, in_min, in_max, out_min, out_max):
 	except Exception as n:
 			print "  ERROR:", n
 			return 0
-
+	
+def executeScript(receivedCommand):
+	print "SCRIPT RECEIVED:\n",receivedCommand
+	initScript()
+	print "STARTING BLOCKLY SCRIPT..."
+	exec(receivedCommand)
+	print "...BLOCKLY SCRIPT DONE"
+	destructScript()
+	
 class WebServer(WebSocket):
 	def handleMessage(self):
 		if self.data is None:

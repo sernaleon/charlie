@@ -1,0 +1,18 @@
+Elimina broza:
+
+document.getElementsByClassName("pagehead")[0].style.display = "none";
+document.getElementsByClassName("header")[0].style.display = "none";
+document.getElementsByClassName("gh-header")[0].style.display = "none";
+document.getElementsByClassName("sunken-menu")[0].style.display = "none";
+document.getElementsByClassName("comment-form-head")[0].style.display = "none";
+document.getElementsByClassName("gollum-editor-page-title input-block")[0].style.display = "none";
+document.getElementsByClassName("site-footer")[0].style.display = "none";
+document.getElementById("gollum-editor-edit-summary").style.display = "none";
+document.getElementById("gollum-editor-submit").style.display = "none";
+document.getElementById("js-repo-pjax-container").style.paddingLeft = "60px";
+
+Falta subir tamaño de fuente y poner título!!!
+
+Y en el imprimir de chrome, ampliar a 25mm el margen superior e inferior. Laterales a 10mm.
+
+Poner encabezado y pie de página.

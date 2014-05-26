@@ -1,38 +1,32 @@
+
+// Called once Blockly is fully loaded.
 function blocklyLoaded(blockly) {
-    // Called once Blockly is fully loaded.
     window.Blockly = blockly;
-
-
-    document.getElementsByClassName("blocklyToolboxDiv")[0].innerHTML += "<div id='btS'>Send</div>"
 }
 
 function onLoad() {
-    document.getElementById('test').onclick = test;
+    document.getElementById('test').onclick = showCode;
     document.getElementById('btSend').onclick = sendToRaspi;
     document.getElementById('btSave').onclick = save;
     document.getElementById('btLoad').onclick = load;
     document.getElementById('btClear').onclick = clearWorkspace
 
     document.addEventListener("deviceready", onDeviceReady, false);
-
-
 }
 
-// Cordova is loaded and it is now safe to call Cordova methods
-//
+// PhoneGap is loaded and it is now safe to call PhoneGap methods
 function onDeviceReady() {
     // Register the event listener
     document.addEventListener("backbutton", onBackKeyDown, false);
 }
 
 // Handle the back button
-//
 function onBackKeyDown() {
     window.location.href = "index.html";
 }
 
 
-function test() {
+function showCode() {
     alert(Blockly.Python.workspaceToCode())
 }
 
@@ -48,6 +42,7 @@ function save() {
 
 function load() {
     var text = "Stored files: \n";
+    var n = ""
     for (var storedName in localStorage) {
         text += storedName + '\n';
         n = storedName;
@@ -82,9 +77,12 @@ function sendToRaspi() {
 
     websocket.onerror = function (evt) {
         websocket.close();
+        toast("Error sending the code. Please try again.")
     };
 }
 
 function clearWorkspace() {
-    Blockly.mainWorkspace.clear()
+    if (confirm('Are you sure you want to delete the workspace?')) {
+        Blockly.mainWorkspace.clear()
+    }
 }

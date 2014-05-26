@@ -1,0 +1,34 @@
+#! /bin/sh
+# /etc/init.d/charlie
+ 
+### BEGIN INIT INFO
+# Provides:          charlie
+# Required-Start:    $all hostapd networking 
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Starts the robot servers
+# Description:       Starts the robot servers
+### END INIT INFO
+
+case "$1" in
+  start)
+
+cd /home/pi/server/
+./start.sh
+
+;;
+  stop)
+    echo "Stopping Chalie servers"
+    service uv4l_raspicam.sh stop
+	cd /home/pi/server/
+	./killserver.sh
+
+    ;;
+  *)
+    echo "Usage: charlie {start|stop}"
+    exit 1
+    ;;
+esac
+ 
+exit 0

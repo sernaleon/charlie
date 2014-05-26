@@ -3,16 +3,17 @@ var websocket = null;
 var isSending = false;
 
 document.addEventListener("deviceready", onDeviceReady, false);
-document.getElementById("overlay").onclick = onTap;
+
 
 function onDeviceReady() {
     window.plugins.orientationchanger.lockOrientation('landscape');
     window.plugins.insomnia.keepAwake();
-    websocket = new WebSocket(WEBHOST);
 
-
+    document.getElementById("overlay").onclick = onTap;
     document.getElementById("camFrame").src = "http://" + SERVER_IP + ":" + SERVER_CAM_PORT;
     document.addEventListener("backbutton", onBackKeyDown, false);
+
+    websocket = new WebSocket(WEBHOST);
 
     websocket.onopen = function (evt) {
         toast("Connected. Tap to start")
@@ -72,11 +73,11 @@ function stopCharlie() {
 }
 
 function onAccelerometerChanged(acceleration) {
-    var msg = formatCMD(
-        CMD_MOVE_FORWARD,
-        map(acceleration.x * 100, 0, 1000, 255, 0),
-        map(acceleration.y * 100, -1000, 1000, 0, 255))
-    var element = document.getElementById('accelerometer');
+    var msg = new Uint8Array(3);
+    msg[0] = CMD_MOVE_FORWARD;
+    msg[1] = map(acceleration.x * 100, 0, 1000, 255, 0,true);
+    msg[2] = map(acceleration.y * 100, -1000, 1000, 0, 255,true);
+
     websocket.send(msg)
 }
 

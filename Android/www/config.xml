@@ -11,7 +11,6 @@
     <feature name="http://api.phonegap.com/1.0/device"/>
     <preference name="permissions" value="none"/>
     <preference name="orientation" value="landscape"/>
-
     <preference name="target-device" value="universal"/>
     <preference name="fullscreen" value="true"/>
     <preference name="webviewbounce" value="true"/>
@@ -26,7 +25,6 @@
     <preference name="android-installLocation" value="auto"/>
     <icon src="img/icon.png"/>
     <access origin="*"/>
-
     <gap:plugin name="com.boyvanderlaak.cordova.plugin.orientationchanger" version="0.1.1" />
     <gap:plugin name="nl.x-services.plugins.insomnia" version="3.0" />
     <gap:plugin name="nl.x-services.plugins.toast" version="1.0" />
